@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "molecules": [
+    {
+      "name": "start",
+      "canonical_smiles": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+      "sha256": "1070cd8ab644ba2316e0b5c9745e612262151cd2894c8007df9fd54ee6fe6cb5"
+    },
+    {
+      "name": "linker",
+      "canonical_smiles": "[1*]Nc1nccc([23*])c1F",
+      "sha256": "76aadcdb740d45ed8fbc702d0a0e6da40753d7840e8de83469307d682c0b22bb"
+    },
+    {
+      "name": "prefix",
+      "canonical_smiles": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "sha256": "3ab650ecc81bdf74763bcae1107e2c63b8c3ad5f75664f2f6364b72e7efe0b4d"
+    },
+    {
+      "name": "reagent_a",
+      "canonical_smiles": "[3*]C12CC(C#N)C(C1)C2",
+      "sha256": "213625604d18c1202639ef4a696b5587f487d8ec572a1071057a7d100ae89502"
+    },
+    {
+      "name": "reagent_b",
+      "canonical_smiles": "[5*]c1cc(O)cc(F)c1C",
+      "sha256": "ee5627a419dfc09503be831bd456035b95144c528d68811d5878da90336c988f"
+    },
+    {
+      "name": "parent",
+      "canonical_smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+      "sha256": "e343253b0ac74c97b963c8b3c7cca52985beae0497a892729fae09446fd20e2b"
+    },
+    {
+      "name": "child",
+      "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "sha256": "75def787e9dcc40fcc14c135769dbbcbd84d99a848a6a56ed28aac74376fe6d3"
+    },
+    {
+      "name": "retro_0",
+      "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "sha256": "75def787e9dcc40fcc14c135769dbbcbd84d99a848a6a56ed28aac74376fe6d3"
+    },
+    {
+      "name": "retro_1",
+      "canonical_smiles": "FC1(F)CC(c2cccc(Br)c2)C1",
+      "sha256": "8cecd9c69af82417fa19e8ad63da494a9f3cc0e2cd7c4f91fa1ed5ec00b35871"
+    },
+    {
+      "name": "retro_2",
+      "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(B2OC(C)(C)C(C)(C)O2)c1F",
+      "sha256": "aff2bcfa57e52398f46ef342298fb7ce3c18947a5855720505aa8d6f7e4a6ddd"
+    },
+    {
+      "name": "retro_3",
+      "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)O",
+      "sha256": "be399c0dba25e055c73768150a83e3ce8a919377293a4717e44779422dc382db"
+    },
+    {
+      "name": "retro_4",
+      "canonical_smiles": "CC1(C)OB(c2ccnc(N)c2F)OC1(C)C",
+      "sha256": "c9cfc1c28ca9c699c247caa3fbbb934f11f8ed564e25c10224bfe10fc63eb71b"
+    }
+  ],
+  "svg_intrinsic_scale": 4,
+  "bond_width": 4.5,
+  "minimum_atom_font": 32,
+  "postprocess": "Tight alpha-bound crop with 4 source-unit padding, unchanged aspect ratio and topology"
+}

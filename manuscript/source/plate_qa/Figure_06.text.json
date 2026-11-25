@@ -1,0 +1,10 @@
+{
+  "pdf": "figures/Figure_06.pdf",
+  "auditable": true,
+  "minimum_required_pt": 6.0,
+  "minimum_found_pt": 6.399999999929866,
+  "text_run_count": 27,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}

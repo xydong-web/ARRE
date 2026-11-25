@@ -1,0 +1,69 @@
+{
+  "target": "ADRB2",
+  "seed": 0,
+  "arm": "prefix2",
+  "iteration_zero_based": 773,
+  "iteration_one_based": 774,
+  "child_smiles": "O=NN1CCC2CCC(c3nc4ccc(-c5c(O)ccc6c5CCC6)cc4[nH]3)CC21",
+  "parent_smiles": "O=NN1CCC2CCC(c3nc4ccc(-c5cc(F)c(F)cc5O)cc4[nH]3)CC21",
+  "child_vina": -15.092,
+  "child": [
+    {
+      "step": 0,
+      "smiles": "",
+      "action": [
+        "block3",
+        "3",
+        "[3*]C1CCC2CCN(N=O)C2C1"
+      ]
+    },
+    {
+      "step": 1,
+      "smiles": "[3*]C1CCC2CCN(N=O)C2C1",
+      "action": [
+        "rxn28_linker_b1",
+        "23-30",
+        "[23*]c1ccc2nc([30*])Nc2c1"
+      ]
+    },
+    {
+      "step": 2,
+      "smiles": "[23*]c1ccc2nc(C3CCC4CCN(N=O)C4C3)[nH]c2c1",
+      "action": [
+        "rxn34_brick_b1",
+        "21",
+        "[21*]c1c(O)ccc2c1CCC2"
+      ]
+    }
+  ],
+  "parent": [
+    {
+      "step": 0,
+      "smiles": "",
+      "action": [
+        "block3",
+        "3",
+        "[3*]C1CCC2CCN(N=O)C2C1"
+      ]
+    },
+    {
+      "step": 1,
+      "smiles": "[3*]C1CCC2CCN(N=O)C2C1",
+      "action": [
+        "rxn28_linker_b1",
+        "23-30",
+        "[23*]c1ccc2nc([30*])Nc2c1"
+      ]
+    },
+    {
+      "step": 2,
+      "smiles": "[23*]c1ccc2nc(C3CCC4CCN(N=O)C4C3)[nH]c2c1",
+      "action": [
+        "rxn34_brick_b1",
+        "21",
+        "[21*]c1cc(F)c(F)cc1O"
+      ]
+    }
+  ],
+  "shared_actions": 2
+}

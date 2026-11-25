@@ -1,0 +1,93 @@
+from dataclasses import dataclass
+
+from gflownet.utils.misc import StrictDataClass
+
+
+@dataclass
+class RHCConfig(StrictDataClass):
+    """RHC: elite-prefix resampling + discounted-bandit behaviour portfolio + exact-budget dedupe.
+
+    Attributes
+    ----------
+    enable : bool
+        Master switch.  False => the trainer class behaves exactly like the baseline.
+    elite_size : int
+        Size of the diverse elite archive (greedy by Vina under the evaluation-protocol diversity rule).
+    elite_sim : float
+        Tanimoto threshold (RDKFingerprint) of the diversity rule.  0.5 == the paper's evaluation protocol
+        (rxnflow.utils.chem_metrics.compute_diverse_top_k), so the archive is a superset of the evaluated top-k set.
+    qed_min : float
+        Only molecules with QED > qed_min enter the archive (evaluation protocol).
+    k_modes : int
+        Size of the evaluated top set; "hits" of the bandit are new members of this set.
+    min_elites : int
+        A prefix arm is unavailable until the archive holds this many eligible elites.
+    rank_kappa : float
+        Elite selection weight 1 / (rank_kappa * |archive| + rank)  (rank-prioritised, as in GGFN / TUIGT).
+    route_aware : bool
+        Route-aware elite selection (composed trainers only, needs a RFG/SPP route prior): the rank weight of an elite is multiplied by exp(route potential of its FORCED prefix),
+        the same potential the behaviour policy uses (RFGSPPState.prefix_logw), so that the prefix proposal and the behaviour policy tilt routes consistently.  Off => plain rank weights.
+    warmup_iters : int
+        Iterations of pure on-policy sampling (no prefix arm, bandit statistics still collected).
+    onpolicy_floor : float
+        Minimum share of the 64 slots that stays on-policy.
+    prefix_cap : float
+        Maximum share of a single prefix arm.
+    bandit : bool
+        True: discounted Thompson sampling allocates slots; False: fixed share `fixed_prefix_frac` split over the prefix arms.
+    fixed_prefix_frac : float
+        Total prefix share when bandit=False.
+    bandit_discount : float
+        Per-iteration discount of the Beta-Bernoulli statistics (non-stationary hit rates).
+    cond_mode : str
+        Condition of an offspring: "posterior" (Bayesian: p(c|x) proportional to p(c) R_c(x)/Z(c)), "inherit" (the elite's own
+        condition) or "prior" (fresh draw).
+    hindsight_candidates : int
+        Prior draws M per offspring for the posterior resampling.
+    z_estimator : str
+        "kernel": log Z(c) in the posterior weights is a Nadaraya-Watson regression of the TB-implied value
+        v = log R_c(x) - sum_t log P_F(a_t|s_t) over the most recent ON-POLICY trajectories (same fixed point as the trained logZ head,
+        without its slow transient; falls back to the head until `z_min_n` trajectories exist); "head": the model's own logZ head.
+    z_capacity, z_min_n : int
+        Ring-buffer size / minimum number of stored trajectories of the kernel estimator.
+    z_bw_beta, z_bw_w : float
+        Gaussian kernel bandwidths in beta/64 and in the Vina preference weight.
+    ess_min : float
+        An offspring keeps the elite's own condition when the effective sample size of its posterior resampling is below ess_min * M.
+    dedupe : bool
+        Exact-budget dedupe: every docked score is cached, duplicates are never re-docked and the freed calls are re-spent
+        on additional on-policy samples so that exactly `algo.num_from_policy` NOVEL molecules are docked per iteration.
+    topup_rounds : int
+        Maximum number of top-up sampling rounds per iteration.
+    topup_margin : float
+        Over-sampling factor of a top-up round (the expected novelty is < 1).
+    log_arms : bool
+        Write <log_dir>/rhc/arms.tsv (iteration, smiles, arm, vina, qed) for every docked molecule.
+    """
+
+    enable: bool = False
+    elite_size: int = 256
+    elite_sim: float = 0.5
+    qed_min: float = 0.5
+    k_modes: int = 100
+    min_elites: int = 8
+    rank_kappa: float = 0.05
+    route_aware: bool = False
+    warmup_iters: int = 30
+    onpolicy_floor: float = 0.25
+    prefix_cap: float = 0.5
+    bandit: bool = True
+    fixed_prefix_frac: float = 0.25
+    bandit_discount: float = 0.98
+    cond_mode: str = "posterior"
+    hindsight_candidates: int = 256
+    z_estimator: str = "kernel"
+    z_capacity: int = 1024
+    z_min_n: int = 256
+    z_bw_beta: float = 0.1
+    z_bw_w: float = 0.15
+    ess_min: float = 0.02
+    dedupe: bool = True
+    topup_rounds: int = 3
+    topup_margin: float = 0.25
+    log_arms: bool = True

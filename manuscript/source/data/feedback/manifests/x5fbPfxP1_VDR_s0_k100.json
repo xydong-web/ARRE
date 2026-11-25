@@ -1,0 +1,35 @@
+{
+  "source": "run/opt/x5fbPfxP1/VDR/seed0",
+  "arms": [
+    {
+      "tag": "x5fbOnP1",
+      "target": "VDR",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 0,
+      "bandit": true,
+      "checkpoint_sha256": "c5930abb8652e07395e3d3b81a8e2306c7ad1d64598ba6b4a9cb450fd136607f",
+      "path": "run/opt/x5fbOnP1/VDR/seed0"
+    },
+    {
+      "tag": "x5fbFrP1",
+      "target": "VDR",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 100,
+      "bandit": true,
+      "checkpoint_sha256": "c5930abb8652e07395e3d3b81a8e2306c7ad1d64598ba6b4a9cb450fd136607f",
+      "path": "run/opt/x5fbFrP1/VDR/seed0"
+    },
+    {
+      "tag": "x5fbFxP1",
+      "target": "VDR",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 0,
+      "bandit": false,
+      "checkpoint_sha256": "c5930abb8652e07395e3d3b81a8e2306c7ad1d64598ba6b4a9cb450fd136607f",
+      "path": "run/opt/x5fbFxP1/VDR/seed0"
+    }
+  ]
+}

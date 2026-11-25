@@ -1,0 +1,35 @@
+panel,tag,reference_tag,metric,definition,mean,lo,hi,n_targets,n_positive,n_negative,n_zero,analysis,holm_p
+a,base_ep30,base_ep30,vina,reference Vina - method Vina,0.0,0.0,0.0,15,0,0,15,versus baseline,
+a,base_ep30,base_ep30,aiz,method predicted solved - reference predicted solved,0.0,0.0,0.0,15,0,0,15,versus baseline,
+a,r2E4L4,base_ep30,vina,reference Vina - method Vina,0.3289626603656345,0.26570746812886653,0.39850070727864906,15,15,0,0,versus baseline,
+a,r2E4L4,base_ep30,aiz,method predicted solved - reference predicted solved,12.88888888888889,9.6,16.333333333333332,15,15,0,0,versus baseline,
+a,r4CP4,base_ep30,vina,reference Vina - method Vina,0.8938493535253739,0.8157356148693297,0.9831660103069414,15,15,0,0,versus baseline,
+a,r4CP4,base_ep30,aiz,method predicted solved - reference predicted solved,8.711111111111114,4.444444444444447,13.177777777777779,15,12,3,0,versus baseline,
+a,r4CE4,base_ep30,vina,reference Vina - method Vina,1.2498913387457529,1.1499040292766356,1.3521369774275351,15,15,0,0,versus baseline,
+a,r4CE4,base_ep30,aiz,method predicted solved - reference predicted solved,-10.511111111111111,-15.777777777777775,-5.044444444444445,15,2,12,1,versus baseline,
+a,r4CE4S4,base_ep30,vina,reference Vina - method Vina,1.1583691068490345,1.0598961420655248,1.2599722931914858,15,15,0,0,versus baseline,
+a,r4CE4S4,base_ep30,aiz,method predicted solved - reference predicted solved,3.8666666666666676,-1.3777777777777767,8.844444444444445,15,11,4,0,versus baseline,
+a,r2CE4L4,base_ep30,vina,reference Vina - method Vina,1.154643356137805,1.0434583076039945,1.2631572271453007,15,15,0,0,versus baseline,
+a,r2CE4L4,base_ep30,aiz,method predicted solved - reference predicted solved,9.466666666666669,4.866666666666671,14.000000000000002,15,13,2,0,versus baseline,
+bc,r2CE4L4,r2E4L4,vina,reference Vina - method Vina,0.8256806957721706,0.7484163005087106,0.9038246872226394,15,15,0,0,primary component contrast,0.00048828125
+bc,r2CE4L4,r2E4L4,aiz,method predicted solved - reference predicted solved,-3.4222222222222216,-7.333333333333333,-0.15555555555555334,15,4,10,1,primary component contrast,0.3718504932370241
+bc,r2CE4L4,r4CP4,vina,reference Vina - method Vina,0.2607940026124312,0.19436530068185495,0.32496747272213294,15,14,1,0,primary component contrast,0.000732421875
+bc,r2CE4L4,r4CP4,aiz,method predicted solved - reference predicted solved,0.7555555555555562,-3.555555555555555,4.8449999999999935,15,7,7,1,primary component contrast,1.0
+bc,r2CE4L4,r4CE4,vina,reference Vina - method Vina,-0.09524798260794753,-0.15042714448769912,-0.03817434959279163,15,3,12,0,primary component contrast,0.04180908203125
+bc,r2CE4L4,r4CE4,aiz,method predicted solved - reference predicted solved,19.97777777777778,15.199444444444449,25.17777777777778,15,15,0,0,primary component contrast,0.00048828125
+bc,r2CE4L4,r4CE4S4,vina,reference Vina - method Vina,-0.003725750711229381,-0.05887655570109704,0.05204882691966095,15,8,7,0,primary component contrast,1.0
+bc,r2CE4L4,r4CE4S4,aiz,method predicted solved - reference predicted solved,5.6,1.2000000000000024,9.644444444444446,15,10,5,0,primary component contrast,0.11494263487368601
+d,r4CE4,r4CE4,vina,reference Vina - method Vina,0.0,0.0,0.0,15,0,0,15,descriptive kappa sweep,
+d,r4CE4,r4CE4,aiz,method predicted solved - reference predicted solved,0.0,0.0,0.0,15,0,0,15,descriptive kappa sweep,
+d,r4CE4L1,r4CE4,vina,reference Vina - method Vina,-0.037505985895792904,-0.08826488093535166,0.016481550561057167,15,4,11,0,descriptive kappa sweep,
+d,r4CE4L1,r4CE4,aiz,method predicted solved - reference predicted solved,7.977777777777779,3.2888888888888914,12.244999999999992,15,12,2,1,descriptive kappa sweep,
+d,r2CE4L2,r4CE4,vina,reference Vina - method Vina,-0.0801817666159734,-0.126139153414303,-0.03610055632723619,15,5,10,0,descriptive kappa sweep,
+d,r2CE4L2,r4CE4,aiz,method predicted solved - reference predicted solved,14.422222222222222,10.19944444444444,18.84444444444444,15,15,0,0,descriptive kappa sweep,
+d,r2CE4L4,r4CE4,vina,reference Vina - method Vina,-0.09524798260794753,-0.15042714448769912,-0.03817434959279163,15,3,12,0,descriptive kappa sweep,
+d,r2CE4L4,r4CE4,aiz,method predicted solved - reference predicted solved,19.97777777777778,15.199444444444449,25.17777777777778,15,15,0,0,descriptive kappa sweep,
+d,r4CE4L8,r4CE4,vina,reference Vina - method Vina,-0.19514976845847207,-0.24124027234315873,-0.1530435654454752,15,0,15,0,descriptive kappa sweep,
+d,r4CE4L8,r4CE4,aiz,method predicted solved - reference predicted solved,27.95555555555556,21.977777777777778,34.44444444444444,15,15,0,0,descriptive kappa sweep,
+e,base_ep30,r4B0,vina,reference Vina - method Vina,0.8634113522370657,0.772413025806348,0.9616353509459231,15,15,0,0,descriptive learned-minus-frozen,
+e,base_ep30,r4B0,aiz,method predicted solved - reference predicted solved,-11.866666666666667,-13.711111111111112,-10.110555555555562,15,0,15,0,descriptive learned-minus-frozen,
+e,r2CE4L4,r4CE0,vina,reference Vina - method Vina,0.4481431163681876,0.36574057484997596,0.5245115767253768,15,15,0,0,descriptive learned-minus-frozen,
+e,r2CE4L4,r4CE0,aiz,method predicted solved - reference predicted solved,-11.644444444444442,-16.22222222222222,-7.355555555555554,15,0,14,1,descriptive learned-minus-frozen,

@@ -1,0 +1,276 @@
+{
+ "dirs": [
+  "/path/to/ARRE/results/independent_retro_20261025/trial/run",
+  "/path/to/ARRE/results/independent_retro_20261025/s1_held20/run"
+ ],
+ "n_molecules": 42000,
+ "n_units": 420,
+ "n_errors": 0,
+ "n_in_stock": 8,
+ "incomplete_units": [],
+ "units_without_aizynth_labels": 0,
+ "labels": {
+  "NW_B": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 84.93333333333332,
+   "aizynth_same_pct": 66.23333333333333,
+   "solved_within_k_pct": {
+    "1": 3.8666666666666667,
+    "2": 38.05,
+    "5": 61.1,
+    "10": 71.25,
+    "20": 76.25,
+    "50": 79.58333333333333,
+    "100": 81.73333333333333,
+    "200": 83.31666666666668,
+    "500": 84.93333333333334
+   },
+   "median_calls_to_solution": 3.0,
+   "terminations": {
+    "call_limit": 843,
+    "time_limit": 61,
+    "solved": 5096
+   }
+  },
+  "NW_F": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 86.83333333333334,
+   "aizynth_same_pct": 74.06666666666666,
+   "solved_within_k_pct": {
+    "1": 8.633333333333333,
+    "2": 43.75,
+    "5": 65.96666666666667,
+    "10": 74.93333333333332,
+    "20": 79.38333333333333,
+    "50": 82.5,
+    "100": 84.06666666666666,
+    "200": 85.48333333333333,
+    "500": 86.83333333333333
+   },
+   "median_calls_to_solution": 2.0,
+   "terminations": {
+    "solved": 5210,
+    "call_limit": 758,
+    "time_limit": 32
+   }
+  },
+  "NW_FZ": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 93.83333333333333,
+   "aizynth_same_pct": 86.65,
+   "solved_within_k_pct": {
+    "1": 74.13333333333333,
+    "2": 81.2,
+    "5": 85.65,
+    "10": 87.88333333333334,
+    "20": 89.48333333333333,
+    "50": 91.4,
+    "100": 92.38333333333333,
+    "200": 93.28333333333333,
+    "500": 93.83333333333333
+   },
+   "median_calls_to_solution": 1.0,
+   "terminations": {
+    "call_limit": 337,
+    "solved": 5630,
+    "time_limit": 33
+   }
+  },
+  "NW_SynGA": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 87.94999999999999,
+   "aizynth_same_pct": 77.88333333333334,
+   "solved_within_k_pct": {
+    "1": 51.300000000000004,
+    "2": 66.10000000000001,
+    "5": 73.95,
+    "10": 78.28333333333333,
+    "20": 80.85,
+    "50": 83.66666666666667,
+    "100": 85.43333333333332,
+    "200": 87.03333333333333,
+    "500": 87.94999999999999
+   },
+   "median_calls_to_solution": 1.0,
+   "terminations": {
+    "call_limit": 696,
+    "solved": 5277,
+    "time_limit": 23,
+    "exhausted": 4
+   }
+  },
+  "NW_SynGBO": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 93.26666666666667,
+   "aizynth_same_pct": 88.21666666666668,
+   "solved_within_k_pct": {
+    "1": 79.23333333333333,
+    "2": 83.76666666666667,
+    "5": 86.58333333333333,
+    "10": 88.2,
+    "20": 89.26666666666667,
+    "50": 90.7,
+    "100": 91.98333333333333,
+    "200": 92.63333333333334,
+    "500": 93.26666666666667
+   },
+   "median_calls_to_solution": 1.0,
+   "terminations": {
+    "solved": 5596,
+    "call_limit": 397,
+    "time_limit": 6,
+    "exhausted": 1
+   }
+  },
+  "S1H_RX": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 84.65,
+   "aizynth_same_pct": 67.04999999999998,
+   "solved_within_k_pct": {
+    "1": 2.8833333333333333,
+    "2": 38.15,
+    "5": 62.43333333333333,
+    "10": 71.55,
+    "20": 76.71666666666667,
+    "50": 80.25,
+    "100": 82.01666666666667,
+    "200": 83.33333333333334,
+    "500": 84.65
+   },
+   "median_calls_to_solution": 3.0,
+   "terminations": {
+    "solved": 5079,
+    "time_limit": 110,
+    "call_limit": 810,
+    "exhausted": 1
+   }
+  },
+  "S1H_RXCE": {
+   "n_molecules": 6000,
+   "n_targets": 20,
+   "independent_pct": 85.8,
+   "aizynth_same_pct": 74.55000000000001,
+   "solved_within_k_pct": {
+    "1": 7.183333333333334,
+    "2": 40.93333333333333,
+    "5": 65.36666666666666,
+    "10": 73.63333333333333,
+    "20": 78.76666666666667,
+    "50": 82.05,
+    "100": 83.58333333333333,
+    "200": 84.75,
+    "500": 85.8
+   },
+   "median_calls_to_solution": 3.0,
+   "terminations": {
+    "solved": 5148,
+    "call_limit": 780,
+    "time_limit": 72
+   }
+  }
+ },
+ "contrasts": {
+  "S1H_RXCE-S1H_RX": {
+   "independent": {
+    "n_targets": 20,
+    "mean_pp": 1.1500000000000004,
+    "sd_pp": 8.303789735813895,
+    "boot_ci_pp": [
+     -2.8166666666666655,
+     4.183333333333335
+    ],
+    "t_ci_pp": [
+     -2.736293224242761,
+     5.036293224242762
+    ],
+    "n_a_better": 14,
+    "n_b_better": 6
+   },
+   "aizynth_same_molecules": {
+    "n_targets": 20,
+    "mean_pp": 7.500000000000002,
+    "sd_pp": 7.805006640289984,
+    "boot_ci_pp": [
+     3.983333333333335,
+     10.516666666666666
+    ],
+    "t_ci_pp": [
+     3.8471444501411534,
+     11.15285554985885
+    ],
+    "n_a_better": 18,
+    "n_b_better": 2
+   }
+  },
+  "NW_F-S1H_RX": {
+   "independent": {
+    "n_targets": 20,
+    "mean_pp": 2.1833333333333362,
+    "sd_pp": 5.07542525513556,
+    "boot_ci_pp": [
+     -0.03333333333333082,
+     4.283333333333339
+    ],
+    "t_ci_pp": [
+     -0.19203880477760205,
+     4.5587054714442745
+    ],
+    "n_a_better": 13,
+    "n_b_better": 6
+   },
+   "aizynth_same_molecules": {
+    "n_targets": 20,
+    "mean_pp": 7.0166666666666675,
+    "sd_pp": 5.311881198911083,
+    "boot_ci_pp": [
+     4.7,
+     9.283333333333335
+    ],
+    "t_ci_pp": [
+     4.530629740385166,
+     9.50270359294817
+    ],
+    "n_a_better": 17,
+    "n_b_better": 2
+   }
+  },
+  "NW_F-NW_B": {
+   "independent": {
+    "n_targets": 20,
+    "mean_pp": 1.899999999999999,
+    "sd_pp": 4.6454404483390315,
+    "boot_ci_pp": [
+     -0.03333333333333589,
+     3.8999999999999986
+    ],
+    "t_ci_pp": [
+     -0.2741330539884781,
+     4.074133053988476
+    ],
+    "n_a_better": 13,
+    "n_b_better": 7
+   },
+   "aizynth_same_molecules": {
+    "n_targets": 20,
+    "mean_pp": 7.83333333333333,
+    "sd_pp": 5.266577836248425,
+    "boot_ci_pp": [
+     5.566666666666664,
+     10.066666666666658
+    ],
+    "t_ci_pp": [
+     5.368499033437219,
+     10.298167633229442
+    ],
+    "n_a_better": 20,
+    "n_b_better": 0
+   }
+  }
+ }
+}

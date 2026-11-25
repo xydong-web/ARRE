@@ -1,0 +1,31 @@
+"""One trainer class per PMO oracle (recipe-reconstructible by the watchdog):  PMO_<ORACLE>_oracle = baseline RxnFlow,  PMO_<ORACLE>_RFGSPP = RFG/SPP (`--set rfg_spp.enable=true ...`)."""
+from cgflow.lanes2d.config2d import Config2D
+from cgflow.lanes2d.rfg_spp_pmo import VinaMOOTrainer_RFGSPP
+from cgflow.lanes2d.pmo import PMOMOOTrainer
+
+ORACLES = ["GSK3B", "JNK3", "DRD2", "QED", "Osimertinib_MPO", "Perindopril_MPO", "Celecoxib_Rediscovery", "Median1"]
+
+
+class _Cfg:
+    def get_default_cfg(self):
+        return Config2D()
+
+
+def _make(oracle):
+    base = type(f"PMO_{oracle}_oracle", (_Cfg, PMOMOOTrainer), {"ORACLE": oracle})
+    lane = type(f"PMO_{oracle}_RFGSPP", (_Cfg, VinaMOOTrainer_RFGSPP), {"ORACLE": oracle})
+    return base, lane
+
+
+class PMO_oracle(_Cfg, PMOMOOTrainer):  # generic: the oracle is the name of the pseudo-pocket directory data/PMO/<ORACLE>
+    pass
+
+
+class PMO_RFGSPP(_Cfg, VinaMOOTrainer_RFGSPP):
+    pass
+
+
+for _o in ORACLES:
+    _b, _l = _make(_o)
+    globals()[_b.__name__] = _b
+    globals()[_l.__name__] = _l

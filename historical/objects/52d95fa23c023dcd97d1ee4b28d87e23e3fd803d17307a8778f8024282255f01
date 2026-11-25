@@ -1,0 +1,24 @@
+"""Config of the 2D (RxnFlow) trainers: rxnflow.config.Config + the lane switches (all default OFF).
+gflownet's StrictDataClass only accepts attributes listed in the class' OWN annotations, so every field of the parent is re-declared (as cgflow.config.Config does by hand)."""
+from dataclasses import MISSING as _NO, field, fields, make_dataclass
+
+from rxnflow import config as rcfg
+from cgflow.lanes.rhc_config import RHCConfig
+from cgflow.lanes.rfg_spp_config import RFGSPPConfig
+
+
+def _copy(f):
+    if f.default_factory is not _NO:
+        return field(default_factory=f.default_factory)
+    if f.default is not _NO:
+        return field(default=f.default)
+    return field()
+
+
+Config2D = make_dataclass(
+    "Config2D",
+    [(f.name, f.type, _copy(f)) for f in fields(rcfg.Config)]
+    + [("rfg_spp", RFGSPPConfig, field(default_factory=RFGSPPConfig)), ("rhc", RHCConfig, field(default_factory=RHCConfig))],
+    bases=(rcfg.Config,),
+)
+Config2D.__module__ = __name__

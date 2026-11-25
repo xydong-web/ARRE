@@ -1,0 +1,16 @@
+{
+  "original_sha256": "b7a932f07f7aca42af7d7f5cf71c0d9c7c15669cf7ca687909e3bde31c9fc48d",
+  "pptx_sha256": "31d1b2cf449df97e0216a0afc1f0b66cf2f0ab34e18b29cdf3ba122b49cae7a7",
+  "pdf_sha256": "67c974689152122a71e11cd903d6c7eef89174eea5190abf5588ca93a8dc6fb4",
+  "pptx_only_change": "Route-History Continuation -> Reaction-History Continuation",
+  "office": "LibreOffice 26.2.7.3 08dfbf04dcac895fc3a8d30dbf5a00de1b9dda5e",
+  "original_and_revised_pdf_text_agree_except_rhc": true,
+  "embedded_fonts": [
+    "BAAAAA+LiberationSans-Bold",
+    "CAAAAA+LiberationSans",
+    "DAAAAA+NotoSans-Regular",
+    "EAAAAA+NotoSans-Bold"
+  ],
+  "width_mm": 178,
+  "height_mm": 125.95229306060934
+}

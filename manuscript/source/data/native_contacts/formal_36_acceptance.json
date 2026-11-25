@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "expected_units": 36,
+  "accepted_units": 36,
+  "expected_source_candidates": 3600,
+  "reported_candidate_rows": 3600,
+  "plip_successes": 3592,
+  "missing_or_invalid": [],
+  "manifest_sha256": "8a6b0b7a1caaa7a5182cc9bd834cd6dc689521ac320e18573c228304c15b6b62",
+  "role_caveat": "PPARG 2PRG is an agonist structural reference; not an inhibitor-activity positive",
+  "interaction_caveat": "Native reference classes absent in a target are NA, not perfect recovery",
+  "inference": "Computational native interaction fingerprints, not measured potency or efficacy",
+  "statistics": "Paired seed and target summaries; do not use 3600 poses as independent biological target replicates",
+  "no_new_jobs_submitted": true
+}

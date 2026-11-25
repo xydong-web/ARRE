@@ -1,0 +1,84 @@
+{
+  "x4nw2B": {
+    "source": "CGFlow_parent",
+    "trainer_options": [],
+    "launch_records": 1,
+    "source_directory": "repo/cgflow_baseline"
+  },
+  "x4nw2F": {
+    "source": "CGFlow_guided",
+    "trainer_options": [
+      "--trainer",
+      "cgflow.lanes.combo:VinaMOOTrainer_ARRE",
+      "--set",
+      "rfg_spp.enable=true",
+      "--set",
+      "rfg_spp.group_norm=true",
+      "--set",
+      "rfg_spp.syn_prior={PRIOR}",
+      "--set",
+      "rfg_spp.syn_lookahead=true",
+      "--set",
+      "rhc.enable=true",
+      "--set",
+      "rfg_spp.syn_kappa=4.0"
+    ],
+    "launch_records": 1,
+    "source_directory": "frozen/round2_integ_4"
+  },
+  "x4nw2FZ": {
+    "source": "CGFlow_guided",
+    "trainer_options": [
+      "--trainer",
+      "cgflow.lanes.combo:VinaMOOTrainer_ARRE",
+      "--set",
+      "rfg_spp.enable=true",
+      "--set",
+      "rfg_spp.group_norm=true",
+      "--set",
+      "rfg_spp.syn_prior={PRIOR}",
+      "--set",
+      "rfg_spp.syn_lookahead=true",
+      "--set",
+      "rhc.enable=true",
+      "--set",
+      "rfg_spp.syn_kappa=4.0",
+      "--set",
+      "opt.learning_rate=0.0",
+      "--set",
+      "algo.tb.Z_learning_rate=0.0"
+    ],
+    "launch_records": 1,
+    "source_directory": "frozen/round2_integ_4"
+  },
+  "x4nw2rxB": {
+    "source": "RxnFlow",
+    "trainer_options": [
+      "--trainer",
+      "cgflow.lanes2d.trainers2d:UniDockMOOTrainer_oracle"
+    ],
+    "launch_records": 1,
+    "source_directory": "frozen/round4_2d"
+  },
+  "x4nw2rxCE": {
+    "source": "RxnFlow",
+    "trainer_options": [
+      "--trainer",
+      "cgflow.lanes2d.trainers2d:UniDockMOOTrainer_ARRE",
+      "--set",
+      "rfg_spp.enable=true",
+      "--set",
+      "rfg_spp.group_norm=true",
+      "--set",
+      "rfg_spp.syn_prior={PRIOR}",
+      "--set",
+      "rfg_spp.syn_lookahead=true",
+      "--set",
+      "rfg_spp.syn_kappa=4.0",
+      "--set",
+      "rhc.enable=true"
+    ],
+    "launch_records": 6,
+    "source_directory": "frozen/round4_2d"
+  }
+}

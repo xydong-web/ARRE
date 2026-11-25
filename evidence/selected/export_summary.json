@@ -1,0 +1,12 @@
+{
+  "units": 795,
+  "candidates": 79500,
+  "aizynth_outcomes": 79500,
+  "aizynth_with_trees": 79500,
+  "aizynth_solved": 55671,
+  "aizynth_isomeric_aliases": 160,
+  "retrostar_outcomes": 79500,
+  "retrostar_solved": 65071,
+  "retrostar_errors": 0,
+  "forward_paths": 1
+}

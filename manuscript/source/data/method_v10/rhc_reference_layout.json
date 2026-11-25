@@ -1,0 +1,27 @@
+{
+  "reference": "user-supplied RHC crop 2026-10-29",
+  "allocation": {
+    "nodes": 5,
+    "edges": 4
+  },
+  "onpolicy": {
+    "nodes": 6,
+    "edges": 6,
+    "teal": 4,
+    "gray": 2
+  },
+  "prefix1": {
+    "nodes": 5,
+    "edges": 4,
+    "teal": 4,
+    "gray": 1
+  },
+  "prefix2": {
+    "nodes": 6,
+    "edges": 5,
+    "teal": 0,
+    "gray": 6
+  },
+  "interpretation": "schematic graph glyphs matching reference, not action count encoding",
+  "native_editable": true
+}

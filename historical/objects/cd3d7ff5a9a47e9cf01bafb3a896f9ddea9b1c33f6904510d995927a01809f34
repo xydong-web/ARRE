@@ -1,0 +1,603 @@
+"""RHC: elite-prefix resampling (destroy-and-repair on synthesis routes) + discounted-bandit behaviour portfolio
+          + exact-budget dedupe, for the 3D compositional GFlowNet (3DSynthFlow / CGFlow).
+
+Mechanism (see docs/RHC_PREFIX.md and docs/rhc/REPORT.md)
+-----------------------------------------------------------------
+* ModeTracker   keeps every docked molecule and the evaluation-protocol set of diverse top modes (QED > 0.5, ranked by Vina,
+                greedy diversity rule of rxnflow.utils.chem_metrics.compute_diverse_top_k).  The first `elite_size` modes form the
+                elite archive; "hits" are new members of the evaluated top-`k_modes` set.
+* Prefix arm    a share of the 64 slots per iteration re-builds an elite synthesis route up to step k (forced, the pose flow is
+                re-run from scratch) and lets the CURRENT policy complete it.  The offspring condition is drawn from the Bayesian
+                posterior p(c | x_elite) ~ p(c) R_c(x_elite) / Z(c)  (self-normalised importance resampling from the prior).
+                The trajectories enter the unchanged TB loss; the loss is valid for any full-support training distribution.
+* Portfolio     discounted Thompson sampling over {on-policy, prefix-1, prefix-2} with per-call hit rates (floor / cap on shares).
+* Dedupe        every docked score is cached; duplicates are not re-docked and the freed oracle calls are re-spent on extra
+                on-policy samples so that exactly `num_from_policy` NOVEL molecules are docked per iteration.
+
+Everything is default-off: with `rhc.enable=false` the trainer subclass takes the baseline code path.
+"""
+from __future__ import annotations
+
+import bisect
+import math
+import time
+from pathlib import Path
+
+import numpy as np
+import torch
+from rdkit import Chem, DataStructs
+from torch import Tensor
+
+from gflownet.data.data_source import DataSource
+from rxnflow.base.gflownet.sqlite_log import CustomSQLiteLogHook
+
+from rxnflow.algo.trajectory_balance import SynthesisTB as SynthesisTB3D_semla  # 2D port
+from rxnflow.algo.synthetic_path_sampling import SyntheticPathSampler as SyntheticPathSampler3D_semla  # 2D port
+from cgflow.lanes2d.task2d import UniDockTaskAdapter as VinaMOOTask_semla  # 2D port: Uni-Dock MOO task exposing the 3D tasks' batch-oracle hook
+from rxnflow.tasks.unidock import UniDockMOOTrainer as VinaMOOTrainer_semla  # 2D port
+
+ARMS = ("onpolicy", "prefix1", "prefix2")
+ALPHA0, BETA0 = 0.5, 4.5  # Beta prior of the per-call hit rate (mean 0.1, strength 5)
+FAIL_R = 1.5e-4  # r_vina <= FAIL_R  <=>  not a negative Vina score (clamped / failed); same rule as eval/extract_topk.py
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# sampler: forced prefix
+# --------------------------------------------------------------------------------------------------------------------
+class SyntheticPathSampler3D_semlaRHC(SyntheticPathSampler3D_semla):
+    """3D sampler that can replay a given action prefix.  `forced[i]` is the list of RxnActions to force for trajectory i of
+    the NEXT `sample_from_model` call (None / shorter list => sampled from the policy as usual)."""
+
+    forced: list | None = None
+
+    def sample_from_model(self, model, n, cond_info, random_action_prob=0.0):
+        self._step = -1
+        self._active = list(range(n))
+        try:
+            return super().sample_from_model(model, n, cond_info, random_action_prob)
+        finally:
+            self._step = -1
+            self._active = []
+
+    def _estimate_policy(self, model, torch_graphs, cond_info, not_done_mask):
+        # one call per loop iteration of sample_from_model  =>  step index and the (ordered) indices of the active trajectories
+        self._step += 1
+        self._active = [i for i, nd in enumerate(not_done_mask) if nd]
+        assert len(self._active) == len(torch_graphs)
+        return super()._estimate_policy(model, torch_graphs, cond_info, not_done_mask)
+
+    def _sample_action(self, torch_graphs, fwd_cat, random_action_prob=0):
+        actions = super()._sample_action(torch_graphs, fwd_cat, random_action_prob)
+        if self.forced is not None:
+            for j, i in enumerate(self._active):
+                f = self.forced[i] if i < len(self.forced) else None
+                if f is not None and self._step < len(f):
+                    actions[j] = self.ctx.GraphAction_to_ActionIndex(torch_graphs[j], f[self._step])
+        return actions
+
+
+class SynthesisTB3D_semlaRHC(SynthesisTB3D_semla):
+    def setup_graph_sampler(self):
+        self.graph_sampler = SyntheticPathSampler3D_semlaRHC(
+            self.ctx,
+            self.env,
+            self.action_subsampler,
+            max_len=self.max_len,
+            importance_temp=self.importance_temp,
+            sample_temp=self.sample_temp,
+            correct_idempotent=self.cfg.do_correct_idempotent,
+            pad_with_terminal_state=self.cfg.do_parameterize_p_b,
+            num_workers=self.global_cfg.num_workers_retrosynthesis,
+        )
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# task: exact-budget dedupe
+# --------------------------------------------------------------------------------------------------------------------
+class VinaMOOTask_semlaRHC(VinaMOOTask_semla):
+    """Oracle wrapper that never docks the same canonical SMILES twice (baseline: only the best 2000 QED>0.5 molecules are cached)."""
+
+    def __init__(self, cfg, wrap_model):
+        super().__init__(cfg, wrap_model)
+        self.rhc_cfg = cfg.rhc
+        self.score_cache: dict[str, float] = {}
+        self.dock_calls_last = 0
+        self.cache_hits_last = 0
+
+    def _calc_vina_score_batch(self, objs):
+        if not (self.rhc_cfg.enable and self.rhc_cfg.dedupe):
+            return super()._calc_vina_score_batch(objs)
+        smiles = [Chem.MolToSmiles(o) for o in objs]
+        first: dict[str, int] = {}
+        hits = 0
+        for i, s in enumerate(smiles):
+            if s in self.score_cache:
+                hits += 1
+            elif s not in first:
+                first[s] = i
+            else:
+                hits += 1  # duplicate inside the batch
+        if first:
+            idx = list(first.values())
+            new_scores = super()._calc_vina_score_batch([objs[i] for i in idx])
+            for s, sc in zip(first.keys(), new_scores, strict=True):
+                self.score_cache[s] = float(sc)
+        self.dock_calls_last = len(first)
+        self.cache_hits_last = hits
+        return [self.score_cache[s] for s in smiles]
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# bookkeeping: evaluation-protocol modes / elite archive
+# --------------------------------------------------------------------------------------------------------------------
+class ModeTracker:
+    """All docked molecules with negative Vina and QED > qed_min, plus the greedy diverse top set of the evaluation protocol."""
+
+    def __init__(self, k_modes: int, k_elite: int, thresh: float, qed_min: float):
+        self.k_modes, self.k_elite, self.thresh, self.qed_min = k_modes, k_elite, thresh, qed_min
+        self.history: dict[str, dict] = {}
+        self.fps: dict[str, object] = {}
+        self._sorted: list[tuple[float, str]] = []
+        self.modes: list[str] = []  # greedy diverse list, best first (length <= k_elite)
+
+    def eligible(self, vina: float, qed: float) -> bool:
+        return vina < 0.0 and qed > self.qed_min
+
+    def add(self, smi: str, vina: float, qed: float, actions: list, arm: str, it: int, obj_props: tuple, cond: dict) -> bool:
+        if smi in self.history or not self.eligible(vina, qed):
+            return False
+        mol = Chem.MolFromSmiles(smi)
+        if mol is None:
+            return False
+        self.fps[smi] = Chem.RDKFingerprint(mol)
+        self.history[smi] = dict(vina=vina, qed=qed, actions=actions, arm=arm, it=it, obj_props=obj_props, cond=cond)
+        bisect.insort(self._sorted, (vina, smi))
+        return True
+
+    def refresh(self) -> set[str]:
+        """Recompute the greedy diverse list; return the molecules that newly entered the evaluated top-k_modes set."""
+        before = set(self.modes[: self.k_modes])
+        acc: list[str] = []
+        acc_fps = []
+        for _, smi in self._sorted:
+            fp = self.fps[smi]
+            if acc_fps and max(DataStructs.BulkTanimotoSimilarity(fp, acc_fps)) >= self.thresh:
+                continue
+            acc.append(smi)
+            acc_fps.append(fp)
+            if len(acc) >= self.k_elite:
+                break
+        self.modes = acc
+        return set(acc[: self.k_modes]) - before
+
+    def elites(self, min_len: int) -> list[str]:
+        return [s for s in self.modes if len(self.history[s]["actions"]) >= min_len]
+
+    def top_stats(self) -> tuple[float, int, int]:
+        top = self.modes[: self.k_modes]
+        if not top:
+            return 0.0, 0, 0
+        v = [self.history[s]["vina"] for s in top]
+        return float(np.mean(v)), int(sum(x < -10.0 for x in v)), len(top)
+
+    # ---- cull-safe resume: history is the only primary state; fingerprints / sorted list / greedy modes are re-derived ----------
+    def state_dict(self) -> dict:
+        return {"history": self.history}
+
+    def load_state_dict(self, d: dict) -> None:
+        self.history = d["history"]
+        self.fps = {s: Chem.RDKFingerprint(Chem.MolFromSmiles(s)) for s in self.history}
+        self._sorted = sorted((h["vina"], s) for s, h in self.history.items())  # same order as the incremental bisect.insort
+        self.modes = []
+        self.refresh()
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# behaviour portfolio: discounted Thompson sampling
+# --------------------------------------------------------------------------------------------------------------------
+class ZEstimator:
+    """Kernel-regressed TB-implied log-partition.
+
+    At the TB optimum the conditional-flow head satisfies  log Z(c) = E_{tau ~ P_F(.|c)} [ log R_c(x_tau) - sum_t log P_F(a_t | s_t) ] + KL(P_F || P*),
+    i.e. the conditional mean  v(c) = E[log R_c - log P_F(tau)]  is the SQUARED-ERROR-OPTIMAL value of the head (it is what the TB loss regresses the head to) and a
+    Jensen lower bound of log Z that becomes tight as the policy calibrates.  The head itself needs thousands of steps to reach it; a local average over recent
+    on-policy samples reaches it immediately.  Only valid trajectories are used (invalid ones carry the -75 clamp and would dominate a mean in log space).
+    """
+
+    def __init__(self, capacity: int, min_n: int, bw_beta: float, bw_w: float):
+        self.cap, self.min_n = capacity, min_n
+        self.bw = np.array([bw_beta, bw_w], dtype=np.float64)
+        self.c = np.zeros((0, 2))
+        self.v = np.zeros(0)
+
+    def __len__(self):
+        return len(self.v)
+
+    def add(self, beta, w, v) -> None:
+        c = np.stack([np.asarray(beta, np.float64) / 64.0, np.asarray(w, np.float64)], 1)
+        self.c = np.concatenate([self.c, c])[-self.cap :]
+        self.v = np.concatenate([self.v, np.asarray(v, np.float64)])[-self.cap :]
+
+    def predict(self, beta, w):
+        """-> (log Z estimate [n], usable mask [n]); unusable entries (too few neighbours) must fall back to the head."""
+        n = len(beta)
+        if len(self.v) < self.min_n:
+            return np.full(n, np.nan), np.zeros(n, bool)
+        q = np.stack([np.asarray(beta, np.float64) / 64.0, np.asarray(w, np.float64)], 1)
+        d = (q[:, None, :] - self.c[None, :, :]) / self.bw
+        k = np.exp(-0.5 * (d * d).sum(-1))  # [n, m]
+        den = k.sum(1)
+        ok = den > 1.0  # at least about one effective neighbour
+        est = np.where(ok, (k @ self.v) / np.maximum(den, 1e-12), np.nan)
+        return est, ok
+
+    def state_dict(self) -> dict:
+        return {"c": self.c.copy(), "v": self.v.copy()}
+
+    def load_state_dict(self, d: dict) -> None:
+        self.c, self.v = np.array(d["c"], dtype=np.float64), np.array(d["v"], dtype=np.float64)
+
+
+class Portfolio:
+    def __init__(self, cfg, seed: int):
+        self.cfg = cfg
+        self.rng = np.random.RandomState(seed + 7919)
+        self.alpha = np.full(len(ARMS), ALPHA0)
+        self.beta = np.full(len(ARMS), BETA0)
+        self.last_theta = np.zeros(len(ARMS))
+
+    def allocate(self, n_total: int, avail: dict[str, bool]) -> dict[str, int]:
+        cfg = self.cfg
+        pref_arms = [a for a in ARMS[1:] if avail.get(a, False)]
+        if not pref_arms:
+            return {"onpolicy": n_total, "prefix1": 0, "prefix2": 0}
+        theta = self.rng.beta(self.alpha, self.beta)
+        self.last_theta = theta
+        if cfg.bandit:
+            tot = theta[0] + sum(theta[ARMS.index(a)] for a in pref_arms)
+            frac = {a: min(cfg.prefix_cap, theta[ARMS.index(a)] / tot) for a in pref_arms}
+        else:
+            frac = {a: min(cfg.prefix_cap, cfg.fixed_prefix_frac / len(pref_arms)) for a in pref_arms}
+        tot_p = sum(frac.values())
+        room = 1.0 - cfg.onpolicy_floor
+        if tot_p > room:
+            frac = {a: f * room / tot_p for a, f in frac.items()}
+            tot_p = room
+        fr = np.array([1.0 - tot_p] + [frac.get(a, 0.0) for a in ARMS[1:]])
+        raw = fr * n_total
+        cnt = np.floor(raw).astype(int)
+        for j in np.argsort(-(raw - cnt))[: n_total - cnt.sum()]:
+            cnt[j] += 1
+        return dict(zip(ARMS, (int(c) for c in cnt), strict=True))
+
+    def update(self, calls: dict[str, int], hits: dict[str, int]) -> None:
+        g = self.cfg.bandit_discount
+        for j, a in enumerate(ARMS):
+            c, h = calls.get(a, 0), min(hits.get(a, 0), calls.get(a, 0))
+            self.alpha[j] = ALPHA0 + g * (self.alpha[j] - ALPHA0) + h
+            self.beta[j] = BETA0 + g * (self.beta[j] - BETA0) + (c - h)
+
+    def state_dict(self) -> dict:
+        return {"alpha": self.alpha.copy(), "beta": self.beta.copy(), "last_theta": self.last_theta.copy(), "rng": self.rng.get_state()}
+
+    def load_state_dict(self, d: dict) -> None:
+        self.alpha, self.beta, self.last_theta = (np.array(d[k], dtype=np.float64) for k in ("alpha", "beta", "last_theta"))
+        self.rng.set_state(d["rng"])
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# lane state: planning, offspring conditions, post-oracle updates
+# --------------------------------------------------------------------------------------------------------------------
+class RHCState:
+    def __init__(self, cfg, log_dir: str | Path, seed: int):
+        self.cfg = cfg.rhc
+        self.tracker = ModeTracker(self.cfg.k_modes, self.cfg.elite_size, self.cfg.elite_sim, self.cfg.qed_min)
+        self.portfolio = Portfolio(self.cfg, seed)
+        self.rng = np.random.RandomState(seed + 4242)
+        self.zest = ZEstimator(self.cfg.z_capacity, self.cfg.z_min_n, self.cfg.z_bw_beta, self.cfg.z_bw_w)
+        self.cond_stats: dict[str, float] = {}
+        self.gen = torch.Generator().manual_seed(seed + 99)
+        self.seen: set[str] = set()  # every molecule that has been docked
+        self.n_docked_total = 0
+        self.arm_file = None
+        if self.cfg.log_arms:
+            d = Path(log_dir) / "rhc"
+            d.mkdir(parents=True, exist_ok=True)
+            self.arm_file = open(d / "arms.tsv", "a", buffering=1)
+            self.arm_file.write("it\tarm\tsmiles\tvina\tqed\thit\telite\n")
+
+    # ---- cull-safe resume ---------------------------------------------------------------------------------------------
+    def state_dict(self) -> dict:
+        return {"tracker": self.tracker.state_dict(), "portfolio": self.portfolio.state_dict(), "rng": self.rng.get_state(), "zest": self.zest.state_dict(),
+                "cond_stats": dict(self.cond_stats), "gen": self.gen.get_state(), "seen": set(self.seen), "n_docked_total": int(self.n_docked_total)}
+
+    def load_state_dict(self, d: dict) -> None:
+        self.tracker.load_state_dict(d["tracker"])
+        self.portfolio.load_state_dict(d["portfolio"])
+        self.rng.set_state(d["rng"])
+        self.zest.load_state_dict(d["zest"])
+        self.cond_stats = dict(d["cond_stats"])
+        self.gen.set_state(d["gen"])
+        self.seen = set(d["seen"])
+        self.n_docked_total = int(d["n_docked_total"])
+
+    # ---- planning -------------------------------------------------------------------------------------------------
+    def plan(self, it: int, n: int) -> dict[str, int]:
+        avail = {a: False for a in ARMS[1:]}
+        if it >= self.cfg.warmup_iters:
+            avail["prefix1"] = len(self.tracker.elites(2)) >= self.cfg.min_elites
+            avail["prefix2"] = len(self.tracker.elites(3)) >= self.cfg.min_elites
+        return self.portfolio.allocate(n, avail)
+
+    def prefix_specs(self, plan: dict[str, int]) -> list[dict]:
+        specs = []
+        for arm in ARMS[1:]:
+            n = plan.get(arm, 0)
+            if n <= 0:
+                continue
+            k = int(arm[-1])
+            elites = self.tracker.elites(k + 1)
+            ranks = np.arange(len(elites))
+            w = 1.0 / (self.cfg.rank_kappa * max(len(elites), 1) + ranks + 1.0)
+            w = w / w.sum()
+            picks = self.rng.choice(len(elites), n, replace=n > len(elites), p=w)
+            for pi in picks:
+                e = self.tracker.history[elites[pi]]
+                specs.append(dict(arm=arm, k=k, forced=list(e["actions"][:k]), elite=elites[pi], obj_props=e["obj_props"], cond=e["cond"]))
+        return specs
+
+    def offspring_cond(self, specs: list[dict], task, model, it: int) -> dict[str, Tensor]:
+        n, mode = len(specs), self.cfg.cond_mode
+        if mode == "prior":
+            return task.sample_conditional_information(n, it)
+        if mode == "inherit":
+            return {k: torch.stack([s["cond"][k] for s in specs]) for k in specs[0]["cond"]}
+        assert mode == "posterior", mode
+        M = self.cfg.hindsight_candidates
+        ci = task.sample_conditional_information(n * M, it)  # prior draws p(c)
+        op = torch.tensor([s["obj_props"] for s in specs], dtype=torch.float32).repeat_interleave(M, dim=0)
+        log_r = task.cond_info_to_logreward(ci, op).float().view(n, M)
+        dev = next(model.parameters()).device
+        with torch.no_grad():
+            log_z = model.logZ(ci["encoding"].to(dev))[:, 0].float().cpu()  # [n*M] trained head
+        used_kernel = 0.0
+        if self.cfg.z_estimator == "kernel":
+            est, ok = self.zest.predict(ci["beta"].numpy(), ci["preferences"][:, 0].numpy())
+            est_t, ok_t = torch.from_numpy(est).float(), torch.from_numpy(ok)
+            used_kernel = float(ok_t.float().mean()) if len(est) else 0.0
+            log_z = torch.where(ok_t, est_t, log_z)
+        log_z = log_z.view(n, M)
+        w = torch.softmax(log_r - log_z, dim=1)
+        ess = 1.0 / (w * w).sum(1)  # effective sample size of the self-normalised importance resampler
+        idx = torch.multinomial(w, 1, generator=self.gen)[:, 0]
+        sel = torch.arange(n) * M + idx
+        out = {k: v[sel].clone() for k, v in ci.items()}
+        skip = ess < self.cfg.ess_min * M
+        if skip.any():  # degenerate resampler => keep the elite's own condition
+            for k in out:
+                inh = torch.stack([s["cond"][k] for s in specs]).to(out[k].dtype)
+                out[k][skip] = inh[skip]
+        self.cond_stats = {
+            "rhc/cond_ess": float(ess.mean()),
+            "rhc/cond_skipped": float(skip.float().mean()),
+            "rhc/cond_beta_mean": float(out["beta"].mean()),
+            "rhc/cond_kernel_frac": used_kernel,
+        }
+        return out
+
+    # ---- dedupe helpers -------------------------------------------------------------------------------------------
+    @staticmethod
+    def novel_smiles(trajs: list[dict], cache) -> list[str]:
+        out, seen = [], set()
+        for t in trajs:
+            if not t.get("is_valid", True):
+                continue
+            s = t["result"].smi
+            if s not in cache and s not in seen:
+                seen.add(s)
+                out.append(s)
+        return out
+
+    @staticmethod
+    def trim_to_budget(trajs: list[dict], cache, budget: int) -> list[dict]:
+        """Keep trajectories whose molecule is cached/valid-duplicate or among the first `budget` distinct novel ones."""
+        kept, novel = [], set()
+        for t in trajs:
+            if t.get("is_valid", True):
+                s = t["result"].smi
+                if s not in cache:
+                    if s not in novel:
+                        if len(novel) >= budget:
+                            continue
+                        novel.add(s)
+            kept.append(t)
+        return kept
+
+    # ---- after the oracle -------------------------------------------------------------------------------------------
+    def after_oracle(self, it: int, trajs: list[dict], task, novel_before: set[str], dt_plan: float) -> dict[str, float]:
+        calls = {a: 0 for a in ARMS}
+        cand = []  # (smi, arm) first occurrences docked this iteration
+        this_iter: dict[str, str] = {}
+        n_added = 0
+        for t in trajs:
+            if not t.get("is_valid", True):
+                continue
+            smi = t["result"].smi
+            if smi in this_iter or smi in self.seen:
+                continue
+            arm = t.get("arm", "onpolicy")
+            this_iter[smi] = arm
+            calls[arm] += 1
+            op = t["obj_props"]
+            r_vina, qed = float(op[0]), float(op[1])
+            vina = -10.0 * r_vina if r_vina > FAIL_R else 0.0
+            actions = [a for (_, a) in t["traj"]]
+            ci = {k: (v.detach().cpu().clone() if torch.is_tensor(v) else v) for k, v in t["cond_info"].items()}
+            if self.tracker.add(smi, vina, qed, actions, arm, it, (r_vina, qed), ci):
+                n_added += 1
+            cand.append((smi, arm, vina, qed, t.get("elite", "-")))
+        self.seen.update(this_iter.keys())
+        self.n_docked_total += len(this_iter)
+        entrants = self.tracker.refresh()
+        hits = {a: 0 for a in ARMS}
+        hit_set = set()
+        for smi in entrants:
+            if smi in this_iter:
+                hits[this_iter[smi]] += 1
+                hit_set.add(smi)
+        self.portfolio.update(calls, hits)
+        # TB-implied value of the ON-POLICY samples = training data of the kernel log Z estimator
+        zb, zw, zv = [], [], []
+        for t in trajs:
+            if t.get("arm", "onpolicy") != "onpolicy" or not t.get("is_valid", True):
+                continue
+            zb.append(float(t["cond_info"]["beta"]))
+            zw.append(float(t["cond_info"]["preferences"][0]))
+            zv.append(float(t["log_reward"]) - float(t["fwd_logprob"]))
+        if zv:
+            self.zest.add(np.array(zb), np.array(zw), np.array(zv))
+        if self.arm_file is not None:
+            for smi, arm, vina, qed, elite in cand:
+                self.arm_file.write(f"{it}\t{arm}\t{smi}\t{vina:.3f}\t{qed:.3f}\t{int(smi in hit_set)}\t{elite}\n")
+        top_mean, n_lt10, n_top = self.tracker.top_stats()
+        elite_v = [self.tracker.history[s]["vina"] for s in self.tracker.modes]
+        st = {
+            "rhc/top_mean_vina": top_mean,
+            "rhc/top_n": float(n_top),
+            "rhc/top_n_lt10": float(n_lt10),
+            "rhc/elite_n": float(len(self.tracker.modes)),
+            "rhc/elite_mean_vina": float(np.mean(elite_v)) if elite_v else 0.0,
+            "rhc/dock_calls": float(getattr(task, "dock_calls_last", len(this_iter))),
+            "rhc/cache_hits": float(getattr(task, "cache_hits_last", 0)),
+            "rhc/docked_total": float(self.n_docked_total),
+            "rhc/plan_s": dt_plan,
+        }
+        st["rhc/zest_n"] = float(len(self.zest))
+        st.update(self.cond_stats)
+        for j, a in enumerate(ARMS):
+            st[f"rhc/calls_{a}"] = float(calls[a])
+            st[f"rhc/hits_{a}"] = float(hits[a])
+            st[f"rhc/theta_{a}"] = float(self.portfolio.alpha[j] / (self.portfolio.alpha[j] + self.portfolio.beta[j]))
+        return st
+
+
+# --------------------------------------------------------------------------------------------------------------------
+# data source + trainer
+# --------------------------------------------------------------------------------------------------------------------
+class DataSourceC(DataSource):
+    def do_sample_model_RHC(self, model, state: RHCState):
+        cfg = state.cfg
+
+        def sample_group(n: int, cond: dict[str, Tensor], p: float, arm: str, forced=None) -> list[dict]:
+            sampler = self.algo.graph_sampler
+            sampler.forced = forced
+            try:
+                grp = self.algo.create_training_data_from_own_samples(model, n, cond["encoding"], p)
+            finally:
+                sampler.forced = None
+            self.set_traj_cond_info(grp, cond)
+            for g in grp:
+                g["arm"] = arm
+            return grp
+
+        def iterator():
+            n_pol = self.cfg.algo.num_from_policy
+            task = self.task
+            while self.active:
+                t = self.current_iter
+                p = self.algo.get_random_action_prob(t)
+                t0 = time.time()
+                plan = state.plan(t, n_pol)
+                specs = state.prefix_specs(plan)
+                dt_plan = time.time() - t0
+                trajs: list[dict] = []
+                # on-policy slots (identical code path to the baseline iterator)
+                n_on = n_pol - len(specs)
+                if n_on > 0:
+                    ci = task.sample_conditional_information(n_on, t)
+                    trajs += sample_group(n_on, ci, p, "onpolicy")
+                # prefix slots
+                if specs:
+                    t1 = time.time()
+                    cond = state.offspring_cond(specs, task, model, t)
+                    dt_plan += time.time() - t1
+                    grp = sample_group(len(specs), cond, p, "prefix", forced=[s["forced"] for s in specs])
+                    for g, s in zip(grp, specs, strict=True):
+                        g["arm"] = s["arm"]
+                        g["elite"] = s["elite"]
+                        if g.get("is_valid", True):  # sanity: the forced prefix is really in the trajectory
+                            acts = [a for (_, a) in g["traj"]]
+                            assert len(acts) >= s["k"] and all(acts[j] == s["forced"][j] for j in range(s["k"])), "forced prefix lost"
+                    trajs += grp
+                # exact-budget dedupe: top-up with on-policy samples until n_pol NOVEL molecules are available
+                if cfg.dedupe:
+                    cache = task.score_cache
+                    novel = state.novel_smiles(trajs, cache)
+                    rounds = 0
+                    while len(novel) < n_pol and rounds < cfg.topup_rounds:
+                        n_more = max(1, int(math.ceil((n_pol - len(novel)) * (1.0 + cfg.topup_margin))))
+                        ci = task.sample_conditional_information(n_more, t)
+                        trajs += sample_group(n_more, ci, p, "onpolicy")
+                        novel = state.novel_smiles(trajs, cache)
+                        rounds += 1
+                    trajs = state.trim_to_budget(trajs, cache, n_pol)
+                    novel_before = set(state.novel_smiles(trajs, cache))
+                else:
+                    rounds, novel_before = 0, set()
+                self.compute_properties(trajs, mark_as_online=True)
+                self.compute_log_rewards(trajs)
+                batch_info = self.call_sampling_hooks(trajs)
+                stats = state.after_oracle(t, trajs, task, novel_before, dt_plan)
+                stats["rhc/topup_rounds"] = float(rounds)
+                stats["rhc/batch_size"] = float(len(trajs))
+                batch_info.update(stats)
+                yield (trajs, batch_info)
+
+        self.iterators.append(iterator)
+        return self
+
+
+class VinaMOOTrainer_RHC(VinaMOOTrainer_semla):
+    """RHC trainer.  Select with:  run_opt.py --trainer cgflow.lanes.rhc:VinaMOOTrainer_RHC --set rhc.enable=true"""
+
+    def setup_task(self):
+        self.task = VinaMOOTask_semlaRHC(cfg=self.cfg, wrap_model=self._wrap_for_mp)
+
+    def setup_algo(self):
+        assert self.cfg.algo.method == "TB"
+        self.algo = SynthesisTB3D_semlaRHC(self.env, self.ctx, self.cfg)
+
+    def build_training_data_loader(self):
+        if not self.cfg.rhc.enable:
+            return super().build_training_data_loader()
+        assert self.cfg.num_workers == 0, "RHC keeps its state in the main process"
+        assert not self.cfg.replay.use and self.cfg.algo.num_from_dataset == 0
+        model = self._wrap_for_mp(self.sampling_model)
+        state = RHCState(self.cfg, self.cfg.log_dir, self.cfg.seed)
+        self.rhc_state = state  # (not `lane_state`: RFG/SPP uses that name and the two lanes are composed in cgflow.lanes.combo)
+        pend = getattr(self, "_rs_pending_c", None)
+        if pend is not None:  # resume: the checkpoint is applied as soon as the lane state exists (it is created when the loader is built)
+            state.load_state_dict(pend)
+            self._rs_pending_c = None
+        src = DataSourceC(self.cfg, self.ctx, self.algo, self.task, replay_buffer=None)
+        src.do_sample_model_RHC(model, state)
+        if self.cfg.log_dir:
+            src.add_sampling_hook(CustomSQLiteLogHook(str(Path(self.cfg.log_dir) / "train"), self.ctx))
+        for hook in self.sampling_hooks:
+            src.add_sampling_hook(hook)
+        return self._make_data_loader(src)
+
+    # cull-safe resume (run/rs_support.py): checkpoint = lane state + the oracle's score cache
+    def rs_extra_state(self):
+        st = getattr(self, "rhc_state", None)
+        if st is None:
+            return {"rhc": None}
+        return {"rhc": {"state": st.state_dict(), "score_cache": dict(self.task.score_cache)}}
+
+    def rs_load_extra_state(self, ex):
+        d = ex.get("rhc")
+        if d is None:
+            return
+        assert self.cfg.rhc.enable, "checkpoint carries RHC state but rhc.enable is false"
+        self.task.score_cache = dict(d["score_cache"])
+        self._rs_pending_c = d["state"]

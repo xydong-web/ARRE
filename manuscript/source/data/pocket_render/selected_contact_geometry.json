@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "A_HIS191",
+    "endpoint_a": [
+      16.19,
+      2.554,
+      1.867
+    ],
+    "endpoint_b": [
+      15.682,
+      4.899,
+      0.457
+    ],
+    "distance_A": 2.783017966165508,
+    "angle_deg": 141.157877793083,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "B_ASP16",
+    "endpoint_a": [
+      18.41,
+      8.128,
+      10.32
+    ],
+    "endpoint_b": [
+      15.722,
+      8.969,
+      9.815
+    ],
+    "distance_A": 2.86140699656655,
+    "angle_deg": 159.59258985811348,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "A_SER275",
+    "endpoint_a": [
+      13.793,
+      10.426,
+      1.694
+    ],
+    "endpoint_b": [
+      13.449,
+      10.724,
+      -0.633
+    ],
+    "distance_A": 2.3710902555575566,
+    "angle_deg": 137.63035710221016,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "A_ARG311",
+    "endpoint_a": [
+      13.793,
+      10.426,
+      1.694
+    ],
+    "endpoint_b": [
+      12.159,
+      12.988,
+      4.116
+    ],
+    "distance_A": 3.8858569196510557,
+    "angle_deg": 127.12278845495938,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "A_ARG196",
+    "endpoint_a": [
+      15.722,
+      8.969,
+      9.815
+    ],
+    "endpoint_b": [
+      15.327,
+      10.974,
+      12.165
+    ],
+    "distance_A": 3.114249508308543,
+    "angle_deg": 109.31139819413904,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "H-Bond",
+    "residue": "A_ARG196",
+    "endpoint_a": [
+      15.722,
+      8.969,
+      9.815
+    ],
+    "endpoint_b": [
+      16.183,
+      11.758,
+      10.237
+    ],
+    "distance_A": 2.8581682945550986,
+    "angle_deg": 106.4522375530531,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL242",
+    "endpoint_a": [
+      18.399,
+      6.981,
+      -2.654
+    ],
+    "endpoint_b": [
+      15.329,
+      7.096,
+      -0.468
+    ],
+    "distance_A": 3.770506729870668,
+    "angle_deg": null,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE351",
+    "endpoint_a": [
+      9.692,
+      6.903,
+      -0.82
+    ],
+    "endpoint_b": [
+      11.675,
+      5.198,
+      -2.885
+    ],
+    "distance_A": 3.332197323088775,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE351",
+    "endpoint_a": [
+      11.277,
+      5.552,
+      0.685
+    ],
+    "endpoint_b": [
+      13.023,
+      4.818,
+      -2.815
+    ],
+    "distance_A": 3.9796070157742967,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE309",
+    "endpoint_a": [
+      14.287,
+      7.234,
+      -5.108
+    ],
+    "endpoint_b": [
+      13.643,
+      4.039,
+      -3.741
+    ],
+    "distance_A": 3.5343245465010704,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE309",
+    "endpoint_a": [
+      11.221,
+      8.051,
+      -4.036
+    ],
+    "endpoint_b": [
+      11.675,
+      5.198,
+      -2.885
+    ],
+    "distance_A": 3.109746935041499,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA379",
+    "endpoint_a": [
+      9.688,
+      2.447,
+      -2.209
+    ],
+    "endpoint_b": [
+      10.902,
+      4.731,
+      -3.96
+    ],
+    "distance_A": 3.123532135259696,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Pi-stacking",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      12.773666666666665,
+      6.738499999999999,
+      5.293499999999999
+    ],
+    "endpoint_b": [
+      15.271,
+      9.092,
+      4.841
+    ],
+    "distance_A": 3.461270327174373,
+    "angle_deg": 15.311361228883676,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Pi-stacking",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      12.773666666666665,
+      6.738499999999999,
+      5.293499999999999
+    ],
+    "endpoint_b": [
+      14.90616666666667,
+      9.402833333333334,
+      7.176000000000001
+    ],
+    "distance_A": 3.897439494220679,
+    "angle_deg": 14.845232549804255,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Pi-stacking",
+    "residue": "B_TYR18",
+    "endpoint_a": [
+      17.692500000000003,
+      11.956833333333334,
+      5.6665
+    ],
+    "endpoint_b": [
+      15.271,
+      9.092,
+      4.841
+    ],
+    "distance_A": 3.8408830401065046,
+    "angle_deg": 4.676038217178956,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_B",
+    "kind": "Pi-stacking",
+    "residue": "B_TYR18",
+    "endpoint_a": [
+      17.692500000000003,
+      11.956833333333334,
+      5.6665
+    ],
+    "endpoint_b": [
+      14.90616666666667,
+      9.402833333333334,
+      7.176000000000001
+    ],
+    "distance_A": 4.070031903369364,
+    "angle_deg": 3.7468995202207793,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "H-Bond",
+    "residue": "A_SER275",
+    "endpoint_a": [
+      12.942,
+      8.804,
+      1.524
+    ],
+    "endpoint_b": [
+      13.449,
+      10.724,
+      -0.633
+    ],
+    "distance_A": 2.9319102987642713,
+    "angle_deg": 157.08418456912102,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_TYR188",
+    "endpoint_a": [
+      15.032,
+      -1.643,
+      -2.89
+    ],
+    "endpoint_b": [
+      15.624,
+      0.38,
+      -5.152
+    ],
+    "distance_A": 3.0918662648956863,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      13.074,
+      6.034,
+      8.111
+    ],
+    "endpoint_b": [
+      15.126,
+      9.103,
+      7.568
+    ],
+    "distance_A": 3.7315297131337437,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      12.604,
+      7.091,
+      3.964
+    ],
+    "endpoint_b": [
+      14.589,
+      7.446,
+      0.566
+    ],
+    "distance_A": 3.951285107404932,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ASP219",
+    "endpoint_a": [
+      18.723,
+      5.948,
+      6.493
+    ],
+    "endpoint_b": [
+      15.991,
+      8.563,
+      6.611
+    ],
+    "distance_A": 3.7836454643636994,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PRO273",
+    "endpoint_a": [
+      17.93,
+      6.69,
+      -6.88
+    ],
+    "endpoint_b": [
+      15.461,
+      3.868,
+      -5.537
+    ],
+    "distance_A": 3.982875092191569,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE309",
+    "endpoint_a": [
+      14.287,
+      7.234,
+      -5.108
+    ],
+    "endpoint_b": [
+      15.461,
+      3.868,
+      -5.537
+    ],
+    "distance_A": 3.590581150733123,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL242",
+    "endpoint_a": [
+      18.399,
+      6.981,
+      -2.654
+    ],
+    "endpoint_b": [
+      16.241,
+      5.904,
+      -0.328
+    ],
+    "distance_A": 3.3506967932058562,
+    "angle_deg": null,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE351",
+    "endpoint_a": [
+      11.277,
+      5.552,
+      0.685
+    ],
+    "endpoint_b": [
+      13.731,
+      7.023,
+      -0.442
+    ],
+    "distance_A": 3.0750749584359736,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Pi-stacking",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      12.773666666666665,
+      6.738499999999999,
+      5.293499999999999
+    ],
+    "endpoint_b": [
+      14.9925,
+      9.395833333333334,
+      6.190833333333334
+    ],
+    "distance_A": 3.576289825596729,
+    "angle_deg": 6.46968289469898,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_ARRE",
+    "kind": "Pi-stacking",
+    "residue": "B_TYR18",
+    "endpoint_a": [
+      17.692500000000003,
+      11.956833333333334,
+      5.6665
+    ],
+    "endpoint_b": [
+      14.9925,
+      9.395833333333334,
+      6.190833333333334
+    ],
+    "distance_A": 3.75814401592654,
+    "angle_deg": 7.314241244231511,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "H-Bond",
+    "residue": "A_SER275",
+    "endpoint_a": [
+      13.71,
+      9.193,
+      1.542
+    ],
+    "endpoint_b": [
+      13.449,
+      10.724,
+      -0.633
+    ],
+    "distance_A": 2.672584329820109,
+    "angle_deg": 175.65478677532477,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_TYR188",
+    "endpoint_a": [
+      17.441,
+      -1.606,
+      -2.115
+    ],
+    "endpoint_b": [
+      18.136,
+      1.686,
+      -2.876
+    ],
+    "distance_A": 3.4495521448443127,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ASP219",
+    "endpoint_a": [
+      18.723,
+      5.948,
+      6.493
+    ],
+    "endpoint_b": [
+      15.997,
+      8.687,
+      6.799
+    ],
+    "distance_A": 3.876445923781214,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL242",
+    "endpoint_a": [
+      20.011,
+      5.339,
+      -3.686
+    ],
+    "endpoint_b": [
+      17.857,
+      2.517,
+      -5.251
+    ],
+    "distance_A": 3.879771256143847,
+    "angle_deg": null,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA379",
+    "endpoint_a": [
+      9.688,
+      2.447,
+      -2.209
+    ],
+    "endpoint_b": [
+      12.891,
+      2.98,
+      -1.912
+    ],
+    "distance_A": 3.2605991780652825,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL242",
+    "endpoint_a": [
+      18.399,
+      6.981,
+      -2.654
+    ],
+    "endpoint_b": [
+      16.119,
+      5.111,
+      -0.675
+    ],
+    "distance_A": 3.5513013107873577,
+    "angle_deg": null,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE351",
+    "endpoint_a": [
+      11.277,
+      5.552,
+      0.685
+    ],
+    "endpoint_b": [
+      14.056,
+      6.126,
+      -1.224
+    ],
+    "distance_A": 3.420028947245915,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Pi-stacking",
+    "residue": "A_PHE193",
+    "endpoint_a": [
+      12.773666666666665,
+      6.738499999999999,
+      5.293499999999999
+    ],
+    "endpoint_b": [
+      14.92966666666667,
+      9.501666666666667,
+      6.7565
+    ],
+    "distance_A": 3.797867168264025,
+    "angle_deg": 8.902318918868115,
+    "key_rule_residue": true
+  },
+  {
+    "id": "NAMPT_reference",
+    "kind": "Pi-stacking",
+    "residue": "B_TYR18",
+    "endpoint_a": [
+      17.692500000000003,
+      11.956833333333334,
+      5.6665
+    ],
+    "endpoint_b": [
+      14.92966666666667,
+      9.501666666666667,
+      6.7565
+    ],
+    "distance_A": 3.8534648550218917,
+    "angle_deg": 4.603660953747465,
+    "key_rule_residue": true
+  },
+  {
+    "id": "MEK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "B_MET143",
+    "endpoint_a": [
+      69.357,
+      -30.467,
+      10.769
+    ],
+    "endpoint_b": [
+      70.03,
+      -27.024,
+      9.211
+    ],
+    "distance_A": 3.8385598862073245,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "B_PHE209",
+    "endpoint_a": [
+      70.492,
+      -21.683,
+      9.695
+    ],
+    "endpoint_b": [
+      69.134,
+      -24.826,
+      9.188
+    ],
+    "distance_A": 3.46116483282724,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "B_VAL211",
+    "endpoint_a": [
+      70.022,
+      -22.27,
+      2.539
+    ],
+    "endpoint_b": [
+      66.582,
+      -22.988,
+      3.449
+    ],
+    "distance_A": 3.6300446278248537,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "B_LEU115",
+    "endpoint_a": [
+      68.248,
+      -25.682,
+      1.27
+    ],
+    "endpoint_b": [
+      66.843,
+      -24.376,
+      4.027
+    ],
+    "distance_A": 3.35867682279793,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "B_LEU215",
+    "endpoint_a": [
+      64.072,
+      -24.558,
+      1.167
+    ],
+    "endpoint_b": [
+      65.205,
+      -22.541,
+      4.008
+    ],
+    "distance_A": 3.663776603451688,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "H-Bond",
+    "residue": "B_ILE216",
+    "endpoint_a": [
+      59.198,
+      -19.091,
+      -1.683
+    ],
+    "endpoint_b": [
+      59.08,
+      -18.708,
+      1.811
+    ],
+    "distance_A": 3.5169090121866957,
+    "angle_deg": 159.9764414579876,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "H-Bond",
+    "residue": "B_VAL211",
+    "endpoint_a": [
+      66.592,
+      -21.933,
+      2.811
+    ],
+    "endpoint_b": [
+      68.112,
+      -19.729,
+      3.132
+    ],
+    "distance_A": 2.6964897552188085,
+    "angle_deg": 168.82572131913284,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "H-Bond",
+    "residue": "B_SER212",
+    "endpoint_a": [
+      66.592,
+      -21.933,
+      2.811
+    ],
+    "endpoint_b": [
+      68.062,
+      -20.718,
+      0.525
+    ],
+    "distance_A": 2.9770658373640306,
+    "angle_deg": 149.19999947011414,
+    "key_rule_residue": true
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "B_LYS97",
+    "endpoint_a": [
+      62.23,
+      -28.891,
+      6.822
+    ],
+    "endpoint_b": [
+      60.008,
+      -25.865,
+      6.371
+    ],
+    "distance_A": 3.781185131674985,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "B_PHE209",
+    "endpoint_a": [
+      70.492,
+      -21.683,
+      9.695
+    ],
+    "endpoint_b": [
+      68.242,
+      -24.467,
+      7.972
+    ],
+    "distance_A": 3.972642067944203,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "B_LEU215",
+    "endpoint_a": [
+      64.072,
+      -24.558,
+      1.167
+    ],
+    "endpoint_b": [
+      64.373,
+      -21.884,
+      3.612
+    ],
+    "distance_A": 3.6357807964727464,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "B_ILE216",
+    "endpoint_a": [
+      61.241,
+      -17.07,
+      -0.206
+    ],
+    "endpoint_b": [
+      60.672,
+      -18.015,
+      3.526
+    ],
+    "distance_A": 3.8916076369541677,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "B_ILE216",
+    "endpoint_a": [
+      63.223,
+      -18.435,
+      0.519
+    ],
+    "endpoint_b": [
+      64.414,
+      -20.648,
+      2.738
+    ],
+    "distance_A": 3.3525827357427005,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_reference",
+    "kind": "Halogen bond",
+    "residue": "B_VAL127",
+    "endpoint_a": [
+      72.704,
+      -26.254,
+      11.981
+    ],
+    "endpoint_b": [
+      70.3,
+      -25.742,
+      9.742
+    ],
+    "distance_A": 3.324827965474301,
+    "angle_deg": 171.33645092097214,
+    "key_rule_residue": true
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "H-Bond",
+    "residue": "A_LYS105",
+    "endpoint_a": [
+      -14.133,
+      54.261,
+      -14.972
+    ],
+    "endpoint_b": [
+      -17.01,
+      55.255,
+      -15.451
+    ],
+    "distance_A": 3.0813318548965176,
+    "angle_deg": 136.56920452986176,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE87",
+    "endpoint_a": [
+      -12.717,
+      47.076,
+      -13.448
+    ],
+    "endpoint_b": [
+      -13.258,
+      49.394,
+      -10.323
+    ],
+    "distance_A": 3.928285885726749,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE120",
+    "endpoint_a": [
+      -16.932,
+      48.76,
+      -10.533
+    ],
+    "endpoint_b": [
+      -13.258,
+      49.394,
+      -10.323
+    ],
+    "distance_A": 3.7342110277808347,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE120",
+    "endpoint_a": [
+      -16.958,
+      49.529,
+      -12.836
+    ],
+    "endpoint_b": [
+      -13.854,
+      51.113,
+      -11.923
+    ],
+    "distance_A": 3.602421546682174,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL137",
+    "endpoint_a": [
+      -23.593,
+      62.96,
+      -16.16
+    ],
+    "endpoint_b": [
+      -20.794,
+      62.597,
+      -18.56
+    ],
+    "distance_A": 3.7048846135878497,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE82",
+    "endpoint_a": [
+      -17.687,
+      62.775,
+      -23.468
+    ],
+    "endpoint_b": [
+      -16.849,
+      63.364,
+      -19.968
+    ],
+    "distance_A": 3.6468020236914427,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL90",
+    "endpoint_a": [
+      -16.785,
+      58.027,
+      -20.214
+    ],
+    "endpoint_b": [
+      -15.084,
+      60.544,
+      -18.063
+    ],
+    "distance_A": 3.7222964685795756,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA103",
+    "endpoint_a": [
+      -21.481,
+      61.851,
+      -22.354
+    ],
+    "endpoint_b": [
+      -20.634,
+      63.493,
+      -19.597
+    ],
+    "distance_A": 3.318828407736682,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_LEU205",
+    "endpoint_a": [
+      -18.34,
+      64.559,
+      -16.385
+    ],
+    "endpoint_b": [
+      -18.404,
+      62.066,
+      -18.692
+    ],
+    "distance_A": 3.3972627216628344,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_B",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE368",
+    "endpoint_a": [
+      -15.147,
+      65.571,
+      -21.363
+    ],
+    "endpoint_b": [
+      -16.849,
+      63.364,
+      -19.968
+    ],
+    "distance_A": 3.1166773974859834,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "H-Bond",
+    "residue": "A_ASP369",
+    "endpoint_a": [
+      -6.645,
+      65.026,
+      -21.362
+    ],
+    "endpoint_b": [
+      -8.492,
+      62.586,
+      -20.193
+    ],
+    "distance_A": 3.27590750785183,
+    "angle_deg": 107.48466282757859,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL90",
+    "endpoint_a": [
+      -18.196,
+      59.413,
+      -21.761
+    ],
+    "endpoint_b": [
+      -17.332,
+      61.864,
+      -18.775
+    ],
+    "distance_A": 3.9585468293301784,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL90",
+    "endpoint_a": [
+      -16.785,
+      58.027,
+      -20.214
+    ],
+    "endpoint_b": [
+      -17.568,
+      60.866,
+      -17.876
+    ],
+    "distance_A": 3.7602199403758263,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_TYR155",
+    "endpoint_a": [
+      -20.447,
+      65.628,
+      -23.861
+    ],
+    "endpoint_b": [
+      -19.806,
+      64.029,
+      -20.516
+    ],
+    "distance_A": 3.762539966565143,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE368",
+    "endpoint_a": [
+      -14.076,
+      65.551,
+      -22.243
+    ],
+    "endpoint_b": [
+      -11.13,
+      65.288,
+      -19.861
+    ],
+    "distance_A": 3.7976320253547464,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_PHE368",
+    "endpoint_a": [
+      -16.234,
+      66.397,
+      -21.609
+    ],
+    "endpoint_b": [
+      -18.335,
+      63.757,
+      -20.256
+    ],
+    "distance_A": 3.6351629949701074,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ASP369",
+    "endpoint_a": [
+      -7.543,
+      65.006,
+      -23.561
+    ],
+    "endpoint_b": [
+      -10.021,
+      64.572,
+      -20.654
+    ],
+    "distance_A": 3.8444100977913376,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ILE82",
+    "endpoint_a": [
+      -17.687,
+      62.775,
+      -23.468
+    ],
+    "endpoint_b": [
+      -18.335,
+      63.757,
+      -20.256
+    ],
+    "distance_A": 3.4206975896737783,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA103",
+    "endpoint_a": [
+      -21.481,
+      61.851,
+      -22.354
+    ],
+    "endpoint_b": [
+      -19.806,
+      64.029,
+      -20.516
+    ],
+    "distance_A": 3.305684951715755,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_MET156",
+    "endpoint_a": [
+      -20.306,
+      67.422,
+      -18.833
+    ],
+    "endpoint_b": [
+      -20.469,
+      63.663,
+      -19.223
+    ],
+    "distance_A": 3.782690841186999,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_ARRE",
+    "kind": "Hydrophobic contact",
+    "residue": "A_LEU205",
+    "endpoint_a": [
+      -18.34,
+      64.559,
+      -16.385
+    ],
+    "endpoint_b": [
+      -19.584,
+      62.613,
+      -18.675
+    ],
+    "distance_A": 3.2524686009245327,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "H-Bond",
+    "residue": "A_GLU154",
+    "endpoint_a": [
+      -23.864,
+      64.382,
+      -19.752
+    ],
+    "endpoint_b": [
+      -21.168,
+      63.78,
+      -19.727
+    ],
+    "distance_A": 2.76250701356576,
+    "angle_deg": 171.94443014119076,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "H-Bond",
+    "residue": "A_LYS105",
+    "endpoint_a": [
+      -16.383,
+      58.152,
+      -15.559
+    ],
+    "endpoint_b": [
+      -17.01,
+      55.255,
+      -15.451
+    ],
+    "distance_A": 2.9660414697033475,
+    "angle_deg": 152.290161219823,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "H-Bond",
+    "residue": "A_MET156",
+    "endpoint_a": [
+      -20.151,
+      64.4,
+      -20.369
+    ],
+    "endpoint_b": [
+      -21.512,
+      66.875,
+      -20.876
+    ],
+    "distance_A": 2.8696680992755894,
+    "angle_deg": 148.68582315177653,
+    "key_rule_residue": true
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA86",
+    "endpoint_a": [
+      -10.922,
+      52.469,
+      -14.884
+    ],
+    "endpoint_b": [
+      -14.343,
+      54.022,
+      -16.115
+    ],
+    "distance_A": 3.953531459341127,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA103",
+    "endpoint_a": [
+      -21.481,
+      61.851,
+      -22.354
+    ],
+    "endpoint_b": [
+      -19.358,
+      62.721,
+      -19.098
+    ],
+    "distance_A": 3.9831601775474708,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_VAL90",
+    "endpoint_a": [
+      -16.785,
+      58.027,
+      -20.214
+    ],
+    "endpoint_b": [
+      -16.316,
+      60.611,
+      -18.209
+    ],
+    "distance_A": 3.3040947322980885,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_LEU205",
+    "endpoint_a": [
+      -18.34,
+      64.559,
+      -16.385
+    ],
+    "endpoint_b": [
+      -19.358,
+      62.721,
+      -19.098
+    ],
+    "distance_A": 3.431462807608439,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "ROCK1_reference",
+    "kind": "Hydrophobic contact",
+    "residue": "A_ALA215",
+    "endpoint_a": [
+      -19.465,
+      62.401,
+      -13.777
+    ],
+    "endpoint_b": [
+      -18.93,
+      61.002,
+      -17.354
+    ],
+    "distance_A": 3.877931794139758,
+    "angle_deg": null,
+    "key_rule_residue": false
+  },
+  {
+    "id": "MEK1_ARRE",
+    "kind": "H-Bond",
+    "residue": "B_SER212",
+    "endpoint_a": [
+      66.321,
+      -22.012,
+      3.075
+    ],
+    "endpoint_b": [
+      68.062,
+      -20.718,
+      0.525
+    ],
+    "distance_A": 3.3478376603413733,
+    "angle_deg": 153.42576032967162,
+    "key_rule_residue": true
+  }
+]

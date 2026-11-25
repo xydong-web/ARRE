@@ -1,0 +1,37 @@
+{
+  "renderer": "PyMOL",
+  "version": [
+    "3.2.0a",
+    3.0,
+    3000000,
+    1754317289,
+    "7e6dafa700aba746ad963d5057748dbb8f87cbc6",
+    0
+  ],
+  "pose": "child_GNINA.sdf",
+  "pose_sha256": "240734cd0c65351f347987289a05d35ba1eeb7fbb3b4071050fdd1d0d3ec7b96",
+  "surface_colors": "chemical elements, not RTMScore per-atom attribution",
+  "no_docking_or_scoring_rerun": true,
+  "transform_rotation": [
+    [
+      -0.059600669890642166,
+      -0.3321395814418793,
+      -0.9413453340530396
+    ],
+    [
+      0.9134061932563782,
+      0.3622495234012604,
+      -0.18564602732658386
+    ],
+    [
+      0.4026623070240021,
+      -0.870895266532898,
+      0.28178802132606506
+    ]
+  ],
+  "transform_center": [
+    0.3655644655227661,
+    -14.238944053649902,
+    -53.45767593383789
+  ]
+}

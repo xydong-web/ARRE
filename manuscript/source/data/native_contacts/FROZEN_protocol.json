@@ -1,0 +1,55 @@
+{
+  "protocol": "First-wave, fixed-native-template, 36-source four-arm PLIP, 2026-11-01",
+  "tasks": [
+    "MAPK1",
+    "PPARG",
+    "OPRK1"
+  ],
+  "arms": [
+    "ARRE",
+    "CGFlow-B",
+    "SynGA",
+    "SynGBO"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_source_candidates_per_arm_seed": 100,
+  "native_templates": {
+    "MAPK1": {
+      "pdb": "4ZZN",
+      "lig": "CQ8",
+      "class": "ERK2 inhibitor structural reference",
+      "secondary": "4QTA induced-pocket inhibitor, not pooled"
+    },
+    "PPARG": {
+      "pdb": "2PRG",
+      "lig": "BRL",
+      "class": "PPARgamma agonist STRUCTURAL reference ONLY, NOT inhibition",
+      "secondary": "6C1I covalent inverse agonist, NOT noncovalent comparable"
+    },
+    "OPRK1": {
+      "pdb": "6B73",
+      "lig": "CVV",
+      "class": "KOR agonist active-state structural reference",
+      "secondary": "4DJH antagonist-state, NOT pooled"
+    }
+  },
+  "classification": "Distinct PLIP H-bond, hydrophobic, salt bridge, pi stacking, pi cation, halogen",
+  "hypothesis": "ARRE recovers native interaction residue-type identities better than matched local baselines",
+  "statistics": "Per-target and per-seed descriptive paired differences; do not treat molecules as independent target-level replicates",
+  "missing": "100 rows per unit; invalid or absent pose keeps zero recovery with separately coded failure",
+  "primary_reference_qualification": {
+    "MAPK1": "inhibitor structural control; 4QTA induced pocket separate",
+    "PPARG": "agonist crystal structural control only, NOT PPARG inhibition",
+    "OPRK1": "agonist active-state 6B73; antagonist state excluded from headline"
+  },
+  "no_ligand_neutralization": true,
+  "no_wetlab_or_affinity_claim": true,
+  "source_manifest_sha256": "8a6b0b7a1caaa7a5182cc9bd834cd6dc689521ac320e18573c228304c15b6b62",
+  "source_gate_sha256": "3e49a82e19b29d1a768db4c883ef5439098b871890f5c21a1f819a9b4dbf8d31",
+  "receptor_QC_sha256": "c397041e21dc9be42adef74b6be11d36b9bcd037f9446f518595cb08aa303d11",
+  "native_PLIP_sha256": "6134d5adff86bf5950b15fc928eceedd13e3a7c55e118de541b91d17aa9bb122"
+}

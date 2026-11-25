@@ -1,0 +1,4656 @@
+{
+  "summary": {
+    "target": "ROCK1",
+    "receptor_reference_type": "holo",
+    "source_poses": "/path/to/ARRE/results/tarpass_eval/gnina/tp26b/ROCK1/s0/best_poses.sdf",
+    "source_sha256": "07a8d4d8aeb902d7400e9815b1759984be9982145916ff0462b758457b95a560",
+    "key_rules_sha256": "a7277461e3401d7189c43adf821fb5723730cce7fd9b4d0e241a7c2795f39ccb",
+    "tarpass_git_revision": "da5058666fb36c0c275ba1d4bd9b8906b0a702fb",
+    "plip_version": "2.4.0",
+    "n_sdf_records": 100,
+    "n_attempted": 100,
+    "n_failed": 0,
+    "n_valid": 100,
+    "reference_mode": false,
+    "mean_match_rate": 0.19,
+    "full_match_rate": 0.19,
+    "full_match_fraction_all": 0.19
+  },
+  "molecules": [
+    {
+      "index": 0,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE87",
+          "A_PHE120",
+          "A_PHE120",
+          "A_VAL137",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL137",
+          "A_PHE368",
+          "A_LEU371",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216"
+        ],
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_LYS200"
+        ],
+        "Halogen bond": [
+          "A_GLU154",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368",
+          "A_LEU205"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS200"
+        ],
+        "H-Bond": [
+          "A_ASP216",
+          "A_LYS105",
+          "A_LYS200"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ILE82"
+        ],
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Halogen bond": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE368",
+          "A_ALA86"
+        ],
+        "H-Bond": [
+          "A_ILE82",
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "Halogen bond": [
+          "A_GLU154"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_MET156",
+          "A_ASP160",
+          "A_VAL162",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP160"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_LYS105",
+          "A_ASP160",
+          "A_VAL162",
+          "A_ASP202",
+          "A_ALA215",
+          "A_ASP216",
+          "A_VAL90",
+          "A_LEU205",
+          "A_LEU205"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_LYS105",
+          "A_MET156",
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL137",
+          "A_LEU205",
+          "A_LEU205",
+          "A_PHE368",
+          "A_LEU371",
+          "A_LYS105",
+          "A_ASP216",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS200"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_PHE87",
+          "A_VAL90",
+          "A_ALA103",
+          "A_PHE120",
+          "A_PHE120",
+          "A_PHE120",
+          "A_ASP202",
+          "A_PHE368",
+          "A_ILE82",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS200",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASN163",
+          "A_ASP202"
+        ],
+        "Halogen bond": [
+          "A_ALA86",
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ILE82",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASN163",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_VAL137",
+          "A_MET156",
+          "A_ASP202",
+          "A_PHE368",
+          "A_ALA86",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE120",
+          "A_ASP202",
+          "A_THR219",
+          "A_PHE368",
+          "A_ILE82",
+          "A_ALA86",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP216",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_MET156",
+          "A_ALA215",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_ASP216",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160",
+          "A_ASP369"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_ASP160",
+          "A_ASP369"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ASP216",
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA215",
+          "A_PHE368",
+          "A_LEU371",
+          "A_VAL90",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "Salt Bridge lneg": [
+          "A_LYS105"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ARG84",
+          "A_LYS105"
+        ],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "A_GLY85"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ASP202",
+          "A_LEU205",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA86",
+          "A_VAL90",
+          "A_ASP202",
+          "A_LEU205",
+          "A_PHE368",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS105"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ARG84"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE87",
+          "A_PHE120",
+          "A_PHE120",
+          "A_ALA215",
+          "A_ILE82",
+          "A_ALA86",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_ARG84",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA215",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP369"
+        ],
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ASP160",
+          "A_ALA86",
+          "A_VAL90",
+          "A_VAL162"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond": [
+          "A_ASP369",
+          "A_LYS105",
+          "A_MET156",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "H-Bond donor": [
+          "A_LYS200"
+        ],
+        "Hydrophobic contact": [
+          "A_MET156",
+          "A_ASP160",
+          "A_ASP202",
+          "A_LEU205",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_VAL137",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP202",
+          "A_LYS200"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASN163"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ALA215",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_ASN163",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LYS105",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ASP369",
+          "A_LEU371",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205",
+          "A_LEU205"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP160"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ALA103",
+          "A_MET156",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLY85"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Halogen bond": [
+          "A_GLU154"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_PHE368",
+          "A_ILE82",
+          "A_LEU205",
+          "A_ASP216",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_GLY85",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Halogen bond": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LYS105",
+          "A_ALA215",
+          "A_PHE368",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA86"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_TYR155",
+          "A_MET156",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP216",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ASP202",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205",
+          "A_ASP216",
+          "A_LEU371"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_PHE87",
+          "A_PHE120"
+        ],
+        "Pi-stacking": [
+          "A_PHE120"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105",
+          "A_ARG84",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_PHE120",
+          "A_PHE120",
+          "A_ASP160",
+          "A_ASP369",
+          "A_ALA86",
+          "A_PHE120",
+          "A_PHE368",
+          "A_LEU371"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS200"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA103",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ALA86",
+          "A_VAL90",
+          "A_ALA215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_MET151",
+          "A_TYR155"
+        ],
+        "H-Bond donor": [
+          "A_ALA103",
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LYS105",
+          "A_MET153",
+          "A_TYR155",
+          "A_MET156",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_ALA103",
+          "A_LEU205",
+          "A_ASP216"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS105"
+        ],
+        "H-Bond": [
+          "A_MET151",
+          "A_TYR155",
+          "A_ALA103",
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ALA103",
+          "A_VAL137",
+          "A_MET153",
+          "A_ASP202",
+          "A_VAL90"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL137",
+          "A_MET156",
+          "A_VAL162",
+          "A_PHE368",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LYS105",
+          "A_ASP216",
+          "A_PHE368",
+          "A_LEU205",
+          "A_LEU371"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_ASP369"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE368",
+          "A_PHE368",
+          "A_ASP369",
+          "A_ILE82",
+          "A_ALA103",
+          "A_LEU205",
+          "A_LEU371"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_ASP369"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ILE82",
+          "A_ALA86",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA103",
+          "A_VAL137",
+          "A_MET153",
+          "A_ASP202",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LYS105",
+          "A_VAL137",
+          "A_MET153",
+          "A_PHE368",
+          "A_ASP369",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLU154"
+        ],
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL137",
+          "A_LEU205",
+          "A_LEU205",
+          "A_ASP216"
+        ],
+        "H-Bond": [
+          "A_GLU154",
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_MET156",
+          "A_ASP160",
+          "A_LEU205",
+          "A_ALA215",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_VAL137",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP216",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS200",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LEU205",
+          "A_LEU205",
+          "A_THR219",
+          "A_PHE368",
+          "A_ALA86"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS200",
+          "A_LYS105",
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_LYS105",
+          "A_VAL137",
+          "A_MET156",
+          "A_ASP369",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_TYR155",
+          "A_MET156",
+          "A_ALA215",
+          "A_ASP216",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160",
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_MET156",
+          "A_ASP369"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL137",
+          "A_VAL162",
+          "A_LEU205",
+          "A_PHE368",
+          "A_LEU371"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP160",
+          "A_MET156",
+          "A_ASP369"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_PHE87",
+          "A_VAL90",
+          "A_PHE120",
+          "A_LEU205",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_PHE120",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ALA86"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_PHE87",
+          "A_PHE87",
+          "A_VAL90",
+          "A_VAL137",
+          "A_MET153",
+          "A_MET156",
+          "A_ALA215",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE120"
+        ],
+        "Pi-stacking": [
+          "A_PHE120"
+        ],
+        "H-Bond": [
+          "A_ALA86",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ARG84",
+          "A_VAL90",
+          "A_VAL137",
+          "A_MET153",
+          "A_LEU205",
+          "A_PHE368",
+          "A_LEU371",
+          "A_ALA103"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_ASN203"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ASP369",
+          "A_LEU371"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ARG84",
+          "A_ASN203"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLY85",
+          "A_MET156"
+        ],
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_LEU205",
+          "A_THR219",
+          "A_ILE82",
+          "A_ALA86",
+          "A_VAL90",
+          "A_PHE120",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_GLY85",
+          "A_MET156",
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_LYS105",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_LEU371",
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLU154"
+        ],
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_GLU154",
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_TYR155",
+          "A_MET156",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE87",
+          "A_PHE120",
+          "A_ALA215",
+          "A_THR219",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA103",
+          "A_VAL137",
+          "A_PHE368",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP369"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_PHE120",
+          "A_MET156",
+          "A_LEU205",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_VAL90"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216",
+          "A_ASP202",
+          "A_ASP160"
+        ],
+        "H-Bond": [
+          "A_ASP369",
+          "A_LYS105",
+          "A_ASP216",
+          "A_ASP202",
+          "A_ASP160"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA103",
+          "A_TYR155",
+          "A_MET156",
+          "A_ILE82",
+          "A_ALA86",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_ILE82",
+          "A_VAL137",
+          "A_LEU205",
+          "A_PHE368",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_VAL90",
+          "A_THR219",
+          "A_ILE82",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ILE82",
+          "A_ALA103",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLU154"
+        ],
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_VAL90",
+          "A_LYS105",
+          "A_LEU371",
+          "A_VAL137",
+          "A_LEU205",
+          "A_ASP369"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP202"
+        ],
+        "H-Bond": [
+          "A_GLU154",
+          "A_ARG84",
+          "A_MET156",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_ASP160"
+        ],
+        "Halogen bond": [
+          "A_ASP369"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ALA215"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP160",
+          "A_ASP160"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ALA103",
+          "A_LYS105",
+          "A_LEU107",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_PHE368",
+          "A_PHE368",
+          "A_LEU205",
+          "A_LEU205",
+          "A_LEU205",
+          "A_ALA215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA103",
+          "A_ASP160",
+          "A_LEU205",
+          "A_PHE368",
+          "A_ILE82",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_ASP202",
+          "A_LEU205",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ALA86"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA103",
+          "A_MET156",
+          "A_ASP160",
+          "A_ASP202",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160"
+        ],
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL137",
+          "A_MET156",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Halogen bond": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_PHE87",
+          "A_PHE87",
+          "A_PHE120",
+          "A_LEU205",
+          "A_ALA86",
+          "A_PHE120"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL162",
+          "A_ASP202",
+          "A_ALA215",
+          "A_VAL90",
+          "A_LYS105",
+          "A_LYS105",
+          "A_LYS105",
+          "A_LEU107",
+          "A_GLU124",
+          "A_GLU124",
+          "A_MET151",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_ASP202",
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "A_GLU154"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ALA103",
+          "A_VAL137",
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LYS105",
+          "A_MET156",
+          "A_ASP202",
+          "A_ALA103",
+          "A_VAL137",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_TYR155",
+          "A_MET156",
+          "A_LEU205",
+          "A_ALA215",
+          "A_PHE368",
+          "A_LEU371"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ARG84"
+        ],
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_LYS105",
+          "A_LYS200"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_LYS105",
+          "A_ALA215",
+          "A_ASP216",
+          "A_ALA86",
+          "A_LEU205",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond": [
+          "A_ARG84",
+          "A_ARG84",
+          "A_LYS105",
+          "A_LYS200"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA86",
+          "A_ALA215",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ASP369",
+          "A_VAL90"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_PHE368",
+          "A_LEU371",
+          "A_LEU371",
+          "A_ALA103",
+          "A_PHE368",
+          "A_ASP369"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_VAL90",
+          "A_LYS105",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_PHE120",
+          "A_PHE368",
+          "A_ALA86",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LEU205",
+          "A_ALA215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ALA103",
+          "A_VAL137",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ILE82",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_VAL90",
+          "A_TYR155",
+          "A_LEU205",
+          "A_PHE368",
+          "A_ILE82",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ASP216"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ASP160",
+          "A_LEU205",
+          "A_ASP369",
+          "A_VAL90",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ASP160"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ASP202",
+          "A_PHE368",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_LYS105",
+          "A_ALA215",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_LYS105",
+          "A_ASP160",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_PHE87",
+          "A_VAL90",
+          "A_PHE120",
+          "A_PHE120",
+          "A_PHE120",
+          "A_THR219",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_VAL137",
+          "A_TYR155",
+          "A_MET156",
+          "A_ALA215",
+          "A_PHE368",
+          "A_PHE368",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_PHE368",
+          "A_ALA86",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS200"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_LYS105",
+          "A_MET156"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_ASP369"
+        ],
+        "Halogen bond": [
+          "A_GLU154"
+        ],
+        "Hydrophobic contact": [
+          "A_TYR155",
+          "A_MET156",
+          "A_ASP202",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ASP369",
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_LEU205",
+          "A_LEU371"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_ASP369"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_GLY85"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA215",
+          "A_PHE368",
+          "A_LEU371",
+          "A_LEU205"
+        ],
+        "H-Bond": [
+          "A_GLY85",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL137",
+          "A_MET153",
+          "A_PHE368",
+          "A_ALA103",
+          "A_LEU205"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS200"
+        ],
+        "H-Bond": [
+          "A_ASP202",
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP216",
+          "A_ASP216"
+        ],
+        "H-Bond donor": [
+          "A_LYS105"
+        ],
+        "Halogen bond": [
+          "A_ILE82",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ALA86",
+          "A_VAL90",
+          "A_PHE120",
+          "A_THR219",
+          "A_VAL90",
+          "A_LEU205"
+        ],
+        "Salt Bridge pneg": [
+          "A_GLU124",
+          "A_ASP216"
+        ],
+        "H-Bond": [
+          "A_ASP216",
+          "A_ASP216",
+          "A_LYS105",
+          "A_GLU124",
+          "A_ASP216"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ALA103",
+          "A_TYR155",
+          "A_MET156",
+          "A_ALA215",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ASP202",
+          "A_LEU205",
+          "A_LEU371"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_TYR155",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84"
+        ],
+        "Hydrophobic contact": [
+          "A_VAL90",
+          "A_ASP216",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ILE82",
+          "A_ALA103",
+          "A_ASP202",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ILE82",
+          "A_VAL90",
+          "A_MET156",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ALA103",
+          "A_ASP202",
+          "A_LEU205",
+          "A_PHE368"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_LYS105",
+          "A_VAL137",
+          "A_TYR155",
+          "A_MET156",
+          "A_ASP216",
+          "A_PHE368",
+          "A_ILE82",
+          "A_VAL90",
+          "A_ALA103",
+          "A_LEU205",
+          "A_ALA215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "A_MET156",
+          "A_ASP202",
+          "A_PHE368",
+          "A_PHE368",
+          "A_PHE368",
+          "A_ASP369",
+          "A_LEU371",
+          "A_ILE82",
+          "A_ALA103",
+          "A_LEU205",
+          "A_ALA215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ASP202",
+          "A_PHE368"
+        ],
+        "Pi-cation lAro": [
+          "A_LYS200"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_VAL137",
+          "A_MET153",
+          "A_VAL162",
+          "A_PHE368",
+          "A_ALA103",
+          "A_MET156",
+          "A_LEU205"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "A_ASP160",
+          "A_ASP202"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_ARG84",
+          "A_ASP369"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_VAL90",
+          "A_LEU205",
+          "A_ALA215",
+          "A_VAL90",
+          "A_LYS105",
+          "A_ASP216",
+          "A_PHE368"
+        ],
+        "Salt Bridge pneg": [
+          "A_ASP160",
+          "A_ASP160",
+          "A_ASP369"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_ARG84",
+          "A_ASP369",
+          "A_ASP160",
+          "A_ASP160",
+          "A_ASP369"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 1,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Hydrophobic contact": [
+          "A_ILE82",
+          "A_ALA86",
+          "A_ALA103",
+          "A_PHE368",
+          "A_LEU205"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "A_MET156",
+          "A_LYS105"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 1,
+      "matched_rate": 1.0,
+      "fully_matched": true,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_MET156"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "rmsd_A": 8.434323796071011,
+  "landmarks": [
+    {
+      "chain": "A",
+      "number": 92,
+      "residue": "MET",
+      "atom": "CB",
+      "ligand_index": 23,
+      "distance": 3.4565033429753824,
+      "other_distance": 7.470209936809006
+    },
+    {
+      "chain": "A",
+      "number": 240,
+      "residue": "GLU",
+      "atom": "CB",
+      "ligand_index": 20,
+      "distance": 3.100564598585236,
+      "other_distance": 9.21283361892529
+    }
+  ],
+  "center": [
+    61.52344669847319,
+    -26.57977476917154,
+    -5.557026677267144
+  ],
+  "basis_columns": [
+    [
+      0.2776446261765456,
+      -0.41542305341788155,
+      0.8662200345433314
+    ],
+    [
+      0.2093023988558441,
+      0.9061678178719901,
+      0.3674947505561206
+    ],
+    [
+      -0.9376065098901968,
+      0.07926898852691443,
+      0.33854166666666663
+    ]
+  ],
+  "span_A": 35.9878000639233,
+  "selection": "Nearest side-chain heavy atom within 4 A in the displayed pose; that residue must be at least 6 A from the other pose by side-chain heavy-atom distance.",
+  "receptor_sha256": "c3d2de538d08cfe87bcf7ae478ca2f5faeb5ffcf5dbb99a110a0b7c366d63926"
+}

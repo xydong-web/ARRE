@@ -1,0 +1,78 @@
+{
+  "parent": {
+    "it": "991",
+    "arm": "prefix2",
+    "smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+    "vina": "-12.190",
+    "qed": "0.745",
+    "hit": "0",
+    "elite": "O=C(Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F)C12C=CC(CC1)C2"
+  },
+  "child": {
+    "it": "993",
+    "arm": "prefix2",
+    "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+    "vina": "-12.775",
+    "qed": "0.514",
+    "hit": "1",
+    "elite": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2"
+  },
+  "parent_trajectory": [
+    {
+      "step": 0,
+      "smiles": "",
+      "action": [
+        "block21",
+        "21",
+        "[21*]c1cccc(C2CC(F)(F)C2)c1"
+      ]
+    },
+    {
+      "step": 1,
+      "smiles": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+      "action": [
+        "rxn34_linker_b0",
+        "1-23",
+        "[1*]Nc1nccc([23*])c1F"
+      ]
+    },
+    {
+      "step": 2,
+      "smiles": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "action": [
+        "rxn1_brick_b1",
+        "3",
+        "[3*]C12CC(C#N)C(C1)C2"
+      ]
+    }
+  ],
+  "child_trajectory": [
+    {
+      "step": 0,
+      "smiles": "",
+      "action": [
+        "block21",
+        "21",
+        "[21*]c1cccc(C2CC(F)(F)C2)c1"
+      ]
+    },
+    {
+      "step": 1,
+      "smiles": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+      "action": [
+        "rxn34_linker_b0",
+        "1-23",
+        "[1*]Nc1nccc([23*])c1F"
+      ]
+    },
+    {
+      "step": 2,
+      "smiles": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "action": [
+        "rxn2_brick_b1",
+        "5",
+        "[5*]c1cc(O)cc(F)c1C"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+[
+  {
+    "name": "start",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      0,
+      36,
+      360,
+      170.25
+    ]
+  },
+  {
+    "name": "linker",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      8.25,
+      1.5,
+      343.5,
+      239.75
+    ]
+  },
+  {
+    "name": "prefix",
+    "originalViewBox": [
+      0,
+      0,
+      680,
+      220
+    ],
+    "croppedViewBox": [
+      63.75,
+      -1.25,
+      552.5,
+      222.5
+    ]
+  },
+  {
+    "name": "reagent_a",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      4.25,
+      49,
+      351.5,
+      141.5
+    ]
+  },
+  {
+    "name": "reagent_b",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      38,
+      -0.75,
+      284,
+      241.5
+    ]
+  },
+  {
+    "name": "parent",
+    "originalViewBox": [
+      0,
+      0,
+      680,
+      220
+    ],
+    "croppedViewBox": [
+      9.75,
+      17.75,
+      660.5,
+      184.5
+    ]
+  },
+  {
+    "name": "child",
+    "originalViewBox": [
+      0,
+      0,
+      680,
+      220
+    ],
+    "croppedViewBox": [
+      18,
+      -3.5,
+      644,
+      224.5
+    ]
+  },
+  {
+    "name": "retro_0",
+    "originalViewBox": [
+      0,
+      0,
+      680,
+      220
+    ],
+    "croppedViewBox": [
+      18,
+      -3.5,
+      644,
+      224.5
+    ]
+  },
+  {
+    "name": "retro_1",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      1.5,
+      34.5,
+      356.75,
+      173.25
+    ]
+  },
+  {
+    "name": "retro_2",
+    "originalViewBox": [
+      0,
+      0,
+      680,
+      220
+    ],
+    "croppedViewBox": [
+      112,
+      -3.75,
+      457.25,
+      225
+    ]
+  },
+  {
+    "name": "retro_3",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      34,
+      -0.75,
+      292,
+      241.5
+    ]
+  },
+  {
+    "name": "retro_4",
+    "originalViewBox": [
+      0,
+      0,
+      360,
+      240
+    ],
+    "croppedViewBox": [
+      -2.25,
+      33.25,
+      365,
+      172.75
+    ]
+  }
+]

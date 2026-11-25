@@ -1,0 +1,109 @@
+"""PMO (practical molecular optimisation) tasks in the RxnFlow action space: reward vector = [oracle score in [0,1], QED] (the same two-objective MOO structure as Vina + QED),
+oracle = a TDC oracle served by eval/pmo_oracle_worker.py (own interpreter with the scikit-learn the pickled models need).  One trainer class per oracle so that the watchdog / launchers
+can reconstruct a run from its recipe alone:  cgflow.lanes2d.pmo_trainers:PMO_<ORACLE>_oracle (baseline) | PMO_<ORACLE>_RFGSPP (RFG/SPP)  with ORACLE in GSK3B, JNK3, DRD2, ...
+Oracle calls are counted over UNIQUE molecules (the PMO convention); the score cache is task.topn_vina (so that run/rs_support.py restores it on resume)."""
+import json
+import os
+import subprocess
+import sys
+from collections import OrderedDict
+from pathlib import Path
+
+import torch
+from rdkit import Chem
+
+from rxnflow.base import BaseTask, RxnFlowTrainer, mogfn_trainer
+from rxnflow.utils.chem_metrics import mol2qed
+
+C = "/nfs/home/fragenmgr/code/CGFlow"
+WORKER = f"{C}/eval/pmo_oracle_worker.py"
+WORKER_PY = f"{C}/envs/extra/bin/python"
+
+
+class PMOOracle:
+    def __init__(self, name: str):
+        env = dict(os.environ)
+        env["PYTHONPATH"] = ""
+        env["PYTHONDONTWRITEBYTECODE"] = "1"
+        self.name = name
+        self.p = subprocess.Popen([WORKER_PY, WORKER, name], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=sys.stderr, text=True, env=env, bufsize=1)
+        ready = self.p.stdout.readline()
+        assert name in ready, f"oracle worker for {name} did not start: {ready!r}"
+
+    def __call__(self, smiles: list[str]) -> list[float]:
+        self.p.stdin.write(json.dumps({"smiles": smiles}) + "\n")
+        self.p.stdin.flush()
+        return json.loads(self.p.stdout.readline())["scores"]
+
+    def close(self):
+        try:
+            self.p.stdin.write(json.dumps({"quit": True}) + "\n")
+            self.p.stdin.flush()
+        except Exception:
+            pass
+
+
+class PMOMOOTask(BaseTask):
+    is_moo = True
+    ORACLE = "GSK3B"
+
+    def __init__(self, cfg, wrap_model):
+        super().__init__(cfg, wrap_model)
+        assert list(self.objectives) == ["pmo", "qed"], self.objectives
+        self.oracle = PMOOracle(self.ORACLE)
+        self.topn_vina: OrderedDict[str, float] = OrderedDict()  # unique smiles -> oracle score (name kept for run/rs_support.py)
+        self.batch_pmo: list[float] = []
+
+    def compute_rewards(self, objs):
+        smis = [Chem.MolToSmiles(o) for o in objs]
+        new = [s for s in dict.fromkeys(smis) if s not in self.topn_vina]
+        if new:
+            for s, v in zip(new, self.oracle(new), strict=True):
+                self.topn_vina[s] = float(v)
+        self.batch_pmo = [self.topn_vina[s] for s in smis]
+        fr_pmo = torch.tensor(self.batch_pmo, dtype=torch.float32)
+        fr_qed = mol2qed(objs).float()
+        self.avg_reward_info = OrderedDict(pmo=fr_pmo.mean().item(), qed=fr_qed.mean().item())
+        return torch.stack([fr_pmo, fr_qed], dim=1)
+
+
+@mogfn_trainer
+class PMOMOOTrainer(RxnFlowTrainer):
+    task: PMOMOOTask
+    ORACLE = None
+
+    def set_default_hps(self, base):
+        super().set_default_hps(base)
+        base.num_training_steps = 175  # 175 x 64 = 11,200 sampled molecules >= 10,000 unique oracle calls
+        base.task.constraint.rule = None
+        base.algo.train_random_action_prob = 0.05
+        base.algo.action_subsampling.sampling_ratio = 0.01
+        base.cond.temperature.sample_dist = "uniform"
+        base.cond.temperature.dist_params = [0, 64]
+        base.task.moo.objectives = ["pmo", "qed"]
+
+    # the baseline has no state besides the GFlowNet / reward cache (task.topn_vina) that run/rs_support.py already checkpoints: an empty lane state enables the cull-safe resume
+    def rs_extra_state(self):
+        return {}
+
+    def rs_load_extra_state(self, ex):
+        return None
+
+    def setup_task(self):
+        # ORACLE None => the oracle is named by the pseudo-pocket directory (data/PMO/<ORACLE>/protein.pdb), so that ONE trainer class serves an array over several PMO tasks
+        name = self.ORACLE or Path(self.cfg.task.docking.protein_path).parent.name
+        t = type(f"PMOMOOTask_{name}", (PMOMOOTask,), {"ORACLE": name})
+        self.task = t(cfg=self.cfg, wrap_model=self._wrap_for_mp)
+
+    def log(self, info, index, key):
+        self.add_extra_info(info)
+        super().log(info, index, key)
+
+    def add_extra_info(self, info):
+        for prop, fr in self.task.avg_reward_info.items():
+            info[f"sample_r_{prop}_avg"] = fr
+        info["n_unique_oracle_calls"] = float(len(self.task.topn_vina))
+        best = sorted(self.task.topn_vina.values(), reverse=True)
+        for k in (10, 100):
+            if len(best) >= k:
+                info[f"top{k}_pmo"] = sum(best[:k]) / k

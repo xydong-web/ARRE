@@ -1,0 +1,49 @@
+{
+  "archive_rows": 79500,
+  "archive_selected_molecules_sha256": "2612f33c6c31acee6b6baaa3d8e0524a88a44b1383464f98acf04226eaabe7e8",
+  "elapsed_s": 95.2,
+  "generated_utc": "2026-11-17T17:29:05Z",
+  "legacy_single_record_crosscheck": [
+    {
+      "actions_equal": true,
+      "candidate_id": "dev15:r2CE4L4:ADRB2:0:57",
+      "iteration_equal": true
+    }
+  ],
+  "platform": "Linux-5.14.0-687.56.1.el9_8.x86_64-x86_64-with-glibc2.34",
+  "python": "3.12.2",
+  "schema": "arre.generation_routes/1",
+  "smoke": false,
+  "synga_catalog": {
+    "blocks_txt_lines": 1881802,
+    "blocks_txt_sha256": "6780fb30ddff466a104f0b77e063745febeab84ef7811cef422f2544562492ac",
+    "index_base": 0,
+    "library": "cgflow38",
+    "note": "B<i> = line i (0-based) of blocks.txt; R<j> = line j (0-based) of reactions.txt",
+    "reactions_txt_lines": 38,
+    "reactions_txt_sha256": "ee073bd86b046d71f3fda9de6ba3f03f18d509ecdeab758911948f90f8656175"
+  },
+  "totals": {
+    "ambiguous": 1341,
+    "arm_onpolicy": 1403,
+    "arm_prefix1": 10035,
+    "arm_prefix2": 15562,
+    "arre_provenance": 27000,
+    "chain_or_format_ok": 72982,
+    "exported": 72982,
+    "not_applicable": 6000,
+    "prefix_parent_not_found": 0,
+    "prefix_selected": 25597,
+    "prefix_verified": 25597,
+    "reexec_checked": 20482,
+    "reexec_exact": 20482,
+    "reexec_flat": 0,
+    "score_consistent": 72982,
+    "selected": 79500,
+    "unavailable": 518,
+    "unavailable_after_checkpoint": 518,
+    "units": 795
+  },
+  "units_processed": 735,
+  "units_total": 795
+}

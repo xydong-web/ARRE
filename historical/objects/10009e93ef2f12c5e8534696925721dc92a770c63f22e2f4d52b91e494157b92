@@ -1,0 +1,35 @@
+"""2D trainers: the RxnFlow Uni-Dock Vina-QED MOO trainer with the ORACLE OF RECORD (Uni-Dock 'balance', conformer/docking seed 1, 20 A box) and the RFG/SPP variant.
+  UniDockMOOTrainer_oracle  : baseline RxnFlow (no lane code at all)
+  UniDockMOOTrainer_RFGSPP   : RFG/SPP (critic tilt, route prior, look-ahead) - `--set rfg_spp.enable=true ...`; with the switch off it is the baseline.
+Select with  run_opt2d_rs.py --trainer cgflow.lanes2d.trainers2d:<Class>."""
+from rxnflow.tasks.unidock import UniDockMOOTrainer
+
+from cgflow.lanes2d.config2d import Config2D
+from cgflow.lanes2d.combo_2d import VinaMOOTrainer_ARRE
+from cgflow.lanes2d.rfg_spp_2d import VinaMOOTrainer_RFGSPP
+
+
+class _Oracle:
+    def get_default_cfg(self):
+        return Config2D()
+
+    def setup_task(self):
+        super().setup_task()
+        self.task.search_mode = "balance"  # RxnFlow's default is 'fast'; the oracle of record (eval/cgflow_oracle.py) is 'balance'
+
+
+class UniDockMOOTrainer_oracle(_Oracle, UniDockMOOTrainer):
+    # no lane state: an empty one enables the cull-safe resume of run/rs_support.py (the baseline keeps nothing beyond the GFlowNet / reward cache that is checkpointed anyway)
+    def rs_extra_state(self):
+        return {}
+
+    def rs_load_extra_state(self, ex):
+        return None
+
+
+class UniDockMOOTrainer_RFGSPP(_Oracle, VinaMOOTrainer_RFGSPP):
+    pass
+
+
+class UniDockMOOTrainer_ARRE(_Oracle, VinaMOOTrainer_ARRE):
+    pass

@@ -1,0 +1,45 @@
+{
+  "status": "source-accurate-scientific-Figure1-v1",
+  "caveat": "3D pocket is coordinate-derived qualitative visualization, not experimental binding or interaction assignment",
+  "evidence": "frozen ADRB2 seed0 parent it991 and child it993, two identical initial route actions, distinct final reaction templates",
+  "parent_smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+  "child_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+  "prefix_molecule": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+  "building_block_start": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+  "linker": "[1*]Nc1nccc([23*])c1F",
+  "reagent_parent": "[3*]C12CC(C#N)C(C1)C2",
+  "reagent_child": "[5*]c1cc(O)cc(F)c1C",
+  "parent_Vina": -12.19,
+  "child_Vina": -12.775,
+  "parent_QED": 0.745,
+  "child_QED": 0.514,
+  "child_poses_selected_top100_index": 56,
+  "child_planner_solved": true,
+  "child_planner_steps": 2,
+  "source_hashes": {
+    "run/opt/r2CE4L4/ADRB2/seed0/rhc/arms.tsv": "607c252620d2f04eaf7d80096588b4532c357d0170f0d0fbd582a7c4fe780e64",
+    "run/opt/r2CE4L4/ADRB2/seed0/train/generated_objs_0.db": "a8c4620fd63afeec1a5caf4a8c90d3ae21a6a09d208cdba98adfa7848e8ea1b1",
+    "data/LIT-PCBA/ADRB2/protein.pdb": "4babf8c4202c4dc9f6484250f1170da9570cd15e09c0422415bb7b953897e5e2",
+    "results/robust/r2CE4L4/ADRB2/s0/pose_P0.sdf": "ba6680865cf192af3ecd706650b6afed0b08124afa3a40dece4bab949c883680",
+    "results/r2CE4L4/ADRB2/seed0/aizynth.json.gz": "2c9515b57ecd99c593fd56acc638b69d55479c45bb7eff8de968e2ad6ba5ad14"
+  },
+  "outputs": [
+    "ADRB2_actual_receptor_and_P0_pose.png",
+    "Figure_1_ARRE_reaction_history_verified_v1.svg",
+    "Figure_1_ARRE_reaction_history_verified_v1.pdf",
+    "Figure_1_ARRE_reaction_history_verified_v1.tiff",
+    "Figure1_source_QA.json",
+    "Figure_1_ARRE_reaction_history_verified_v1.png"
+  ],
+  "pdf_check": {
+    "page_size_mm": [
+      178.0,
+      145.0
+    ],
+    "text_spans": 75,
+    "out_of_bounds_text": 0,
+    "pdf_image_objects": 1,
+    "min_text_pt": 5.102362632751465,
+    "max_text_pt": 11.055118560791016
+  }
+}

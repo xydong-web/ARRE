@@ -1,0 +1,491 @@
+{
+  "case": "ADRB2 seed0 991/993",
+  "verified": true,
+  "topk_index": 56,
+  "pose": "independent reevaluation P0, not saved sampling-time state",
+  "molecules": {
+    "start": {
+      "smiles": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+      "atoms": 13
+    },
+    "linker": {
+      "smiles": "[1*]Nc1nccc([23*])c1F",
+      "atoms": 10
+    },
+    "prefix": {
+      "smiles": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "atoms": 21
+    },
+    "reagent_a": {
+      "smiles": "[3*]C12CC(C#N)C(C1)C2",
+      "atoms": 9
+    },
+    "reagent_b": {
+      "smiles": "[5*]c1cc(O)cc(F)c1C",
+      "atoms": 10
+    },
+    "parent": {
+      "smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+      "atoms": 30
+    },
+    "child": {
+      "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "atoms": 31
+    },
+    "retro_0": {
+      "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "atoms": 31
+    },
+    "retro_1": {
+      "smiles": "FC1(F)CC(c2cccc(Br)c2)C1",
+      "atoms": 13
+    },
+    "retro_2": {
+      "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(B2OC(C)(C)C(C)(C)O2)c1F",
+      "atoms": 28
+    },
+    "retro_3": {
+      "smiles": "Cc1c(F)cc(O)cc1C(=O)O",
+      "atoms": 12
+    },
+    "retro_4": {
+      "smiles": "CC1(C)OB(c2ccnc(N)c2F)OC1(C)C",
+      "atoms": 17
+    }
+  },
+  "source_hashes": {
+    "aizynth.json.gz": "2c9515b57ecd99c593fd56acc638b69d55479c45bb7eff8de968e2ad6ba5ad14",
+    "arms.tsv": "607c252620d2f04eaf7d80096588b4532c357d0170f0d0fbd582a7c4fe780e64",
+    "best_poses.sdf": "89bec2423ccca6d9490805e53f549368e9ba4671b666609c4e1484105d039773",
+    "generated_objs_0.db": "a8c4620fd63afeec1a5caf4a8c90d3ae21a6a09d208cdba98adfa7848e8ea1b1",
+    "gnina.csv": "f02654ef59be5f6a3270fe9afee10efad8583e5e904be589a8f48d67f0fd69db",
+    "interactions.csv": "8a0db8a1ab8e7c3e837f88818761651c2daf8615351296718587bb0266d3e1d8",
+    "pose_P0.sdf": "ba6680865cf192af3ecd706650b6afed0b08124afa3a40dece4bab949c883680",
+    "protein.pdb": "4babf8c4202c4dc9f6484250f1170da9570cd15e09c0422415bb7b953897e5e2",
+    "rtm_gnina.csv": "5d255f7ce27b662dcd12f1a280f741d24ecfc9746c169837aa81db952193e8f3",
+    "rtm_score_poses.py": "6b6e0d7bb311aee9aaa2c84864821cba9f1946c49d7c8de3cb1ca8ca6f5bada6",
+    "topk.csv": "bb65a7b10a00d922cef31c34e614a787136c33112fc8a9987cdd2c3efd22120e"
+  },
+  "parent": {
+    "it": "991",
+    "arm": "prefix2",
+    "smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+    "vina": "-12.190",
+    "qed": "0.745",
+    "hit": "0",
+    "elite": "O=C(Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F)C12C=CC(CC1)C2"
+  },
+  "child": {
+    "it": "993",
+    "arm": "prefix2",
+    "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+    "vina": "-12.775",
+    "qed": "0.514",
+    "hit": "1",
+    "elite": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2"
+  },
+  "retrosynthesis": {
+    "tree_index": 2,
+    "reaction_count": 2,
+    "solved": true,
+    "nodes": [
+      {
+        "id": 0,
+        "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+        "in_stock": false
+      },
+      {
+        "id": 1,
+        "smiles": "FC1(F)CC(c2cccc(Br)c2)C1",
+        "in_stock": true
+      },
+      {
+        "id": 2,
+        "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(B2OC(C)(C)C(C)(C)O2)c1F",
+        "in_stock": false
+      },
+      {
+        "id": 3,
+        "smiles": "Cc1c(F)cc(O)cc1C(=O)O",
+        "in_stock": true
+      },
+      {
+        "id": 4,
+        "smiles": "CC1(C)OB(c2ccnc(N)c2F)OC1(C)C",
+        "in_stock": true
+      }
+    ],
+    "edges": [
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  },
+  "nearest_residues": [
+    {
+      "distance": 2.5209717769146094,
+      "point": [
+        -4.602,
+        -15.43,
+        -50.242
+      ],
+      "label": "ASN424:A"
+    },
+    {
+      "distance": 2.7351856500062297,
+      "point": [
+        1.692,
+        -9.064,
+        -43.029
+      ],
+      "label": "THR261:A"
+    },
+    {
+      "distance": 2.8896825811843083,
+      "point": [
+        -3.937,
+        -11.674,
+        -57.53
+      ],
+      "label": "PHE336:A"
+    },
+    {
+      "distance": 2.9175959024511964,
+      "point": [
+        5.03,
+        -11.472,
+        -49.017
+      ],
+      "label": "SER346:A"
+    }
+  ],
+  "minimum_heavy_atom_distance_A": 2.5209717769146094,
+  "rdkit_version": "2025.03.2",
+  "python": "3.10.13 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:24:38) [MSC v.1916 64 bit (AMD64)]",
+  "missing": [
+    "sampling-time intermediate 3D coordinates",
+    "candidate-matched TarPass/PLIP interaction map"
+  ],
+  "notes": [
+    "No interactions inferred from proximity alone.",
+    "No docking or synthesis planning rerun.",
+    "Exact isomeric identity verified across trajectory, topk, P0 SDF and retrosynthesis target."
+  ],
+  "independent_scores": {
+    "gnina": {
+      "idx": "56",
+      "smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+      "unidock": "-12.77500033378601",
+      "n_poses": "9",
+      "cnn_aff": "7.0955581665",
+      "cnn_score": "0.8033936024",
+      "cnn_var": "",
+      "vina_gn": "13.54767",
+      "cnn_aff_max": "7.5976409912",
+      "vina_gn_min": "-11.75298"
+    },
+    "rtmscore_on_gnina_pose": {
+      "set": "gnina",
+      "tag": "r2CE4L4",
+      "seed": "0",
+      "idx": "56",
+      "nha": "31",
+      "rtm1": "12.506389278770321",
+      "rtm2": "13.30541962826802",
+      "rtm3": "12.722589095757268"
+    },
+    "identity_checks_passed": true,
+    "mapping": "eval/rtm_score_poses.py uses tag|seed|SDF idx, not dataframe row position",
+    "caveat": "GNINA best-CNN pose has positive minimizedAffinity; score is a model output, not validated binding."
+  },
+  "pocket_render": {
+    "renderer": "PyMOL",
+    "version": [
+      "3.2.0a",
+      3.0,
+      3000000,
+      1754317289,
+      "7e6dafa700aba746ad963d5057748dbb8f87cbc6",
+      0
+    ],
+    "input_pose": "child_P0.sdf",
+    "input_pocket": "source/protein.pdb",
+    "ligand_atoms": 31,
+    "visible_receptor_atoms": 1162,
+    "orientation_transform": [
+      [
+        -0.552064836025238,
+        -0.2661532461643219,
+        -0.7901815176010132,
+        -45.757484436035156
+      ],
+      [
+        0.7802340984344482,
+        -0.4991011321544647,
+        -0.37700504064559937,
+        -23.37436866760254
+      ],
+      [
+        -0.29403936862945557,
+        -0.8246577978134155,
+        0.48319801688194275,
+        13.257247924804688
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "view": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      -53.186832427978516,
+      -2.86102294921875e-06,
+      -4.76837158203125e-07,
+      1.6689300537109375e-06,
+      33.18682861328125,
+      73.18682861328125,
+      20.0
+    ],
+    "closeup_view": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      -50.35118865966797,
+      -2.86102294921875e-06,
+      -4.76837158203125e-07,
+      1.6689300537109375e-06,
+      39.697261810302734,
+      61.0051155090332,
+      20.0
+    ],
+    "representation": "focused gray molecular surface, cyan ligand carbon sticks with element colors, rust highlighted residues",
+    "contacts": [
+      {
+        "residue": "ASN424",
+        "chain": "A",
+        "distance_A": 2.520971985914856,
+        "protein_atom": "OD1",
+        "ligand_atom": "F",
+        "protein_xyz": [
+          0.5901638865470886,
+          -0.32238858938217163,
+          3.0580527782440186
+        ],
+        "ligand_xyz": [
+          0.04074939712882042,
+          0.09385702759027481,
+          0.6331439018249512
+        ]
+      },
+      {
+        "residue": "PHE336",
+        "chain": "A",
+        "distance_A": 2.8896824683138367,
+        "protein_atom": "N",
+        "ligand_atom": "C",
+        "protein_xyz": [
+          4.982210636138916,
+          1.0694552659988403,
+          -3.7564446926116943
+        ],
+        "ligand_xyz": [
+          5.7542195320129395,
+          0.892509400844574,
+          -0.9774237871170044
+        ]
+      }
+    ],
+    "no_coordinate_optimization": true
+  },
+  "render_asset_hashes": {
+    "child_P0.sdf": "68a442e48b85da86a8d9650c3d5333369a391f0f1956a09c5976ff9cd880a4df",
+    "pocket_context.pdb": "584023d14d7340a900f4ae2a295a670193a1463c0ca33c24014c57f7c47236ed",
+    "pocket_pymol.png": "6a170290d43bf89839fba507540bb533142b971e39b077eeef706dd24cac47d1",
+    "pocket_pymol_closeup.png": "546f3a08a785299f8e7422044eebc0eca9d00051b7e2dac6799093cf63b08958",
+    "ADRB2_993_P0_pocket.pse": "e1a83f18ac02c3d6975130aa057d541cb5e34e994ffb870c5e9460a4795cbacb"
+  },
+  "rhc_verification": {
+    "source": "frozen/round2_integ_4/src/cgflow/lanes/rhc.py",
+    "arms_line": 37,
+    "prefix_specs_lines": [
+      330,
+      345
+    ],
+    "arms": [
+      "onpolicy",
+      "prefix1",
+      "prefix2"
+    ],
+    "forced_actions": [
+      0,
+      1,
+      2
+    ],
+    "connection": "initialization and forced-prefix replay"
+  },
+  "assessment_render": {
+    "renderer": "PyMOL",
+    "version": [
+      "3.2.0a",
+      3.0,
+      3000000,
+      1754317289,
+      "7e6dafa700aba746ad963d5057748dbb8f87cbc6",
+      0
+    ],
+    "pose": "child_GNINA.sdf",
+    "pose_sha256": "240734cd0c65351f347987289a05d35ba1eeb7fbb3b4071050fdd1d0d3ec7b96",
+    "surface_colors": "chemical elements, not RTMScore per-atom attribution",
+    "no_docking_or_scoring_rerun": true,
+    "transform_rotation": [
+      [
+        -0.059600669890642166,
+        -0.3321395814418793,
+        -0.9413453340530396
+      ],
+      [
+        0.9134061932563782,
+        0.3622495234012604,
+        -0.18564602732658386
+      ],
+      [
+        0.4026623070240021,
+        -0.870895266532898,
+        0.28178802132606506
+      ]
+    ],
+    "transform_center": [
+      0.3655644655227661,
+      -14.238944053649902,
+      -53.45767593383789
+    ]
+  },
+  "chemistry_depiction": {
+    "passed": true,
+    "molecules": [
+      {
+        "name": "start",
+        "canonical_smiles": "[21*]c1cccc(C2CC(F)(F)C2)c1",
+        "sha256": "7d3a190508a26876433bf7f87a9cae4d376f479f6f28a079a6e2e5cf869e6f28"
+      },
+      {
+        "name": "linker",
+        "canonical_smiles": "[1*]Nc1nccc([23*])c1F",
+        "sha256": "71d1f22d72b7b974a42ff3463313da2ec2aa66acb3da76e36faad1812dd22051"
+      },
+      {
+        "name": "prefix",
+        "canonical_smiles": "[1*]Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+        "sha256": "322f2854d3f2736739c0310f8b441d3ee0a08a4b72c3804ccf0c784b0c911362"
+      },
+      {
+        "name": "reagent_a",
+        "canonical_smiles": "[3*]C12CC(C#N)C(C1)C2",
+        "sha256": "d8bccfa114406240c8c8082a7425fc43cb266ba82c6945bd81cef7740e6b65f0"
+      },
+      {
+        "name": "reagent_b",
+        "canonical_smiles": "[5*]c1cc(O)cc(F)c1C",
+        "sha256": "3118e2f21f2e744f2b38074df2d1e726ac4f44f4668ca9f3cdc4eb60452e925a"
+      },
+      {
+        "name": "parent",
+        "canonical_smiles": "N#CC1CC2(C(=O)Nc3nccc(-c4cccc(C5CC(F)(F)C5)c4)c3F)CC1C2",
+        "sha256": "2802bc3323ceb96068ce672e11dd6f68137a3a8d567ddfede75424ea2365c7e7"
+      },
+      {
+        "name": "child",
+        "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+        "sha256": "470f6631d90fd18e59ec8000419574885affee1f0a336a8bcec3618e4365d22e"
+      },
+      {
+        "name": "retro_0",
+        "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(-c2cccc(C3CC(F)(F)C3)c2)c1F",
+        "sha256": "470f6631d90fd18e59ec8000419574885affee1f0a336a8bcec3618e4365d22e"
+      },
+      {
+        "name": "retro_1",
+        "canonical_smiles": "FC1(F)CC(c2cccc(Br)c2)C1",
+        "sha256": "6b05f4dc6dbee82e66ad4c2f4e7de9ecf86bbd146aed424e9f1b5df5ff76797e"
+      },
+      {
+        "name": "retro_2",
+        "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)Nc1nccc(B2OC(C)(C)C(C)(C)O2)c1F",
+        "sha256": "417b5052f530b88c17e4ca9c7310bd9d1e8a6ab7128631ec4d9b402e296b2ebc"
+      },
+      {
+        "name": "retro_3",
+        "canonical_smiles": "Cc1c(F)cc(O)cc1C(=O)O",
+        "sha256": "4515aa84016deb5429ec05f3871a4f83952c6af06ad0fbdfeeaa5ca94bdc186a"
+      },
+      {
+        "name": "retro_4",
+        "canonical_smiles": "CC1(C)OB(c2ccnc(N)c2F)OC1(C)C",
+        "sha256": "b590414c4dd14544f5ceb6549a8ce585d2d8447d1fb275d55dd57ad17819b1f8"
+      }
+    ],
+    "svg_intrinsic_scale": 4,
+    "bond_width": 4.5,
+    "minimum_atom_font": 32
+  },
+  "rhc_reference_layout": {
+    "reference": "user-supplied RHC crop 2026-10-29",
+    "allocation": {
+      "nodes": 5,
+      "edges": 4
+    },
+    "onpolicy": {
+      "nodes": 6,
+      "edges": 6,
+      "teal": 4,
+      "gray": 2
+    },
+    "prefix1": {
+      "nodes": 5,
+      "edges": 4,
+      "teal": 4,
+      "gray": 1
+    },
+    "prefix2": {
+      "nodes": 6,
+      "edges": 5,
+      "teal": 0,
+      "gray": 6
+    },
+    "interpretation": "schematic graph glyphs matching reference, not action count encoding",
+    "native_editable": true
+  }
+}

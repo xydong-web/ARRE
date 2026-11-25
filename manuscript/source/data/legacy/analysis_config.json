@@ -1,0 +1,40 @@
+{
+  "bootstrap_resamples": 10000,
+  "bootstrap_rng": "numpy RandomState(0)",
+  "primary_F": "r2CE4L4",
+  "baseline": "base_ep30",
+  "target_order": [
+    "ADRB2",
+    "ALDH1",
+    "ESR_ago",
+    "ESR_antago",
+    "FEN1",
+    "GBA",
+    "IDH1",
+    "KAT2A",
+    "MAPK1",
+    "MTORC1",
+    "OPRK1",
+    "PKM2",
+    "PPARG",
+    "TP53",
+    "VDR"
+  ],
+  "new_pockets": [
+    "BGL07_ORYSJ",
+    "COAA_MYCTU",
+    "HDAC8_HUMAN",
+    "CCPR_YEAST",
+    "NOS1_HUMAN",
+    "TRAR_RHIRD",
+    "OLIAC_CANSA",
+    "ODBB_THET8",
+    "AKT1_HUMAN",
+    "HMD_METJA"
+  ],
+  "scipy": "1.15.3",
+  "numpy": "2.2.6",
+  "backend": "Python",
+  "manuscript_claim": "computational search; proxy endpoints",
+  "retrospective_new_analyses": "exploratory; no changed model selection"
+}

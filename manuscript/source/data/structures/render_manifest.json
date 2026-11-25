@@ -1,0 +1,738 @@
+{
+  "pymol_version": [
+    "3.0.0"
+  ],
+  "panels": [
+    {
+      "id": "NAMPT_B",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/NAMPT/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26b/NAMPT/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 6,
+      "residues": [
+        "A_ASP219",
+        "A_PHE193",
+        "A_SER275",
+        "A_VAL242",
+        "B_TYR18"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "NAMPT_ARRE",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/NAMPT/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26f/NAMPT/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 4,
+      "residues": [
+        "A_ASP219",
+        "A_PHE193",
+        "A_SER275",
+        "A_VAL242",
+        "B_TYR18"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "NAMPT_reference",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/NAMPT/protein.pdb",
+      "sdf": "data/tarpass20261024/NAMPT/reference_ligand.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 5,
+      "residues": [
+        "A_ASP219",
+        "A_PHE193",
+        "A_SER275",
+        "A_VAL242",
+        "B_TYR18"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_B",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/MEK1/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26b/MEK1/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 0,
+      "residues": [
+        "B_SER212",
+        "B_VAL127"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_ARRE",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/MEK1/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26f/MEK1/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 0,
+      "residues": [
+        "B_SER212",
+        "B_VAL127"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_reference",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/MEK1/protein.pdb",
+      "sdf": "data/tarpass20261024/MEK1/reference_ligand.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 2,
+      "residues": [
+        "B_SER212",
+        "B_VAL127"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_B",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/ROCK1/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26b/ROCK1/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 0,
+      "residues": [
+        "A_MET156"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_ARRE",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/ROCK1/protein.pdb",
+      "sdf": "results/tarpass_eval/gnina/tp26f/ROCK1/s0/best_poses.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 0,
+      "residues": [
+        "A_MET156"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_reference",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "receptor": "data/tarpass20261024/ROCK1/protein.pdb",
+      "sdf": "data/tarpass20261024/ROCK1/reference_ligand.sdf",
+      "idx": 0,
+      "n_key_geometry_segments": 1,
+      "residues": [
+        "A_MET156"
+      ],
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.9,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "B_stable",
+      "camera": [
+        0.7079691290855408,
+        -0.1689172387123108,
+        -0.685745358467102,
+        -0.6582187414169312,
+        0.19412313401699066,
+        -0.7273680567741394,
+        0.2559840679168701,
+        0.9663246870040894,
+        0.026248708367347717,
+        0.0,
+        0.0,
+        -68.91868591308594,
+        -1.8150768280029297,
+        7.133155345916748,
+        8.654478073120117,
+        54.33601760864258,
+        83.50135803222656,
+        20.0
+      ],
+      "receptor": "data/LIT-PCBA/KAT2A/protein.pdb",
+      "original": "results/robust/base_ep30/KAT2A/s0/pose_P0.sdf",
+      "redock": "results/gnina/base_ep30/KAT2A/s0/best_poses.sdf",
+      "idx": 72,
+      "recomputed_rmsd_A": 0.846538393208761,
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.86
+    },
+    {
+      "id": "B_shifted",
+      "camera": [
+        0.9968352913856506,
+        -0.04594094678759575,
+        -0.06487557291984558,
+        0.033163584768772125,
+        0.9820207357406616,
+        -0.1858377307653427,
+        0.07224670797586441,
+        0.18309807777404785,
+        0.980436384677887,
+        0.0,
+        0.0,
+        -70.86320495605469,
+        -35.970306396484375,
+        3.8642330169677734,
+        19.942821502685547,
+        55.86909103393555,
+        85.85731506347656,
+        20.0
+      ],
+      "receptor": "data/LIT-PCBA/ESR_ago/protein.pdb",
+      "original": "results/robust/base_ep30/ESR_ago/s0/pose_P0.sdf",
+      "redock": "results/gnina/base_ep30/ESR_ago/s0/best_poses.sdf",
+      "idx": 74,
+      "recomputed_rmsd_A": 8.258674981956018,
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.86
+    },
+    {
+      "id": "F_stable",
+      "camera": [
+        0.6303361058235168,
+        0.7663464546203613,
+        0.1240554004907608,
+        -0.7735650539398193,
+        0.6334823369979858,
+        0.01724264957010746,
+        -0.06537305563688278,
+        -0.10683358460664749,
+        0.9921255707740784,
+        0.0,
+        0.0,
+        -63.95536422729492,
+        -34.90125274658203,
+        4.766942501068115,
+        20.393808364868164,
+        50.42289733886719,
+        77.48783111572266,
+        20.0
+      ],
+      "receptor": "data/LIT-PCBA/ESR_ago/protein.pdb",
+      "original": "results/robust/r2CE4L4/ESR_ago/s0/pose_P0.sdf",
+      "redock": "results/gnina/r2CE4L4/ESR_ago/s0/best_poses.sdf",
+      "idx": 17,
+      "recomputed_rmsd_A": 0.6502133801276092,
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.86
+    },
+    {
+      "id": "F_shifted",
+      "camera": [
+        -0.008141965605318546,
+        -0.3152562975883484,
+        0.9489716291427612,
+        0.9999106526374817,
+        0.007496090140193701,
+        0.011069274507462978,
+        -0.010603236965835094,
+        0.9489770531654358,
+        0.3151671290397644,
+        0.0,
+        0.0,
+        -76.64546966552734,
+        32.530269622802734,
+        35.01393508911133,
+        -15.928332328796387,
+        60.42787170410156,
+        92.86306762695312,
+        20.0
+      ],
+      "receptor": "data/LIT-PCBA/GBA/protein.pdb",
+      "original": "results/robust/r2CE4L4/GBA/s0/pose_P0.sdf",
+      "redock": "results/gnina/r2CE4L4/GBA/s0/best_poses.sdf",
+      "idx": 83,
+      "recomputed_rmsd_A": 8.558327368106305,
+      "ligand_alignment": false,
+      "crop": "none",
+      "background": "white",
+      "surface_transparency": 0.86
+    }
+  ]
+}

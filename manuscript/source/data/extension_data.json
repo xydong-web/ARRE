@@ -1,0 +1,174 @@
+{
+  "Figure2": {
+    "target": [
+      "ADRB2",
+      "ESR1 ant.",
+      "IDH1",
+      "MTORC1",
+      "PPARG"
+    ],
+    "equal_time_delta": [
+      -1.2576950132846827,
+      -1.0537250995635983,
+      -1.0409300267696375,
+      -1.0535800039768217,
+      -0.8981700330972666
+    ],
+    "iteration_time_ratio": [
+      1.1846460694707617,
+      1.2423934057838828,
+      1.1953092204924094,
+      1.1130068840614664,
+      1.0565967687397122
+    ],
+    "delta_mean": -1.0608200353384014,
+    "delta_ci95": [
+      -1.219967686112536,
+      -0.901672384564267
+    ],
+    "ratio_mean": 1.1583904697096463,
+    "n_targets": 5,
+    "n_seeds": 2,
+    "source": "docs/arre_v2_gap_experiments_20261101/advancement/walltime_equal.json"
+  },
+  "Figure5": {
+    "control": [
+      "Random prefix replay",
+      "Prioritized replay",
+      "Elite last-block",
+      "RHC (route continuation)"
+    ],
+    "delta_adj": [
+      0.0034007959355434104,
+      -0.2807987257137342,
+      -0.7385496131541471,
+      -0.9507905436502803
+    ],
+    "ci95": [
+      [
+        -0.08,
+        0.0868
+      ],
+      [
+        -0.4563,
+        -0.1053
+      ],
+      [
+        -1.0111,
+        -0.466
+      ],
+      [
+        -1.2232,
+        -0.6784
+      ]
+    ],
+    "rhc_minus_els_by_target": {
+      "ADRB2": -0.032903520047826706,
+      "FEN1": -0.15245223852888168,
+      "MAPK1": -0.12556626504821067,
+      "MTORC1": -0.31893705466733824,
+      "VDR": -0.4313455741884088
+    },
+    "rhc_minus_els_mean": -0.21224093049613318,
+    "rhc_minus_els_ci95": [
+      -0.41113984586235197,
+      -0.013342015129914425
+    ],
+    "els_explained_fraction": 0.78,
+    "n_targets": 5,
+    "n_seeds": 3,
+    "source": "docs/arre_v2_gap_experiments_20261101/advancement/controls_results.json"
+  },
+  "Figure7": {
+    "target": [
+      "ADRB2",
+      "FEN1",
+      "MAPK1",
+      "MTORC1",
+      "VDR"
+    ],
+    "fc_minus_synGBO_vina": [
+      -0.7107435954093919,
+      -0.11217347505251585,
+      -0.345813534317017,
+      0.3667564269574459,
+      0.33606306570688815
+    ],
+    "fc_minus_synGBO_heavy_atoms": [
+      0.22333333333333272,
+      0.28000000000000114,
+      -0.129999999999999,
+      -2.556666666666665,
+      -1.7833333333333314
+    ],
+    "mean_delta_vina": -0.09318222242291814,
+    "ci95_delta_vina": [
+      -0.6626447097298784,
+      0.4762802648840421
+    ],
+    "fc_ha": 27.77266666666667,
+    "synGBO_ha": 28.565999999999995,
+    "fc_solved_pct": 86.03333333333333,
+    "synGBO_solved_pct": 87.13333333333334,
+    "n_targets": 5,
+    "n_seeds": 3,
+    "source": "docs/arre_v2_gap_experiments_20261101/advancement/sizecap_results.json"
+  },
+  "Figure8": {
+    "target": [
+      "AKT1",
+      "BGL07",
+      "CCPR",
+      "COAA",
+      "HDAC8",
+      "HMD",
+      "NOS1",
+      "ODBB",
+      "OLIAC",
+      "TRAR"
+    ],
+    "delta_alternative_crystal": [
+      -0.483595,
+      -0.5757055555555528,
+      -0.4344577777777783,
+      -0.31105999999999945,
+      -0.50889,
+      -0.7193733333333316,
+      -0.7780677777777782,
+      -1.6065649999999998,
+      -1.0053566666666676,
+      -1.5803666666666683
+    ],
+    "delta_mean": -0.8003437777777777,
+    "delta_ci95": [
+      -1.1304533835385153,
+      -0.47023417201703993
+    ],
+    "n_targets": 10,
+    "n_alternative_structures": 24,
+    "pb_methods": [
+      "CGFlow-B",
+      "ARRE",
+      "Frozen ARRE",
+      "SynGA",
+      "SynGBO"
+    ],
+    "pb_pass_pct": [
+      99.15555555555555,
+      99.06666666666666,
+      99.17777777777778,
+      99.46666666666667,
+      99.42222222222222
+    ],
+    "pb_per_method_n": 4500,
+    "pb_delta_f_b": -0.08888888888888798,
+    "pb_delta_ci95": [
+      -0.504395930137111,
+      0.3266181523593351
+    ],
+    "source": [
+      "docs/arre_v2_gap_experiments_20261101/validity/xrec_summary.json",
+      "docs/arre_v2_gap_experiments_20261101/validity/pb_summary.json"
+    ]
+  }
+}

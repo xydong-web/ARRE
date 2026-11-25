@@ -1,0 +1,5918 @@
+{
+  "summary": {
+    "target": "MEK1",
+    "receptor_reference_type": "holo",
+    "source_poses": "/path/to/ARRE/results/tarpass_eval/gnina/tp26f/MEK1/s0/best_poses.sdf",
+    "source_sha256": "7f01381bed6e6dc7d98d0c4ae21ab42a966556fc6a4ce3f050563ac358fc6531",
+    "key_rules_sha256": "a7277461e3401d7189c43adf821fb5723730cce7fd9b4d0e241a7c2795f39ccb",
+    "tarpass_git_revision": "da5058666fb36c0c275ba1d4bd9b8906b0a702fb",
+    "plip_version": "2.4.0",
+    "n_sdf_records": 100,
+    "n_attempted": 100,
+    "n_failed": 0,
+    "n_valid": 100,
+    "reference_mode": false,
+    "mean_match_rate": 0.13,
+    "full_match_rate": 0.0,
+    "full_match_fraction_all": 0.0
+  },
+  "molecules": [
+    {
+      "index": 0,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASN195"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_VAL127",
+          "B_LEU197",
+          "B_ASP208",
+          "B_PHE209",
+          "B_LEU118",
+          "B_LEU197",
+          "B_LEU215"
+        ],
+        "H-Bond": [
+          "B_ASN195",
+          "B_VAL211",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ASP190",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ILE141"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ILE141",
+          "B_ARG189",
+          "B_PHE209",
+          "B_MET219",
+          "B_LEU118",
+          "B_PHE129",
+          "B_MET143",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_PHE209",
+          "B_LEU118",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_GLY128"
+        ],
+        "H-Bond donor": [
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_VAL127",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ASP190",
+          "B_PHE209",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU118",
+          "B_LEU215"
+        ],
+        "H-Bond": [
+          "B_GLY128",
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_ASP208",
+          "B_PHE209",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Halogen bond": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_VAL127",
+          "B_PHE129",
+          "B_ARG189",
+          "B_ASP208",
+          "B_LEU118",
+          "B_MET143",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_PHE209"
+        ],
+        "H-Bond donor": [
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_PHE209",
+          "B_ILE216",
+          "B_PHE129",
+          "B_MET143",
+          "B_LEU215",
+          "B_ILE216",
+          "B_MET219",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond": [
+          "B_PHE209",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ARG189"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_MET219",
+          "B_LEU118",
+          "B_VAL127",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "Salt Bridge lneg": [
+          "B_ARG234"
+        ],
+        "H-Bond": [
+          "B_ARG189",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ARG234"
+        ],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_VAL127"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_VAL127",
+          "B_PHE129",
+          "B_LEU118",
+          "B_ARG189",
+          "B_PHE209",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_VAL127",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_LYS97"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_PHE129",
+          "B_PHE129",
+          "B_MET143",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ALA220",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ASP208",
+          "B_PHE209",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_LYS97"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ILE141"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP190",
+          "B_PHE209"
+        ],
+        "H-Bond donor": [
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_VAL127",
+          "B_VAL127",
+          "B_PHE129",
+          "B_ASP190",
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_ILE141",
+          "B_MET143",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_ASP190",
+          "B_PHE209",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE139",
+          "B_PHE209",
+          "B_PHE209",
+          "B_LYS97",
+          "B_ILE99",
+          "B_ILE99",
+          "B_LEU101",
+          "B_LEU101",
+          "B_LEU115",
+          "B_LEU118",
+          "B_ILE139",
+          "B_ILE141",
+          "B_ILE141",
+          "B_LEU215",
+          "B_LEU215",
+          "B_ALA222"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ASP190",
+          "B_LYS97",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_VAL127",
+          "B_VAL127",
+          "B_MET143",
+          "B_ASP190",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASN78"
+        ],
+        "Halogen bond": [
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_MET219",
+          "B_LEU101",
+          "B_LEU215",
+          "B_ALA222"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASN78"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ARG189"
+        ],
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Halogen bond": [
+          "B_VAL127"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ARG189",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ASP190",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond": [
+          "B_ARG189",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_VAL127"
+          ]
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_PHE129",
+          "B_MET143",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ILE141",
+          "B_ILE216",
+          "B_ALA220"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Halogen bond": [
+          "B_MET219"
+        ],
+        "Hydrophobic contact": [
+          "B_ASP190",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LEU101",
+          "B_ALA220",
+          "B_ALA222"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU215",
+          "B_ALA220"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_ILE126",
+          "B_VAL127",
+          "B_ILE141",
+          "B_ARG189",
+          "B_ASP190",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_PHE209",
+          "B_VAL211",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ASP208",
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP208"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_VAL127",
+          "B_PHE129",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ASP190",
+          "B_ASP208",
+          "B_LEU215",
+          "B_ILE216",
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG189"
+        ],
+        "Hydrophobic contact": [
+          "B_ALA220",
+          "B_ARG189",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG189"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_GLY128"
+        ],
+        "H-Bond donor": [
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_MET219",
+          "B_LEU118",
+          "B_ILE141"
+        ],
+        "H-Bond": [
+          "B_GLY128",
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ARG189",
+          "B_PHE209",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE216",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_MET143",
+          "B_PHE209",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE126",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ASP208",
+          "B_LEU118",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_PHE209",
+          "B_LEU215"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_LYS97"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ASP208",
+          "B_LEU118",
+          "B_PHE209",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_LYS97"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209",
+          "B_PHE209",
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_PHE129",
+          "B_ASP208",
+          "B_MET219"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP208"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_ILE141",
+          "B_MET143",
+          "B_PHE209",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP190"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU101",
+          "B_ILE141",
+          "B_MET143",
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_VAL127"
+        ],
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_MET143",
+          "B_ARG189",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141"
+        ],
+        "H-Bond": [
+          "B_VAL127",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_ILE141",
+          "B_ASP190",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ARG189"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_MET143",
+          "B_ARG189",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "Halogen bond": [
+          "B_CYS142",
+          "B_LEU206"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_VAL127",
+          "B_ILE141",
+          "B_MET143",
+          "B_ARG189",
+          "B_ASP190",
+          "B_PHE209",
+          "B_LEU215",
+          "B_LEU118",
+          "B_ILE216"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_PHE209",
+          "B_MET219"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE216",
+          "B_MET219",
+          "B_ALA220",
+          "B_ILE99",
+          "B_ASP190",
+          "B_LEU215"
+        ],
+        "H-Bond": [
+          "B_PHE209",
+          "B_MET219",
+          "B_VAL211",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_VAL127",
+          "B_ILE216",
+          "B_LEU118",
+          "B_VAL211",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE141",
+          "B_ILE141",
+          "B_ASP190",
+          "B_LEU115",
+          "B_MET219",
+          "B_ALA220"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_ILE141",
+          "B_LEU215",
+          "B_LEU118",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ALA220"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU115",
+          "B_VAL127",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_PHE209",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU115",
+          "B_ILE141",
+          "B_LEU197",
+          "B_ASP208",
+          "B_VAL211",
+          "B_MET219",
+          "B_LEU118",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208",
+          "B_ASP208"
+        ],
+        "Halogen bond": [
+          "B_ILE141"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_ASP208",
+          "B_LEU215",
+          "B_LEU118",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Halogen bond": [
+          "B_CYS142",
+          "B_LEU206"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_VAL127",
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_ILE216",
+          "B_ILE141"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_MET143",
+          "B_ARG189",
+          "B_PHE209",
+          "B_MET219",
+          "B_LEU118",
+          "B_VAL127",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ILE216",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Halogen bond": [
+          "B_GLY128"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ARG189",
+          "B_ASP190",
+          "B_ILE216",
+          "B_LEU118"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP208"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ARG234",
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Halogen bond": [
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_MET143",
+          "B_ASP208",
+          "B_PHE209",
+          "B_LEU118"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_MET219",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ILE216",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_GLY79"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_LYS97"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_ILE99",
+          "B_LEU118",
+          "B_ASP208",
+          "B_PHE209",
+          "B_LEU118",
+          "B_ASP190",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_GLY79",
+          "B_VAL211",
+          "B_SER212",
+          "B_LYS97"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_ARG234",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Halogen bond": [
+          "B_ALA220"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_ILE141",
+          "B_VAL211",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ARG234",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_VAL127",
+          "B_PHE129",
+          "B_MET143",
+          "B_PHE209",
+          "B_LEU118",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "B_CYS207"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU115",
+          "B_ILE139",
+          "B_ILE99",
+          "B_ILE99",
+          "B_LEU101",
+          "B_LEU101",
+          "B_ILE103",
+          "B_ILE111",
+          "B_ILE111",
+          "B_ILE139",
+          "B_ILE139",
+          "B_LEU215",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "B_GLY128"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209",
+          "B_ILE99",
+          "B_LEU118",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_ILE141",
+          "B_ALA220",
+          "B_LEU118",
+          "B_VAL127",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_PHE209",
+          "B_PHE209",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU118",
+          "B_VAL127",
+          "B_ASP208",
+          "B_LEU215"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_LEU215",
+          "B_ALA220",
+          "B_ILE141",
+          "B_ASP208",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ARG189"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Halogen bond": [
+          "B_ILE216"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_ILE111",
+          "B_ILE139",
+          "B_ARG189",
+          "B_ASP208",
+          "B_ILE99",
+          "B_ILE99",
+          "B_LEU101",
+          "B_LEU115",
+          "B_ILE139",
+          "B_ILE141",
+          "B_ASP190",
+          "B_LEU215",
+          "B_LEU215"
+        ],
+        "H-Bond": [
+          "B_ARG189",
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_ARG189",
+          "B_ASP190",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ALA220",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP217"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234",
+          "B_ASP217"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_PHE129",
+          "B_PHE129",
+          "B_MET219",
+          "B_LEU118",
+          "B_VAL127",
+          "B_MET143",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_LYS97",
+          "B_ASP208"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_ASP208",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ARG189",
+          "B_LEU215"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_LYS97",
+          "B_ASP208",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_ASP190",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ALA220"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP190"
+        ],
+        "H-Bond donor": [
+          "B_ARG234",
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_MET143",
+          "B_ARG189",
+          "B_ASP190",
+          "B_ASP208",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_ASP190",
+          "B_ARG234",
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_SER212"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_ILE186",
+          "B_LEU215",
+          "B_LEU118",
+          "B_ILE216",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond": [
+          "B_SER212",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE126",
+          "B_PHE129",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_PHE129",
+          "B_MET143",
+          "B_ASP190",
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU118",
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_PHE129",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ILE216",
+          "B_MET143",
+          "B_LEU215",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "B_GLY128"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_PHE129",
+          "B_ILE141",
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP208"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP208"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_VAL127",
+          "B_PHE129",
+          "B_PHE129",
+          "B_ASP190",
+          "B_PHE209",
+          "B_LEU215",
+          "B_LYS97",
+          "B_LEU118",
+          "B_MET143",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_VAL127"
+        ],
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_LYS97",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond": [
+          "B_VAL127",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_PHE209"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_MET143",
+          "B_ASP190",
+          "B_ASP208",
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond": [
+          "B_PHE209",
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP190"
+        ],
+        "H-Bond donor": [
+          "B_LYS192"
+        ],
+        "Halogen bond": [
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_ILE126",
+          "B_VAL127",
+          "B_ILE141",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190",
+          "B_ASP190"
+        ],
+        "H-Bond": [
+          "B_ASP190",
+          "B_LYS192",
+          "B_ASP190",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_ASP190",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU101",
+          "B_ILE141"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE216",
+          "B_ILE216",
+          "B_LYS97",
+          "B_ILE99",
+          "B_ILE141",
+          "B_ARG189",
+          "B_ASP190"
+        ],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP208",
+          "B_PHE209",
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_LEU118",
+          "B_PHE129",
+          "B_MET143",
+          "B_PHE209",
+          "B_MET219",
+          "B_VAL127",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Halogen bond": [
+          "B_MET219"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU115",
+          "B_ILE139",
+          "B_VAL211",
+          "B_ILE99",
+          "B_LEU101",
+          "B_LEU115",
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215",
+          "B_LEU215"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "B_CYS142",
+          "B_LEU206"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_VAL127",
+          "B_ILE141",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_ILE216",
+          "B_ILE141",
+          "B_ASP190",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_LEU118",
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_ARG189",
+          "B_ILE216",
+          "B_ASP208",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ASP208",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_ASP190",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ARG234",
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE141",
+          "B_ARG189",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LEU118",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ARG234",
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_PHE209"
+        ],
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Halogen bond": [
+          "B_ARG189"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE141",
+          "B_ILE141",
+          "B_ASP190",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ILE216",
+          "B_MET219",
+          "B_LEU118"
+        ],
+        "H-Bond": [
+          "B_PHE209",
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_ILE216",
+          "B_LEU115",
+          "B_ILE141",
+          "B_ARG189",
+          "B_ASP208",
+          "B_LEU215",
+          "B_ILE216"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_SER212"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU115",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ASP190",
+          "B_VAL211",
+          "B_LEU118",
+          "B_ILE216",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_SER212",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": []
+      },
+      "matched_count": 1,
+      "total_checks": 2,
+      "matched_rate": 0.5,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Hydrophobic contact": [
+          "B_ASP190",
+          "B_MET219",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ALA220"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211",
+          "B_ARG234"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_LYS192"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_VAL127",
+          "B_ILE141",
+          "B_MET143",
+          "B_PHE209",
+          "B_LYS97",
+          "B_ILE99",
+          "B_PHE129",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209",
+          "B_LYS192"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_LYS97"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_LEU118",
+          "B_VAL127",
+          "B_MET143",
+          "B_LEU118",
+          "B_ILE141",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_LYS97",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Halogen bond": [
+          "B_ILE216"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU118",
+          "B_ILE141",
+          "B_LEU215",
+          "B_ILE216",
+          "B_ALA220",
+          "B_ILE99",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ILE139",
+          "B_ILE141",
+          "B_ARG189",
+          "B_LEU215",
+          "B_ILE99",
+          "B_LEU118",
+          "B_LEU118",
+          "B_ILE141",
+          "B_ASP190",
+          "B_LEU215",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASP208"
+        ],
+        "Halogen bond": [
+          "B_GLY128"
+        ],
+        "Hydrophobic contact": [
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_MET143",
+          "B_ASP190",
+          "B_PHE209",
+          "B_LEU115",
+          "B_LEU118",
+          "B_LEU215",
+          "B_PHE209"
+        ],
+        "Pi-stacking": [
+          "B_PHE209"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASN78"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ALA222",
+          "B_LEU101",
+          "B_LEU118"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASN78"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ILE141",
+          "B_ASP208",
+          "B_PHE209",
+          "B_ILE216",
+          "B_LYS97",
+          "B_LEU118",
+          "B_PHE129",
+          "B_MET143"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_ASP208",
+          "B_PHE209"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "Hydrophobic contact": [
+          "B_ASP190",
+          "B_ILE216",
+          "B_ILE216",
+          "B_ILE216"
+        ],
+        "Pi-cation lAro": [
+          "B_ARG189"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond donor": [],
+        "H-Bond": [],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ILE216"
+        ],
+        "Halogen bond": [
+          "B_PHE209"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_LEU115",
+          "B_LEU118",
+          "B_PHE129",
+          "B_ILE141",
+          "B_ILE141",
+          "B_ASP208",
+          "B_PHE209",
+          "B_LEU215",
+          "B_MET219",
+          "B_LEU118"
+        ],
+        "Salt Bridge pneg": [
+          "B_ASP190"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ILE216",
+          "B_ASP190"
+        ],
+        "Salt Bridge lneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond acceptor": [
+          "B_ASN78"
+        ],
+        "Hydrophobic contact": [
+          "B_ILE99",
+          "B_LEU118",
+          "B_MET143",
+          "B_ARG189",
+          "B_ASP190",
+          "B_ASP208",
+          "B_ILE216",
+          "B_MET219",
+          "B_VAL127",
+          "B_PHE129"
+        ],
+        "H-Bond donor": [],
+        "H-Bond": [
+          "B_ASN78"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_PHE129",
+          "B_ILE141",
+          "B_LEU118",
+          "B_LEU215",
+          "B_ILE216",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "valid": true,
+      "uncharge": "uncharge_success",
+      "interactions": {
+        "H-Bond donor": [
+          "B_VAL211"
+        ],
+        "Hydrophobic contact": [
+          "B_LYS97",
+          "B_ILE99",
+          "B_ILE126",
+          "B_MET143",
+          "B_PHE209",
+          "B_LEU215",
+          "B_ILE216",
+          "B_LEU118",
+          "B_VAL127",
+          "B_ILE141",
+          "B_PHE209",
+          "B_MET219"
+        ],
+        "H-Bond acceptor": [],
+        "H-Bond": [
+          "B_VAL211"
+        ],
+        "Salt Bridge lneg": [],
+        "Salt Bridge pneg": [],
+        "Pi-stacking": []
+      },
+      "matched_count": 0,
+      "total_checks": 2,
+      "matched_rate": 0.0,
+      "fully_matched": false,
+      "details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ]
+    }
+  ]
+}

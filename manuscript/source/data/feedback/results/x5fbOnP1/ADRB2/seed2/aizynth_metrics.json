@@ -1,0 +1,6 @@
+{
+ "n_targets": 100,
+ "n_solved": 89,
+ "success_rate": 89.0,
+ "mean_steps_solved": 2.3258426966292136
+}

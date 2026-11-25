@@ -1,0 +1,5 @@
+pose,method,target,seed,idx,reason
+rtm_oracle,r2CE4L4,MTORC1,2,18,absent from frozen RTMScore output
+rtm_oracle,r2CE4L4,MTORC1,2,36,absent from frozen RTMScore output
+rtm_gnina,r2CE4L4,MTORC1,2,18,absent from frozen RTMScore output
+rtm_gnina,r2CE4L4,MTORC1,2,36,absent from frozen RTMScore output

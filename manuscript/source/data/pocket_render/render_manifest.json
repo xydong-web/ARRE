@@ -1,0 +1,660 @@
+{
+  "pymol_version": "3.0.0",
+  "surface_transparency": 0.68,
+  "cartoon_transparency": 0.3,
+  "contact_geometry_file": "selected_contact_geometry.json",
+  "contact_geometry_sha256": "5b86eb8bafb813f95b8369f9a50796112ef2b7f2d8a5cbae0d5690958a7a1733",
+  "panels": [
+    {
+      "id": "NAMPT_B",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "crop_pixels": [
+        193,
+        78,
+        1606,
+        1115
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "NAMPT_B.png",
+      "png_sha256": "2da8b1c4353063d914cceea0fd67f576bf94bf77b1b6cc642d16490784cc7272",
+      "receptor": "NAMPT_receptor.pdb",
+      "receptor_sha256": "4d0d64350a83de98cfb586592c164b141b005894f3a98f01aa026697a4659b4d",
+      "ligand": "NAMPT_B.sdf",
+      "ligand_sha256": "cbe4b05657ec38c1697b90bd6f633e5e7cf3f88a7fae5e8c01f22e832c366597",
+      "n_key_geometry_segments": 6,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "NAMPT_ARRE",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "crop_pixels": [
+        193,
+        78,
+        1606,
+        1115
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "NAMPT_ARRE.png",
+      "png_sha256": "9179b6bf166c0d338568d5958b224444eb08f8fc728f41cc1535afb33c0349e3",
+      "receptor": "NAMPT_receptor.pdb",
+      "receptor_sha256": "4d0d64350a83de98cfb586592c164b141b005894f3a98f01aa026697a4659b4d",
+      "ligand": "NAMPT_ARRE.sdf",
+      "ligand_sha256": "975f057298ee9218294a0fa2ed01e01a93857b430ebc7213993a8bb2bd22878f",
+      "n_key_geometry_segments": 4,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "NAMPT_reference",
+      "camera": [
+        -0.014523650519549847,
+        0.8685578107833862,
+        0.49537521600723267,
+        0.5223742127418518,
+        -0.4158513844013214,
+        0.7444412708282471,
+        0.8525926470756531,
+        0.26958322525024414,
+        -0.4476724863052368,
+        0.0,
+        0.0,
+        -68.98454284667969,
+        15.6001615524292,
+        6.607147216796875,
+        1.0411643981933594,
+        54.387939453125,
+        83.58114624023438,
+        20.0
+      ],
+      "crop_pixels": [
+        193,
+        78,
+        1606,
+        1115
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "NAMPT_reference.png",
+      "png_sha256": "d34a431fb0c0a9123e97754999cf25e54a5e0a4ea6ff17e7655c1bd8ed4c4560",
+      "receptor": "NAMPT_receptor.pdb",
+      "receptor_sha256": "4d0d64350a83de98cfb586592c164b141b005894f3a98f01aa026697a4659b4d",
+      "ligand": "NAMPT_reference.sdf",
+      "ligand_sha256": "5ba819f103d7c03f88dc4e5b700f959214dc1a8c47989a8b4e2e07a89bc124d6",
+      "n_key_geometry_segments": 5,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_ASP219",
+          "coordinate_A": [
+            19.645999908447266,
+            4.734000205993652,
+            6.544000148773193
+          ],
+          "x": 0.6100925925925925,
+          "y": 0.7374438832772165,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_PHE193",
+          "coordinate_A": [
+            14.312000274658203,
+            5.264999866485596,
+            8.586999893188477
+          ],
+          "x": 0.6733333333333333,
+          "y": 0.5602272727272728,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_SER275",
+          "coordinate_A": [
+            14.541000366210938,
+            11.276000022888184,
+            -2.703000068664551
+          ],
+          "x": 0.4776422764227642,
+          "y": 0.3407705099778271,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "A_VAL242",
+          "coordinate_A": [
+            20.815000534057617,
+            6.968999862670898,
+            -1.9470000267028809
+          ],
+          "x": 0.4265740740740741,
+          "y": 0.6466470258136925,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_TYR18",
+          "coordinate_A": [
+            20.929000854492188,
+            10.718000411987305,
+            3.7950000762939453
+          ],
+          "x": 0.6332520325203251,
+          "y": 0.6508869179600887,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_B",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "crop_pixels": [
+        157,
+        66,
+        1549,
+        1088
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "ROCK1_B.png",
+      "png_sha256": "95d5d0c4e0aeddaaf85317daf11adef82e36e8118cde0e6a4c66b8bab06303f1",
+      "receptor": "ROCK1_receptor.pdb",
+      "receptor_sha256": "c7096d83485c42da0e32358a7f5c79ce3e3acaa26df1a2a63290fd351f8c9bf7",
+      "ligand": "ROCK1_B.sdf",
+      "ligand_sha256": "279ba74cfb4069ac222b6fcdbfaa840581d0b00c1c1f576262341c9b2590fea9",
+      "n_key_geometry_segments": 0,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_ARRE",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "crop_pixels": [
+        157,
+        66,
+        1549,
+        1088
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "ROCK1_ARRE.png",
+      "png_sha256": "ce6ce7e195e45a1648650e2eaea6fc9eec8cfc3c1d7cec68f0e6fe1da444d689",
+      "receptor": "ROCK1_receptor.pdb",
+      "receptor_sha256": "c7096d83485c42da0e32358a7f5c79ce3e3acaa26df1a2a63290fd351f8c9bf7",
+      "ligand": "ROCK1_ARRE.sdf",
+      "ligand_sha256": "349b0442f3c113aba076238cdcda75cf7802fc08edd40cf5cdd825cf3a71de4d",
+      "n_key_geometry_segments": 0,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "ROCK1_reference",
+      "camera": [
+        0.5322692394256592,
+        0.8465534448623657,
+        0.006062509957700968,
+        -0.7004423141479492,
+        0.43635743856430054,
+        0.5647767782211304,
+        0.47546830773353577,
+        -0.3048597276210785,
+        0.8252214789390564,
+        0.0,
+        0.0,
+        -74.09329223632812,
+        -14.578912734985352,
+        59.95854949951172,
+        -17.254961013793945,
+        58.41571807861328,
+        89.77086639404297,
+        20.0
+      ],
+      "crop_pixels": [
+        157,
+        66,
+        1549,
+        1088
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "ROCK1_reference.png",
+      "png_sha256": "bd7e2ce1c950e36f3697ddb554726e0855deb966e199374d88ae0f63121683f0",
+      "receptor": "ROCK1_receptor.pdb",
+      "receptor_sha256": "c7096d83485c42da0e32358a7f5c79ce3e3acaa26df1a2a63290fd351f8c9bf7",
+      "ligand": "ROCK1_reference.sdf",
+      "ligand_sha256": "6ea33e4ef5f72396799a7d0e3188fce10962205b038d747dc6640cd637454919",
+      "n_key_geometry_segments": 1,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "A_MET156",
+          "coordinate_A": [
+            -20.93899917602539,
+            67.98300170898438,
+            -20.124000549316406
+          ],
+          "x": 0.2089888888888889,
+          "y": 0.46153030303030296,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_B",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "crop_pixels": [
+        4,
+        0,
+        1625,
+        1188
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "MEK1_B.png",
+      "png_sha256": "0ab06b4527429d3ef327cfda5fb3408b7f9307cbe158d969fa8b068bacc81c6f",
+      "receptor": "MEK1_receptor.pdb",
+      "receptor_sha256": "6604ea58b70572945a3d647a83dad3a283f02f528b9e22dcb8fea1de584a824a",
+      "ligand": "MEK1_B.sdf",
+      "ligand_sha256": "c82a744d1c345388e5352c5fa8102f8232a3f418487c6d9a94854192f756eb34",
+      "n_key_geometry_segments": 0,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_ARRE",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "crop_pixels": [
+        4,
+        0,
+        1625,
+        1188
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "MEK1_ARRE_rank2.png",
+      "png_sha256": "441e1bd3e0e5259835efa37cbd4ed42601e26af31a503a84f6fa7282f150e283",
+      "receptor": "MEK1_receptor.pdb",
+      "receptor_sha256": "6604ea58b70572945a3d647a83dad3a283f02f528b9e22dcb8fea1de584a824a",
+      "ligand": "MEK1_ARRE_rank2.sdf",
+      "ligand_sha256": "bbc77d3536e9b786a3375761696e1ea47c0291d2ee038060b8711f5f3000f881",
+      "n_key_geometry_segments": 1,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    },
+    {
+      "id": "MEK1_reference",
+      "camera": [
+        0.6469511389732361,
+        0.7111703753471375,
+        0.2751198410987854,
+        -0.5364798307418823,
+        0.16810594499111176,
+        0.827000617980957,
+        0.5418890118598938,
+        -0.6826251745223999,
+        0.49028491973876953,
+        0.0,
+        0.0,
+        -64.54473114013672,
+        64.87014770507812,
+        -23.859878540039062,
+        6.613977432250977,
+        50.88755798339844,
+        78.201904296875,
+        20.0
+      ],
+      "crop_pixels": [
+        4,
+        0,
+        1625,
+        1188
+      ],
+      "image_size": [
+        1800,
+        1320
+      ],
+      "png": "MEK1_reference.png",
+      "png_sha256": "53c9ef4545cbaac798c8fcdd2d64c7d703f1fe3660d56d0b9fbdfc44e93aa28b",
+      "receptor": "MEK1_receptor.pdb",
+      "receptor_sha256": "6604ea58b70572945a3d647a83dad3a283f02f528b9e22dcb8fea1de584a824a",
+      "ligand": "MEK1_reference.sdf",
+      "ligand_sha256": "51bea032240b572d36703487ed2654b07d614f67a839be743579c9c1b0548fcf",
+      "n_key_geometry_segments": 2,
+      "ligand_alignment": false,
+      "projected_residue_labels": [
+        {
+          "residue": "B_SER212",
+          "coordinate_A": [
+            67.81900024414062,
+            -21.09600067138672,
+            -0.8640000224113464
+          ],
+          "x": 0.38310439560439563,
+          "y": 0.8364510489510489,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        },
+        {
+          "residue": "B_VAL127",
+          "coordinate_A": [
+            71.59300231933594,
+            -26.02199935913086,
+            14.107999801635742
+          ],
+          "x": 0.8083333333333333,
+          "y": 0.46931818181818186,
+          "projection_method": "PyMOL ray point calibration, unchanged camera and aspect ratio"
+        }
+      ]
+    }
+  ]
+}

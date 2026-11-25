@@ -1,0 +1,36 @@
+# CGFlow feedback causal-controls: frozen successor contract (2026-10-25)
+
+**Status:** Designed and implemented; no performance outcomes of the successor known at the time of writing.
+
+**Preserve originals:** Baseline `base_ep30`, final F `r2CE4L4`, and every file in `frozen/round2_integ_4` are immutable comparators.  This successor resides in `successors/online_feedback_20261025/code` copied byte-for-byte before changes.  Core sampling, docking, pose prediction, prior, reward, and training objectives are not altered.  The two interventions must each preserve F's route prior `data/syn_prior_v1.frozen.json`, kappa=4, first-decision lookahead, group-normalised critic tilt, and all otherwise unchanged settings.
+
+## Questions and interventions
+
+1. **E: Must the feedback-trained critic continue updating throughout the search?** `rfg_spp.freeze_after_iters=100` permits the usual first 100 updates then freezes ridge sufficient statistics and weights, calibration, selected regularization, reliability, reward scale and KL trust controller. Prequential correlations after that point are **diagnostics only**. GFlowNet and C still update, so this is *not* a frozen policy. Comparator: archived F with `freeze_after_iters=0` (the original behaviour); a short paired identity smoke is needed before formal comparison.
+2. **C: Must prefix-vs-on-policy allocation be feedback-adaptive?** `rhc.bandit=false`, `rhc.fixed_prefix_frac=0.65` preserves elites, their ongoing updates, both prefix arms, posterior conditioning, dedupe and exact oracle budget; it changes only slot allocation. 0.65 is a diagnostic fixed share approximating five examined F targets after the critic warm-up (measured ~0.56–0.70) and is **not an optimized hyperparameter**; a later confirmatory analysis must disclose this choice. Comparator: archived F with `rhc.bandit=true`.
+
+## Pilot contract and scope
+
+- Development targets: ADRB2, FEN1, MAPK1, MTORC1, VDR; seeds 0/1/2; 1,000 training iterations; 64 novel Uni-Dock oracle calls per iteration; original ep029 pose checkpoint with 80 inference steps; original 15-target panel, no new target or parameter tuning.
+- Two successor arms, total 5 targets × 3 seeds × 2 = **30 full pilot runs**, not 30 per arm. Existing F runs are read-only reference (45 in full), subject to initial-step protocol equivalence.
+- Primary outcome: top-100 diverse mean Vina (lower better) at equal new dock-call count. Secondaries: AiZynth predicted success, number of accepted diverse modes, route-length and archive hit rates. Unit of inference is the target, not seed or molecule. Pilot is *exploratory* with effects and CIs, not a final significance claim.
+- Pre-launch smoke gates: CLI parsing succeeds; patched E defaults to F behaviour; for the critic control `n_labels` stops increasing after iteration 100, `rfg_spp/frozen=1` appears only thereafter, and policy/C remain active; for fixed portfolio, planned shares remain fixed when both prefixes available and total new oracle calls stay matched. Cold-start and resume identities must be preserved. A successor failure never invalidates/replaces archived F results.
+- After pilot: a further 10-target extension to 15×3×2 total = 90 successor runs is **conditional** on clean integrity and a scientifically meaningful pilot mechanism. All negative results remain reportable.
+
+## Provenance and independent synthesis firewall
+
+`tmp/lead_analysis/syn_profile.py` explicitly pools AiZynth labels from historical baseline and several early innovation lanes (seed 0 of the **same** 15 LIT-PCBA targets), then fits a route-family logistic predictor. `data/syn_prior_v1.frozen.json` has n=10,500. This is a static prior (not online model), but planning-model and target-panel overlap means AiZynth success M2 is **not a wholly independent confirmation**. Audit exact final-SMILES overlap separately; even zero exact overlap would not cure shared-planner dependence. Independent evaluation must use a different retrosynthesis policy/engine plus a clearly identified stock/availability policy, fixed for all B/F/SynGBO candidates; alternative AiZynth budgets alone are sensitivity checks, not independent validation. Do not refit the prior on final F top-k or held-out external targets.
+
+## P2 and exclusion
+
+Do not start S3-GFN full benchmark, feedback-noise grids, more kappa sweeps, or re-run F/B. Inventory S3-GFN code/checkpoint availability and TarPass completion first. Report unavailable models as an explicit limitation; never substitute published numbers for same-oracle results.
+
+## Addendum A — common-prefix controlled continuation (before any formal successor result)
+
+On 2026-10-25, two separate 4-step same-seed smoke runs (`x5fbFsm1`, `x5fbEsm1`, Slurm 630572/630573) produced **identical 64/64 first-batch SMILES but nonidentical scores on 37/64 molecules**, with 9/64 differing by more than 1 kcal/mol and mean first-batch absolute difference 0.4763 kcal/mol. The docking oracle therefore introduces meaningful between-run variation even before a critic intervention. Both short runs completed; the K=2 experimental smoke correctly held `rfg_spp/n_labels` constant after iteration 2, but this K precedes the normal 128-label activation threshold, so it is a *software smoke*, not a test of continued active critic learning.
+
+**Protocol amendment:** Replace direct independent-seed efficacy comparisons against the archived F with **three checkpoint branches from the exact same newly generated pre-intervention prefix**. For each target and seed, run F normally to at least K+1 iterations with a retained, complete checkpoint at iteration K=100. Clone the **same** `rs_state.pt`, score database and C/E archival state into three new, isolated run tags, then continue from 101 to 1,000 iterations with: (i) E/C online F, (ii) E critic frozen after 100, (iii) C fixed allocation fraction=0.65. Checkpoint includes GFlowNet/EMA, both optimizers, RNG, critic, portfolio, elites, dedupe and oracle-score caches. The extra K+1 iteration in the source is discarded via `rs_support.finish_resume` truncation on each branch; no candidate scored after the common checkpoint may be inherited.
+
+The five-target, three-seed **full exploratory pilot** therefore has 15 short common-prefix jobs and 45 post-prefix continuation jobs, rather than 30 independent 1,000-step jobs. It consumes about 42,000 training iterations in total (15×100 + 45×900), i.e., 40% more iterations than the earlier 30,000-step plan; the increment is warranted by pre-intervention oracle noise. Actual GPU time depends on scheduler and docking cost and is not guaranteed. The archived F remains an independently performed reproduction, not the numeric paired control for this new experiment. This amendment was made after the smoke's numerical-integrity finding and **before** any new full-length successor outcome.
+
+The branch-copy procedure must be successfully tested on a short retained checkpoint before releasing the 15-prefix formal inventory. Only `eval/fork_feedback_checkpoint_20261025.py` may create the branch run dirs, with explicit SHA256 equality of the three cloned state files. Never overwrite an existing run/tag. Halt release if resumed logger/SQLite/critic state or pre-intervention budget identity fails.

@@ -1,0 +1,439 @@
+{
+  "candidate_identities_verified": 1800,
+  "contact_validity_is_not_pose_validity": true,
+  "severe_overlap_screen_A": 2.0,
+  "display_selection": "First by original Vina among completed archived profiles with finite negative shown-pose Vina and no heavy-atom pair below 2.0 A; no contact criterion",
+  "panels": [
+    {
+      "id": "NAMPT_B",
+      "seed": 0,
+      "idx": 0,
+      "rank": 1,
+      "heavy_atoms": 39,
+      "original_vina": -14.040000438690186,
+      "shown_pose_vina": -8.84997,
+      "min_heavy_atom_distance_A": 2.3640809228958295,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 3,
+      "total_rules": 3,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_SER275",
+              "A_ASP219"
+            ],
+            "match_mode": "any"
+          },
+          "matched": true,
+          "observed": [
+            "A_SER275"
+          ]
+        },
+        {
+          "type": "Hydrophobic contact",
+          "rule": {
+            "residues": [
+              "A_VAL242"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_VAL242"
+          ]
+        },
+        {
+          "type": "Pi-stacking",
+          "rule": {
+            "residues": [
+              "A_PHE193",
+              "B_TYR18"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_PHE193",
+            "B_TYR18"
+          ]
+        }
+      ],
+      "ligand": "NAMPT_B.sdf",
+      "ligand_sha256": "cbe4b05657ec38c1697b90bd6f633e5e7cf3f88a7fae5e8c01f22e832c366597",
+      "excluded_higher_ranked": [],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "NAMPT_ARRE",
+      "seed": 0,
+      "idx": 0,
+      "rank": 1,
+      "heavy_atoms": 38,
+      "original_vina": -15.777000188827516,
+      "shown_pose_vina": -13.88317,
+      "min_heavy_atom_distance_A": 2.932089476806601,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 3,
+      "total_rules": 3,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_SER275",
+              "A_ASP219"
+            ],
+            "match_mode": "any"
+          },
+          "matched": true,
+          "observed": [
+            "A_SER275"
+          ]
+        },
+        {
+          "type": "Hydrophobic contact",
+          "rule": {
+            "residues": [
+              "A_VAL242"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_VAL242"
+          ]
+        },
+        {
+          "type": "Pi-stacking",
+          "rule": {
+            "residues": [
+              "A_PHE193",
+              "B_TYR18"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "A_PHE193",
+            "B_TYR18"
+          ]
+        }
+      ],
+      "ligand": "NAMPT_ARRE.sdf",
+      "ligand_sha256": "975f057298ee9218294a0fa2ed01e01a93857b430ebc7213993a8bb2bd22878f",
+      "excluded_higher_ranked": [],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "NAMPT_reference",
+      "heavy_atoms": 32,
+      "min_heavy_atom_distance_A": 2.672584329820109,
+      "overlaps": [],
+      "recovered_rules": 3,
+      "total_rules": 3,
+      "pdb_id": "7PPE",
+      "ligand": "NAMPT_reference.sdf",
+      "ligand_sha256": "5ba819f103d7c03f88dc4e5b700f959214dc1a8c47989a8b4e2e07a89bc124d6"
+    },
+    {
+      "id": "ROCK1_B",
+      "seed": 0,
+      "idx": 0,
+      "rank": 1,
+      "heavy_atoms": 37,
+      "original_vina": -11.615999937057495,
+      "shown_pose_vina": -11.88247,
+      "min_heavy_atom_distance_A": 2.900334580699268,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 0,
+      "total_rules": 1,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ],
+      "ligand": "ROCK1_B.sdf",
+      "ligand_sha256": "279ba74cfb4069ac222b6fcdbfaa840581d0b00c1c1f576262341c9b2590fea9",
+      "excluded_higher_ranked": [],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "ROCK1_ARRE",
+      "seed": 0,
+      "idx": 0,
+      "rank": 1,
+      "heavy_atoms": 39,
+      "original_vina": -12.81000018119812,
+      "shown_pose_vina": -10.5924,
+      "min_heavy_atom_distance_A": 3.104002667524629,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 0,
+      "total_rules": 1,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "A_MET156"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ],
+      "ligand": "ROCK1_ARRE.sdf",
+      "ligand_sha256": "349b0442f3c113aba076238cdcda75cf7802fc08edd40cf5cdd825cf3a71de4d",
+      "excluded_higher_ranked": [],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "ROCK1_reference",
+      "heavy_atoms": 25,
+      "min_heavy_atom_distance_A": 2.76250701356576,
+      "overlaps": [],
+      "recovered_rules": 1,
+      "total_rules": 1,
+      "pdb_id": "7JOU",
+      "ligand": "ROCK1_reference.sdf",
+      "ligand_sha256": "6ea33e4ef5f72396799a7d0e3188fce10962205b038d747dc6640cd637454919"
+    },
+    {
+      "id": "MEK1_B",
+      "seed": 0,
+      "idx": 0,
+      "rank": 1,
+      "heavy_atoms": 32,
+      "original_vina": -12.668999433517456,
+      "shown_pose_vina": -12.71183,
+      "min_heavy_atom_distance_A": 3.0734089558664337,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 0,
+      "total_rules": 2,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ],
+      "ligand": "MEK1_B.sdf",
+      "ligand_sha256": "c82a744d1c345388e5352c5fa8102f8232a3f418487c6d9a94854192f756eb34",
+      "excluded_higher_ranked": [],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "MEK1_ARRE",
+      "seed": 0,
+      "idx": 1,
+      "rank": 2,
+      "heavy_atoms": 34,
+      "original_vina": -13.964999914169312,
+      "shown_pose_vina": -10.59783,
+      "min_heavy_atom_distance_A": 2.8738592223698083,
+      "overlaps": [],
+      "pli_completed": true,
+      "recovered_rules": 1,
+      "total_rules": 2,
+      "rule_details": [
+        {
+          "type": "H-Bond",
+          "rule": {
+            "residues": [
+              "B_SER212"
+            ],
+            "match_mode": "all"
+          },
+          "matched": true,
+          "observed": [
+            "B_SER212"
+          ]
+        },
+        {
+          "type": "Halogen bond",
+          "rule": {
+            "residues": [
+              "B_VAL127"
+            ],
+            "match_mode": "all"
+          },
+          "matched": false,
+          "observed": []
+        }
+      ],
+      "ligand": "MEK1_ARRE_rank2.sdf",
+      "ligand_sha256": "bbc77d3536e9b786a3375761696e1ea47c0291d2ee038060b8711f5f3000f881",
+      "excluded_higher_ranked": [
+        {
+          "seed": 0,
+          "idx": 0,
+          "rank": 1,
+          "heavy_atoms": 40,
+          "original_vina": -13.970999717712402,
+          "shown_pose_vina": 41.57471,
+          "min_heavy_atom_distance_A": 1.7495508680801533,
+          "overlaps": [
+            {
+              "ligand_atom_1based": 25,
+              "element": "O",
+              "receptor_atom": "SG",
+              "chain": "B",
+              "residue": "CYS207",
+              "distance_A": 1.7495508680801533
+            },
+            {
+              "ligand_atom_1based": 24,
+              "element": "C",
+              "receptor_atom": "SG",
+              "chain": "B",
+              "residue": "CYS207",
+              "distance_A": 1.8259640220990143
+            },
+            {
+              "ligand_atom_1based": 23,
+              "element": "N",
+              "receptor_atom": "SD",
+              "chain": "B",
+              "residue": "MET143",
+              "distance_A": 1.8639539613413167
+            },
+            {
+              "ligand_atom_1based": 22,
+              "element": "C",
+              "receptor_atom": "CE",
+              "chain": "B",
+              "residue": "MET143",
+              "distance_A": 1.9552672988622275
+            },
+            {
+              "ligand_atom_1based": 27,
+              "element": "C",
+              "receptor_atom": "SG",
+              "chain": "B",
+              "residue": "CYS207",
+              "distance_A": 1.9624603410005517
+            }
+          ],
+          "pli_completed": true,
+          "recovered_rules": 0,
+          "total_rules": 2,
+          "rule_details": [
+            {
+              "type": "H-Bond",
+              "rule": {
+                "residues": [
+                  "B_SER212"
+                ],
+                "match_mode": "all"
+              },
+              "matched": false,
+              "observed": []
+            },
+            {
+              "type": "Halogen bond",
+              "rule": {
+                "residues": [
+                  "B_VAL127"
+                ],
+                "match_mode": "all"
+              },
+              "matched": false,
+              "observed": []
+            }
+          ]
+        }
+      ],
+      "uncharge": "uncharge_success"
+    },
+    {
+      "id": "MEK1_reference",
+      "heavy_atoms": 37,
+      "min_heavy_atom_distance_A": 2.6964897552188085,
+      "overlaps": [],
+      "recovered_rules": 2,
+      "total_rules": 2,
+      "pdb_id": "7M0Y",
+      "ligand": "MEK1_reference.sdf",
+      "ligand_sha256": "51bea032240b572d36703487ed2654b07d614f67a839be743579c9c1b0548fcf"
+    }
+  ],
+  "recovery": {
+    "NAMPT": {
+      "cgflow_pct": 63.444444444444436,
+      "arre_pct": 73.77777777777777,
+      "delta_pp": 10.33333333333334,
+      "reference_redock_rule_counts": [
+        2,
+        1,
+        1
+      ],
+      "reference_redock_vina": [
+        -3.57605,
+        24.36462,
+        -3.08694
+      ]
+    },
+    "MEK1": {
+      "cgflow_pct": 19.0,
+      "arre_pct": 19.166666666666668,
+      "delta_pp": 0.16666666666666774,
+      "reference_redock_rule_counts": [
+        1,
+        2,
+        2
+      ],
+      "reference_redock_vina": [
+        -10.43252,
+        -11.44836,
+        -11.38948
+      ]
+    },
+    "ROCK1": {
+      "cgflow_pct": 21.666666666666668,
+      "arre_pct": 13.333333333333334,
+      "delta_pp": -8.333333333333334,
+      "reference_redock_rule_counts": [
+        1,
+        1,
+        1
+      ],
+      "reference_redock_vina": [
+        -7.73038,
+        -7.71771,
+        -7.6806
+      ]
+    }
+  }
+}

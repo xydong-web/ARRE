@@ -1,0 +1,199 @@
+{
+ "poses": 24000,
+ "panel": [
+  "BACE2_HUMAN",
+  "BAPA_SPHXN",
+  "BTRN_BACCI",
+  "COTA_BACSU",
+  "DPO4_SULSO",
+  "GSTP1_HUMAN",
+  "IPMK_HUMAN",
+  "LAT_MYCTU",
+  "NQO1_HUMAN",
+  "PAC_ECOLX",
+  "PHP_SULSO",
+  "PLCD1_RAT",
+  "PPIA_HUMAN",
+  "PYRE_BACAN",
+  "RG1_RAUSE",
+  "TIAM1_HUMAN",
+  "TNKS1_HUMAN",
+  "UPPS_ECOLI",
+  "XANLY_BACGL",
+  "Y635_MYCTU"
+ ],
+ "min_seeds": 2,
+ "dropped_cells": [],
+ "methods": {
+  "B": {
+   "n_targets": 20,
+   "n_poses": 6000,
+   "pass_all_pct": 99.2,
+   "vina_redock_mean": -9.178357333333333,
+   "vina_redock_pb_valid_mean": -9.177569848089743,
+   "fail_pct_by_check": {
+    "bond_lengths": 0.33333333333332993,
+    "bond_angles": 0.06666666666667043,
+    "internal_steric_clash": 0.04999999999999449,
+    "non-aromatic_ring_non-flatness": 0.04999999999999449,
+    "double_bond_flatness": 0.28333333333333544,
+    "minimum_distance_to_protein": 0.10000000000000009
+   }
+  },
+  "F": {
+   "n_targets": 20,
+   "n_poses": 6000,
+   "pass_all_pct": 98.9,
+   "vina_redock_mean": -10.18942216666667,
+   "vina_redock_pb_valid_mean": -10.18904373240837,
+   "fail_pct_by_check": {
+    "no_radicals": 0.01666666666666483,
+    "bond_lengths": 0.3666666666666707,
+    "bond_angles": 0.08333333333333526,
+    "internal_steric_clash": 0.04999999999999449,
+    "non-aromatic_ring_non-flatness": 0.04999999999999449,
+    "double_bond_flatness": 0.43333333333333,
+    "minimum_distance_to_protein": 0.10000000000000009
+   }
+  },
+  "RX": {
+   "n_targets": 20,
+   "n_poses": 6000,
+   "pass_all_pct": 99.33333333333331,
+   "vina_redock_mean": -9.162157,
+   "vina_redock_pb_valid_mean": -9.161885765297534,
+   "fail_pct_by_check": {
+    "no_radicals": 0.01666666666666483,
+    "bond_lengths": 0.24999999999999467,
+    "bond_angles": 0.03333333333332966,
+    "non-aromatic_ring_non-flatness": 0.03333333333332966,
+    "double_bond_flatness": 0.30000000000000027,
+    "minimum_distance_to_protein": 0.04999999999999449
+   }
+  },
+  "RXCE": {
+   "n_targets": 20,
+   "n_poses": 6000,
+   "pass_all_pct": 98.91666666666666,
+   "vina_redock_mean": -10.208472333333333,
+   "vina_redock_pb_valid_mean": -10.217087437307807,
+   "fail_pct_by_check": {
+    "no_radicals": 0.01666666666666483,
+    "bond_lengths": 0.5333333333333301,
+    "bond_angles": 0.14999999999999458,
+    "internal_steric_clash": 0.06666666666667043,
+    "non-aromatic_ring_non-flatness": 0.03333333333332966,
+    "double_bond_flatness": 0.3833333333333355,
+    "minimum_distance_to_protein": 0.06666666666667043,
+    "volume_overlap_with_protein": 0.01666666666666483
+   }
+  }
+ },
+ "contrasts": {
+  "RXCE-RX": {
+   "pass_all_pp": {
+    "n": 20,
+    "mean": -0.4166666666666652,
+    "ci95": [
+     -0.740264084298947,
+     -0.0930692490343834
+    ],
+    "p": 0.0143432800180014,
+    "n_first_higher": 4,
+    "n_first_lower": 15
+   },
+   "vina_redock_all": {
+    "n": 20,
+    "mean": -1.046315333333333,
+    "ci95": [
+     -1.1565240802501624,
+     -0.9361065864165037
+    ],
+    "p": 3.582061088268986e-14,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   },
+   "vina_redock_pb_valid": {
+    "n": 20,
+    "mean": -1.0552016720102746,
+    "ci95": [
+     -1.1629664001087137,
+     -0.9474369439118354
+    ],
+    "p": 2.0423074962121397e-14,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   }
+  },
+  "F-B": {
+   "pass_all_pp": {
+    "n": 20,
+    "mean": -0.30000000000000304,
+    "ci95": [
+     -0.6917324741808912,
+     0.09173247418088515
+    ],
+    "p": 0.12545175894950947,
+    "n_first_higher": 6,
+    "n_first_lower": 11
+   },
+   "vina_redock_all": {
+    "n": 20,
+    "mean": -1.0110648333333334,
+    "ci95": [
+     -1.1075582610017918,
+     -0.9145714056648749
+    ],
+    "p": 5.925251680543685e-15,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   },
+   "vina_redock_pb_valid": {
+    "n": 20,
+    "mean": -1.0114738843186317,
+    "ci95": [
+     -1.1080755738069739,
+     -0.9148721948302896
+    ],
+    "p": 6.003542642797814e-15,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   }
+  },
+  "F-RX": {
+   "pass_all_pp": {
+    "n": 20,
+    "mean": -0.433333333333335,
+    "ci95": [
+     -0.6818094698146884,
+     -0.18485719685198165
+    ],
+    "p": 0.0017025222837276925,
+    "n_first_higher": 4,
+    "n_first_lower": 14
+   },
+   "vina_redock_all": {
+    "n": 20,
+    "mean": -1.0272651666666668,
+    "ci95": [
+     -1.1243663057953182,
+     -0.9301640275380154
+    ],
+    "p": 4.96810615795232e-15,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   },
+   "vina_redock_pb_valid": {
+    "n": 20,
+    "mean": -1.027157967110839,
+    "ci95": [
+     -1.1248088571848922,
+     -0.9295070770367859
+    ],
+    "p": 5.520041628732783e-15,
+    "n_first_higher": 0,
+    "n_first_lower": 20
+   }
+  }
+ }
+}

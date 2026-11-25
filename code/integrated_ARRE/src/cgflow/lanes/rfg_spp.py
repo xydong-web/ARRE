@@ -1,0 +1,664 @@
+"""RFG/SPP - critic-tilted behaviour policy (CTB).
+
+    run/run_opt.py --trainer cgflow.lanes.rfg_spp:VinaMOOTrainer_RFGSPP --set rfg_spp.enable=true
+
+Mechanism.  The reward of a generated molecule is, to a good approximation, ADDITIVE over its building blocks (offline check on 4e4 labelled molecules of a
+baseline run: a ridge model on summed block fingerprints reaches Spearman 0.53-0.76 on later molecules, about as good as a model of the whole product).
+The GFlowNet policy does not exploit this explicitly: it learns block preferences only through the noisy trajectory-balance residual of ~1000 optimiser steps.
+CTB learns an *online block-additive critic* by (closed-form) Bayesian ridge regression on every docked label, and tilts the BEHAVIOUR policy of the sampler,
+
+    mu(b | s, c)  ∝  softmax_subsample( l_theta(s, b)  +  tau(c) * ( w_v c_v(b) + w_q c_q(b) ) ),     tau(c) = lambda_eff * beta / s_bar(c),
+
+with c_k(b) the critic's predicted contribution of block b to objective k (role-aware: first block vs reagent), beta/w the trajectory's own temperature /
+preference, s_bar the running mean of the scalarised reward.  tau is the first-order expansion of log R_c = beta * log(w.f) in the block contributions, so the
+tilt is "sample proportionally to R_c under the critic's posterior mean".  Trajectory balance is off-policy valid for any behaviour policy with full support
+(its residual vanishes at the optimum on every trajectory) and the TB loss re-evaluates log P_F with the TRAINING model and its own independent sub-sample,
+so NOTHING on the training side changes - the lane only changes which trajectories are generated (and therefore where the oracle calls are spent).
+"""
+
+from __future__ import annotations
+
+import copy
+import json
+import re
+import time
+
+import numpy as np
+import torch
+from torch import Tensor
+
+from gflownet.envs.graph_building_env import ActionIndex
+from rxnflow.base.trainer import mogfn_trainer  # noqa: F401  (must be imported first: breaks the rxnflow.algo <-> rxnflow.base import cycle)
+from rxnflow.envs import RxnActionType
+from rxnflow.models.gfn import RxnFlow
+from rxnflow.policy.action_categorical import RxnActionCategorical
+from cgflow.tasks.semla_vina import VinaMOOTrainer_semla
+from cgflow.algo.semla_algo import SynthesisTB3D_semla, SyntheticPathSampler3D_semla
+from cgflow.lanes.rfg_spp_config import RFGSPPConfig
+
+FAIL_EPS = 1.5e-4  # reward clipped at 1e-4 <=> docking failed (same convention as eval/extract_topk.py)
+
+
+def spearman(a: Tensor, b: Tensor) -> float:
+    if a.numel() < 4:
+        return float("nan")
+    ra = a.detach().float().argsort().argsort().float()
+    rb = b.detach().float().argsort().argsort().float()
+    ra = ra - ra.mean()
+    rb = rb - rb.mean()
+    den = ra.norm() * rb.norm()
+    return float((ra * rb).sum() / den) if float(den) > 0 else float("nan")
+
+
+class BlockCritic:
+    """Online Bayesian-ridge, block-additive critic.
+
+    Molecule x with blocks (role_i, b_i):  y_k(x) ~ bias_k + sum_i  w_{role_i,k} . phi(b_i),   k in {r_vina, QED},  role in {0: first block, 1: reagent}.
+    Features phi(b) = standardised [fingerprint bits, descriptors] of the block (statistics of the block population).  Sufficient statistics
+    A = X^T X, B = X^T Y are accumulated in float64 and the ridge system is solved in closed form: no optimiser, no randomness.
+    """
+
+    N_OUT = 2
+    CHUNK = 16384
+
+    def __init__(self, cfg: RFGSPPConfig, mean: Tensor, std: Tensor, device: torch.device) -> None:
+        self.cfg = cfg
+        self.device = device
+        self.mean = mean.to(device=device, dtype=torch.float32)
+        self.std = std.to(device=device, dtype=torch.float32)
+        self.D = int(mean.numel())
+        d = 2 * self.D + 1
+        self.A = torch.zeros(d, d, dtype=torch.float64, device=device)
+        self.B = torch.zeros(d, self.N_OUT, dtype=torch.float64, device=device)
+        self.n = 0
+        self.alphas = [float(a) for a in str(cfg.ridge_grid).split(",") if a.strip()]
+        self.k = len(self.alphas) // 2  # selected ridge solution
+        self.coefs = [torch.zeros(d, self.N_OUT, dtype=torch.float32, device=device) for _ in self.alphas]
+        self.coef = self.coefs[self.k]
+        self.scale = torch.ones(self.N_OUT, dtype=torch.float32, device=device)  # de-shrinkage factors (cfg.calibrate), applied to the block scores only
+        self.W = torch.zeros(2, self.D, self.N_OUT, dtype=torch.float32, device=device)
+        self.fitted = False
+        self.fit_seconds = 0.0
+
+    @classmethod
+    def from_ctx(cls, cfg: RFGSPPConfig, ctx, device: torch.device, seed: int) -> "BlockCritic":
+        g = np.random.default_rng(1_000_003 * (int(seed) + 1) + 77)  # own RNG stream: the baseline streams are untouched
+        rows = []
+        for _block_type, (desc, fp) in ctx.block_features.items():
+            n = int(desc.shape[0])
+            idx = torch.from_numpy(g.choice(n, size=min(n, cfg.stat_blocks_per_type), replace=False))
+            rows.append(torch.cat([fp[idx].float(), desc[idx].float()], dim=1))
+        x = torch.cat(rows, 0)
+        return cls(cfg, x.mean(0), x.std(0).clamp_min(cfg.std_floor), device)
+
+    # ------------------------------------------------------------------ features
+    def phi(self, desc: Tensor, fp: Tensor) -> Tensor:
+        x = torch.cat([fp.float(), desc.float()], dim=1).to(self.device)
+        return ((x - self.mean) / self.std).clamp(-self.cfg.z_clip, self.cfg.z_clip)
+
+    def build_x(self, desc: Tensor, fp: Tensor, mol_idx: Tensor, role: Tensor, n_mol: int) -> Tensor:
+        """x = [sum phi over first blocks | sum phi over reagent blocks | 1] for n_mol molecules."""
+        phi = self.phi(desc, fp)
+        mol_idx, role = mol_idx.to(self.device), role.to(self.device)
+        x = torch.zeros(n_mol, 2 * self.D + 1, device=self.device, dtype=torch.float32)
+        x[:, -1] = 1.0
+        for r in (0, 1):
+            m = role == r
+            if bool(m.any()):
+                x[:, r * self.D : (r + 1) * self.D].index_add_(0, mol_idx[m], phi[m])
+        return x
+
+    # ------------------------------------------------------------------ learning
+    @torch.no_grad()
+    def predict(self, x: Tensor) -> Tensor:
+        return x @ self.coef
+
+    @torch.no_grad()
+    def update(self, x: Tensor, y: Tensor) -> None:
+        x64, y64 = x.double(), y.to(self.device).double()
+        self.A += x64.T @ x64
+        self.B += x64.T @ y64
+        self.n += int(x.shape[0])
+
+    @torch.no_grad()
+    def predict_all(self, x: Tensor) -> list[Tensor]:
+        return [x @ c for c in self.coefs]
+
+    @torch.no_grad()
+    def fit(self) -> None:
+        """Solve the ridge system for every precision of the grid (shared sufficient statistics), keep the selected one active."""
+        t0 = time.time()
+        d = self.A.shape[0]
+        for k, a in enumerate(self.alphas):
+            reg = torch.full((d,), a, dtype=torch.float64, device=self.device)
+            reg[-1] = 1e-6  # the intercept is (practically) unregularised
+            self.coefs[k] = torch.linalg.solve(self.A + torch.diag(reg), self.B).float()
+        self.select(self.k)
+        self.fitted = True
+        self.fit_seconds = time.time() - t0
+
+    @torch.no_grad()
+    def select(self, k: int) -> None:
+        self.k = int(k)
+        self.coef = self.coefs[self.k]
+        self._refresh_W()
+
+    def _refresh_W(self) -> None:
+        self.W = (self.coef[:-1].reshape(2, self.D, self.N_OUT) * self.scale.view(1, 1, -1)).contiguous()
+
+    @torch.no_grad()
+    def set_scale(self, s) -> None:
+        self.scale = torch.as_tensor(s, dtype=torch.float32, device=self.device).reshape(self.N_OUT)
+        self._refresh_W()
+
+    def state_dict(self) -> dict:
+        """Everything that is not a pure function of (cfg, ctx, seed): the ridge sufficient statistics and the selected precision."""
+        return {"A": self.A.cpu(), "B": self.B.cpu(), "n": int(self.n), "k": int(self.k), "fitted": bool(self.fitted), "scale": self.scale.cpu()}
+
+    @torch.no_grad()
+    def load_state_dict(self, d: dict) -> None:
+        self.A.copy_(d["A"].to(self.device))
+        self.B.copy_(d["B"].to(self.device))
+        self.n = int(d["n"])
+        if "scale" in d:
+            self.scale = d["scale"].to(self.device)
+        if d["fitted"]:
+            self.fit()  # re-solve every ridge precision from the statistics (deterministic)
+        self.select(int(d["k"]))
+
+    @torch.no_grad()
+    def block_scores(self, blocks, role: int) -> Tensor:
+        """[Nblock, 2] predicted contributions (r_vina, QED) of candidate blocks; blocks = (typ, desc, fp)."""
+        _typ, desc, fp = blocks
+        n, w = int(desc.shape[0]), self.W[role]
+        if n <= self.CHUNK:
+            return self.phi(desc, fp) @ w
+        # chunked: bounds the transient [chunk x D] float32 tensors (a 1% sub-sample of the 10.4M-block library has ~1e5 rows)
+        return torch.cat([self.phi(desc[i : i + self.CHUNK], fp[i : i + self.CHUNK]) @ w for i in range(0, n, self.CHUNK)], 0)
+
+
+class RFGSPPState:
+    """Shared runtime state: critic, reliability gate, condition decoding, diagnostics."""
+
+    def __init__(self, cfg_e: RFGSPPConfig, cfg, critic: BlockCritic, ctx) -> None:
+        self.cfg = cfg_e
+        self.critic = critic
+        self.ctx = ctx
+        tc, mc = cfg.cond.temperature, cfg.cond.moo
+        assert tc.sample_dist == "uniform", "RFG/SPP decodes the thermometer-encoded temperature of a uniform beta"
+        self.n_temp = int(tc.num_thermometer_dim)
+        self.beta_hi = float(tc.dist_params[1])
+        self.n_pref = int(mc.num_thermometer_dim)
+        self.n_obj = int(mc.num_objectives)
+        assert self.n_obj == 2 and self.n_pref > 1
+        self.rho_ema: float | None = None  # prequential Spearman EMA of the SELECTED ridge solution
+        self.rho_k: list[float | None] = [None] * len(critic.alphas)
+        # exponentially weighted prequential moments per ridge precision k and output o: [sum w, sum p, sum y, sum p*p, sum p*y]
+        self.cal = np.zeros((len(critic.alphas), critic.N_OUT, 5), dtype=np.float64)
+        self.kl_scale = 1.0  # trust-region controller state in [kl_min, 1]
+        self.kl_acc: list[float] = []  # KL(tilted || untilted) of the sampling steps since the last hook call
+        self.y_mean = np.array([0.7, 0.55], dtype=np.float64)  # running mean of the (r_vina, QED) labels
+        self.sampling_model = None
+        self.stats: dict[str, float] = {}
+        self.syn: dict | None = None  # retrosynthesis-aware route prior (v4), see RFGSPPConfig.syn_prior
+        if float(cfg_e.syn_kappa) > 0 and cfg_e.syn_prior:
+            with open(cfg_e.syn_prior) as f:
+                self.syn = json.load(f)
+            assert "family" in self.syn and "gamma3" in self.syn, cfg_e.syn_prior
+        self._syn_first: dict[str, float] = {}  # first-decision look-ahead of the route prior (RFGSPPConfig.syn_lookahead)
+        if self.syn is not None and bool(cfg_e.syn_lookahead):
+            self._syn_first = self._build_syn_first()
+
+    # thermometer(v, n, lo, hi): bins = linspace(lo, hi, n); enc_j = clamp(v - bin_j, 0, gap)/gap  =>  v = lo + gap * sum_j enc_j  (exact)
+    def decode(self, enc: Tensor) -> tuple[Tensor, Tensor]:
+        enc = enc.float()
+        beta = enc[:, : self.n_temp].sum(1) * (self.beta_hi / (self.n_temp - 1))
+        pref = enc[:, self.n_temp : self.n_temp + self.n_obj * self.n_pref].reshape(-1, self.n_obj, self.n_pref)
+        w = pref.sum(2) / (self.n_pref - 1)
+        return beta, w
+
+    def cal_update(self, k: int, pred: Tensor, y: Tensor) -> None:
+        """Prequential update (prediction made BEFORE the batch was used for learning) of the calibration moments of ridge solution k."""
+        d = float(self.cfg.calib_decay)
+        p, t = pred.double().numpy(), y.double().numpy()
+        for o in range(p.shape[1]):
+            self.cal[k, o] = d * self.cal[k, o] + np.array([len(p), p[:, o].sum(), t[:, o].sum(), (p[:, o] ** 2).sum(), (p[:, o] * t[:, o]).sum()])
+
+    def cal_scale(self, k: int) -> np.ndarray:
+        """OLS slope of y_o on the prediction of solution k (exponentially weighted, prequential), clipped; ones if too little data or cfg.calibrate is off."""
+        out = np.ones(self.cal.shape[1])
+        if not self.cfg.calibrate:
+            return out
+        for o in range(out.shape[0]):
+            sw, sp, sy, spp, spy = self.cal[k, o]
+            var, cov = spp - sp * sp / max(sw, 1e-12), spy - sp * sy / max(sw, 1e-12)
+            if sw >= 64 and var > 1e-12:
+                out[o] = min(max(cov / var, float(self.cfg.calib_min)), float(self.cfg.calib_max))
+        return out
+
+    def lam_eff(self) -> float:
+        c = self.cfg
+        if not self.critic.fitted or self.critic.n < c.min_labels or self.rho_ema is None:
+            return 0.0
+        g = (self.rho_ema - c.rho_lo) / max(c.rho_hi - c.rho_lo, 1e-6)
+        return float(c.tilt) * float(min(max(g, 0.0), 1.0)) * float(self.kl_scale)
+
+    def update_kl(self) -> None:
+        """Multiplicative trust-region controller on the mean KL(tilted || untilted) of the last sampling call."""
+        c = self.cfg
+        if c.kl_target <= 0 or not self.kl_acc:
+            self.kl_acc = []
+            return
+        kl = float(np.mean(self.kl_acc))
+        self.kl_acc = []
+        self.stats["rfg_spp/kl"] = kl
+        self.kl_scale = float(min(1.0, max(c.kl_min, self.kl_scale * float(np.exp(-c.kl_gain * (kl - c.kl_target) / c.kl_target)))))
+        self.stats["rfg_spp/kl_scale"] = self.kl_scale
+
+    @staticmethod
+    def kl_of(base_logits: list, bonus: list) -> float:
+        """Mean over states of KL(softmax(l+b) || softmax(l)) over all candidate actions of the step."""
+        lb = torch.cat(list(base_logits), dim=1)
+        lt = lb + torch.cat(list(bonus), dim=1)
+        lpb, lpt = torch.log_softmax(lb, 1), torch.log_softmax(lt, 1)
+        kl = (lpt.exp() * (lpt - lpb)).nan_to_num(0.0).sum(1)
+        return float(kl.mean())
+
+    def taus(self, beta: Tensor, w: Tensor, lam: float) -> tuple[Tensor, Tensor]:
+        s_bar = (w[:, 0] * float(self.y_mean[0]) + w[:, 1] * float(self.y_mean[1])).clamp_min(1e-3)
+        tau_v = lam * beta * w[:, 0] / s_bar
+        tau_q = lam * beta * w[:, 1] / s_bar if self.cfg.use_qed else torch.zeros_like(tau_v)
+        return tau_v, tau_q
+
+    def role_off(self, role: int) -> bool:
+        return (self.cfg.roles == "first" and role == 1) or (self.cfg.roles == "reagent" and role == 0)
+
+    @staticmethod
+    def family(name: str) -> str:
+        """protocol name -> reaction family ('rxn35_brick_b0' -> 'rxn35_brick'; first-block protocols keep their name)."""
+        return re.sub(r"_[ab]\d+$", "", name)
+
+    def _build_syn_first(self) -> dict[str, float]:
+        """Look-ahead of the first decision.  For the first-block protocol 'blockK' (exposed attachment pattern K) the BiRxn protocols that can follow are those with state_type == K; under the reference continuation distribution
+        (the untrained policy: every building block of every follower protocol equally likely, w_p = #blocks of p) the exact twist of the first decision is  log( sum_p w_p exp(syn_bias(p)) / sum_p w_p )  (<= 0)."""
+        ctx = self.ctx
+        blocks = getattr(ctx, "blocks", None) or {}
+        followers: dict[int, list[tuple[float, float]]] = {}
+        for p in ctx.protocols:
+            if p.action is RxnActionType.BiRxn:
+                w = float(sum(len(blocks.get(t, ())) for t in p.block_types)) or 1.0
+                followers.setdefault(int(p.state_type), []).append((w, self.syn_bias(p)))
+        out: dict[str, float] = {}
+        for p in ctx.protocols:
+            if p.action is RxnActionType.FirstBlock:
+                lst = followers.get(int(p.block_types[0]), [])
+                tot = sum(w for w, _ in lst)
+                if tot > 0:
+                    out[p.name] = float(np.log(sum(w * np.exp(b) for w, b in lst) / tot))
+        return out
+
+    def syn_bias(self, protocol) -> float:
+        """Behaviour-logit offset of a whole reaction protocol from the retrosynthesis-aware route prior:  kappa * log sigmoid(b0 + theta_family + gamma3 * [linker]),
+        i.e. the log-probability that AiZynth solves a route made of this reaction (kappa = 1: sample routes in proportion to their success probability).
+        A linker commits the route to >= 3 actions, so the 3-action penalty is charged at the decision that causes it."""
+        if self.syn is None:
+            return 0.0
+        if protocol.action is RxnActionType.FirstBlock:
+            return self._syn_first.get(protocol.name, 0.0)
+        if protocol.action not in (RxnActionType.UniRxn, RxnActionType.BiRxn):
+            return 0.0
+        return self._syn_bias_name(protocol.name)
+
+    def _syn_bias_name(self, name: str) -> float:
+        """syn_bias of a reaction protocol given by its name (the form in which the actions of a stored trajectory carry it)."""
+        fam = self.family(name)
+        th = float(self.syn["family"].get(fam, float(self.syn.get("default", 0.0))))
+        if "linker" in name:
+            th += float(self.syn["gamma3"])
+        z = float(self.syn.get("b0", 0.0)) + th
+        return float(self.cfg.syn_kappa) * float(-np.log1p(np.exp(-z)))
+
+    def prefix_logw(self, actions: list, k: int) -> float:
+        """log( mu(prefix) / pi(prefix) ) + const of the k forced leading actions of a stored (elite) trajectory under the route prior; used by RHC to select elite prefixes
+        consistently with the behaviour policy (route-aware prefix proposals).  Doob h-transform bookkeeping: for k == 1 the tilted probability of the first block carries the
+        look-ahead bias of its type; for k >= 2 the bias of the first block cancels against the normaliser of the next decision and the weight is the offset of the k-th (reaction) action.
+        Returns 0 without a prior, for non-reaction k-th actions, and for look-ahead-free configs at k == 1."""
+        if self.syn is None or not actions or k < 1:
+            return 0.0
+        if k == 1:
+            return float(self._syn_first.get(actions[0].protocol, 0.0))
+        a = actions[k - 1]
+        if a.action not in (RxnActionType.UniRxn, RxnActionType.BiRxn):
+            return 0.0
+        return self._syn_bias_name(a.protocol)
+
+    @staticmethod
+    def group_normalize(logit: Tensor, b: Tensor) -> Tensor:
+        """Shift the bonus of ONE protocol by -log sum_b softmax(logit)_b exp(b_b) (per state), so the protocol keeps its probability mass under the tilt (conditional exponential tilt).
+        Masked entries (-inf logits) are ignored; rows without any valid entry are left unchanged."""
+        lg = logit.float()
+        fin = torch.isfinite(lg)
+        anyf = fin.any(1, keepdim=True)
+        lg0 = torch.where(fin, lg, torch.full_like(lg, -1e30))
+        lp = lg0 - torch.logsumexp(lg0, 1, keepdim=True)
+        shift = torch.logsumexp(lp + b.float(), 1, keepdim=True)
+        shift = torch.where(anyf & torch.isfinite(shift), shift, torch.zeros_like(shift))
+        return (b.float() - shift).to(b.dtype)
+
+    def bonuses(self, logits: list, scores: dict, tau_v: Tensor, tau_q: Tensor, normalize: bool = False) -> list[Tensor]:
+        """One [Nstate, Nblock_p] additive logit bonus per protocol (zeros where no critic score is available); `logits` = per-protocol logit list.
+        normalize=True: per-protocol mass-preserving shift (see RFGSPPConfig.group_norm)."""
+        out = []
+        R = float(self.cfg.max_bonus)
+        for p_idx, protocol in enumerate(self.ctx.protocols):
+            logit = logits[p_idx]
+            sc = scores.get(protocol.name)
+            role = 0 if protocol.action is RxnActionType.FirstBlock else 1
+            if sc is None or self.role_off(role) or sc.shape[0] != logit.shape[1]:
+                out.append(torch.zeros_like(logit))
+                continue
+            b = tau_v.view(-1, 1) * sc[:, 0].view(1, -1) + tau_q.view(-1, 1) * sc[:, 1].view(1, -1)
+            b = b.clamp(-R, R).to(logit.dtype)
+            out.append(self.group_normalize(logit, b) if normalize else b)
+        return out
+
+
+class CriticActionCategorical(RxnActionCategorical):
+    """Prior mode (CPP): the critic bonus is added to the policy logits of every protocol, for the sampling AND the training categorical, and to the logit
+    of every taken action (log_prob).  The network therefore only learns the residual w.r.t. the critic prior."""
+
+    def __init__(self, graphs, emb, action_masks, model, tau_v: Tensor, tau_q: Tensor, state: "RFGSPPState") -> None:
+        self._tau_v, self._tau_q, self._state = tau_v, tau_q, state
+        super().__init__(graphs, emb, action_masks, model)
+
+    def _calculate_logits(self) -> list[Tensor]:
+        model = self.model
+        model.__dict__.setdefault("scores", {}).clear()  # the scores must belong to THIS construction
+        logits = super()._calculate_logits()
+        bonus = self._state.bonuses(logits, model.__dict__["scores"], self._tau_v, self._tau_q)
+        if model is self._state.sampling_model and not torch.is_grad_enabled():
+            self._state.kl_acc.append(RFGSPPState.kl_of(logits, bonus))
+            bb, lb = torch.cat(bonus, dim=1), torch.cat(logits, dim=1)
+            self._state.stats["rfg_spp/bonus_sd"] = float(torch.where(torch.isfinite(lb), bb, torch.zeros_like(bb)).std(1).mean())
+        return [l + b for l, b in zip(logits, bonus, strict=True)]
+
+    def _cal_action_logits(self, actions: list[ActionIndex]) -> Tensor:
+        base = super()._cal_action_logits(actions)
+        st = self._state
+        R = float(st.cfg.max_bonus)
+        extra = []
+        for i, action in enumerate(actions):
+            p_idx, bt_idx, b_idx = action
+            protocol = st.ctx.protocols[p_idx]
+            role = 0 if protocol.action is RxnActionType.FirstBlock else 1
+            if st.role_off(role):
+                extra.append(base.new_zeros(()))
+                continue
+            typ, desc, fp, _lvl = st.ctx.get_block_data(protocol.block_types[int(bt_idx)], b_idx)
+            sc = st.critic.block_scores((typ, desc.to(base.device), fp.to(base.device)), role)[0]
+            extra.append((self._tau_v[i] * sc[0] + self._tau_q[i] * sc[1]).clamp(-R, R))
+        return base + torch.stack(extra)
+
+
+class CriticRxnFlow(RxnFlow):
+    """RxnFlow that (a) records the critic's score of every candidate block it embeds and (b) in prior mode builds the critic-prior categorical.
+    Same parameters / state-dict as RxnFlow."""
+
+    critic = None
+    state = None
+    record_scores = False
+    prior_mode = False
+
+    def _rec(self, protocol: str, blocks, role: int) -> None:
+        if self.record_scores and self.critic is not None and self.critic.fitted:
+            self.__dict__.setdefault("scores", {})[protocol] = self.critic.block_scores(blocks, role)
+
+    def hook_firstblock(self, emb, blocks, protocol):
+        self._rec(protocol, blocks, 0)
+        return super().hook_firstblock(emb, blocks, protocol)
+
+    def hook_birxn(self, emb, blocks, protocol):
+        self._rec(protocol, blocks, 1)
+        return super().hook_birxn(emb, blocks, protocol)
+
+    def forward(self, g, cond):
+        self.__dict__["_tau"] = None
+        st = self.state
+        if self.prior_mode and st is not None:
+            lam = st.lam_eff()
+            if lam > 0:
+                beta, w = st.decode(cond.detach().cpu())
+                tv, tq = st.taus(beta, w, lam)
+                self.__dict__["_tau"] = (tv.to(cond.device), tq.to(cond.device))
+                st.stats["rfg_spp/lam_eff"] = lam
+        return super().forward(g, cond)
+
+    def _make_cat(self, g, emb):
+        tau = self.__dict__.get("_tau")
+        if tau is None:
+            return super()._make_cat(g, emb)
+        action_masks = list(torch.unbind(g.protocol_mask, dim=1))
+        return CriticActionCategorical(g, emb, action_masks, self, tau[0], tau[1], self.state)
+
+
+class SyntheticPathSampler3D_semlaRFGSPP(SyntheticPathSampler3D_semla):
+    """Baseline trajectory sampler; with RFG/SPP active the behaviour logits of every step get the critic bonus."""
+
+    rfg_spp: RFGSPPState | None = None
+
+    def sample_from_model(self, model, n, cond_info, random_action_prob: float = 0.0):
+        st = self.rfg_spp
+        self._lam = st.lam_eff() if (st is not None and st.cfg.mode == "behavior") else 0.0
+        if st is not None and self._lam > 0:
+            beta, w = st.decode(cond_info.detach().cpu())
+            self._tau_v_all, self._tau_q_all = st.taus(beta, w, self._lam)
+            st.stats["rfg_spp/tau_v_mean"] = float(self._tau_v_all.mean())
+        self._e_step = 0
+        self._ent_gain: list[float] = []
+        self._bonus_sd: list[float] = []
+        out = super().sample_from_model(model, n, cond_info, random_action_prob)
+        if st is not None:
+            if st.cfg.mode == "behavior":
+                st.stats["rfg_spp/lam_eff"] = self._lam
+            if self._ent_gain:
+                st.stats["rfg_spp/entropy_change_nats"] = float(np.mean(self._ent_gain))
+                st.stats["rfg_spp/bonus_sd"] = float(np.mean(self._bonus_sd))
+        return out
+
+    def _estimate_policy(self, model, torch_graphs, cond_info, not_done_mask):
+        st = self.rfg_spp
+        if st is not None and st.sampling_model is not None and "scores" in st.sampling_model.__dict__:
+            st.sampling_model.__dict__["scores"].clear()  # stale scores of a previous step must never be used
+        self._rows = torch.tensor(not_done_mask, dtype=torch.bool)
+        return super()._estimate_policy(model, torch_graphs, cond_info, not_done_mask)
+
+    def _sample_action(self, torch_graphs, fwd_cat, random_action_prob: float = 0) -> list[ActionIndex]:
+        st = self.rfg_spp
+        step, self._e_step = self._e_step, self._e_step + 1
+        have_critic = st is not None and self._lam > 0 and st.sampling_model is not None and "scores" in st.sampling_model.__dict__
+        have_syn = st is not None and st.syn is not None
+        if not have_critic and not have_syn:
+            return super()._sample_action(torch_graphs, fwd_cat, random_action_prob)
+        dev = fwd_cat.raw_logits[0].device
+        if have_critic:
+            tau_v = self._tau_v_all[self._rows].to(dev)
+            tau_q = self._tau_q_all[self._rows].to(dev)
+            bonus = st.bonuses(fwd_cat.raw_logits, st.sampling_model.__dict__["scores"], tau_v, tau_q, normalize=bool(st.cfg.group_norm))
+        else:
+            bonus = [torch.zeros_like(l) for l in fwd_cat.raw_logits]
+        # retrosynthesis-aware route prior: one scalar offset per reaction protocol (not part of the critic's trust-region KL)
+        syn = [st.syn_bias(p) for p in st.ctx.protocols] if have_syn else [0.0] * len(bonus)
+        total = [b + s for b, s in zip(bonus, syn, strict=True)]
+        cat = copy.copy(fwd_cat)  # shallow: the original fwd_cat (and its log_prob) stays the untilted policy
+        cat.raw_logits = [l + b for l, b in zip(fwd_cat.raw_logits, total, strict=True)]
+        cat.weighted_logits = [l + b for l, b in zip(fwd_cat.weighted_logits, total, strict=True)]
+        if step == 0:  # diagnostics on the first step only
+            with torch.no_grad():
+                lb = torch.cat(list(fwd_cat.raw_logits), dim=1)
+                lt = torch.cat(list(cat.raw_logits), dim=1)
+                pb, pt = torch.softmax(lb, 1), torch.softmax(lt, 1)
+                hb = -(pb * pb.clamp_min(1e-30).log()).sum(1)
+                ht = -(pt * pt.clamp_min(1e-30).log()).sum(1)
+                self._ent_gain.append(float((ht - hb).nan_to_num().mean()))
+                bb = torch.cat(total, dim=1)
+                self._bonus_sd.append(float(torch.where(torch.isfinite(lb), bb, torch.zeros_like(bb)).std(1).mean()))
+        if have_critic:
+            with torch.no_grad():
+                st.kl_acc.append(RFGSPPState.kl_of(fwd_cat.raw_logits, bonus))
+        acts = super()._sample_action(torch_graphs, cat, random_action_prob)
+        if step == 1:  # structure diagnostics: share of linker (=> 3-action) choices at the second decision
+            names = [st.ctx.protocols[int(a[0])].name for a in acts]
+            st.stats["rfg_spp/linker_frac"] = float(np.mean([("linker" in n) for n in names])) if names else 0.0
+        return acts
+
+
+class SynthesisTB3D_semlaRFGSPP(SynthesisTB3D_semla):
+    def setup_graph_sampler(self):
+        self.graph_sampler = SyntheticPathSampler3D_semlaRFGSPP(
+            self.ctx,
+            self.env,
+            self.action_subsampler,
+            max_len=self.max_len,
+            importance_temp=self.importance_temp,
+            sample_temp=self.sample_temp,
+            correct_idempotent=self.cfg.do_correct_idempotent,
+            pad_with_terminal_state=self.cfg.do_parameterize_p_b,
+            num_workers=self.global_cfg.num_workers_retrosynthesis,
+        )
+
+
+class CriticEngine:
+    """Sampling hook (called with every freshly docked batch): prequential evaluation first, then learning."""
+
+    def __init__(self, cfg_e: RFGSPPConfig, state: RFGSPPState, ctx) -> None:
+        self.cfg = cfg_e
+        self.state = state
+        self.ctx = ctx
+        self.it = 0
+
+    def __call__(self, trajs, rewards, obj_props, cond_info) -> dict[str, float]:
+        t0 = time.time()
+        self.it += 1
+        st, crit = self.state, self.state.critic
+        descs, fps, mol_idx, role, ys = [], [], [], [], []
+        m = 0
+        for t, op in zip(trajs, obj_props, strict=True):
+            if not t.get("is_valid", True) or float(op[0]) <= FAIL_EPS:
+                continue
+            for _g, act in t["traj"]:
+                assert act._block_type is not None and act._block_idx is not None, act
+                _typ, desc, fp, _lvl = self.ctx.get_block_data(act._block_type, int(act._block_idx))
+                descs.append(desc.view(1, -1))
+                fps.append(fp.view(1, -1))
+                mol_idx.append(m)
+                role.append(0 if act.action is RxnActionType.FirstBlock else 1)
+            ys.append([float(op[0]), float(op[1])])
+            m += 1
+        info: dict[str, float] = {}
+        if m >= 4:
+            x = crit.build_x(torch.cat(descs), torch.cat(fps), torch.tensor(mol_idx), torch.tensor(role), m)
+            y = torch.tensor(ys, dtype=torch.float32)
+            if crit.fitted:  # PREQUENTIAL: evaluate every ridge solution on the new batch BEFORE learning from it
+                preds = [p.cpu() for p in crit.predict_all(x)]
+                a = float(self.cfg.rho_ema)
+                for k, pred in enumerate(preds):
+                    st.cal_update(k, pred, y)
+                    rv = spearman(pred[:, 0], y[:, 0])
+                    if rv == rv:
+                        st.rho_k[k] = rv if st.rho_k[k] is None else a * st.rho_k[k] + (1 - a) * rv
+                    if k == crit.k:
+                        info["rfg_spp/rho_vina"], info["rfg_spp/rho_qed"] = rv, spearman(pred[:, 1], y[:, 1])
+            first = crit.n == 0
+            crit.update(x, y)
+            ym = y.double().mean(0).numpy()
+            st.y_mean = ym if first else 0.95 * st.y_mean + 0.05 * ym
+            if self.it % max(1, int(self.cfg.refit_every)) == 0 or not crit.fitted:
+                crit.fit()
+            if any(r is not None for r in st.rho_k):  # online model selection (prequential)
+                kbest = int(np.argmax([(-9.0 if r is None else r) for r in st.rho_k]))
+                crit.select(kbest)
+                if self.cfg.calibrate:
+                    sc = st.cal_scale(kbest)
+                    crit.set_scale(sc)
+                    info["rfg_spp/scale_vina"], info["rfg_spp/scale_qed"] = float(sc[0]), float(sc[1])
+                st.rho_ema = st.rho_k[kbest]
+            info["rfg_spp/alpha"] = crit.alphas[crit.k]
+        st.update_kl()
+        info["rfg_spp/n_labels"] = float(crit.n)
+        if st.rho_ema is not None:
+            info["rfg_spp/rho_ema"] = float(st.rho_ema)
+        info["rfg_spp/lam_eff_next"] = st.lam_eff()
+        info["rfg_spp/fit_s"] = crit.fit_seconds
+        info["rfg_spp/hook_s"] = time.time() - t0
+        info.update(st.stats)
+        return info
+
+
+class VinaMOOTrainer_RFGSPP(VinaMOOTrainer_semla):
+    """RFG/SPP trainer.  Select with:  run_opt.py --trainer cgflow.lanes.rfg_spp:VinaMOOTrainer_RFGSPP --set rfg_spp.enable=true"""
+
+    lane_state = None
+
+    def setup_algo(self):
+        assert self.cfg.algo.method == "TB"
+        self.algo = SynthesisTB3D_semlaRFGSPP(self.env, self.ctx, self.cfg)
+
+    def setup_model(self):
+        self.model = CriticRxnFlow(
+            self.ctx,
+            self.cfg,
+            do_bck=self.cfg.algo.tb.do_parameterize_p_b,
+            num_graph_out=self.cfg.algo.tb.do_predict_n + 1,
+        )
+
+    # ---- cull-safe resume (run/rs_support.py): the lane state that is not part of the GFlowNet weights
+    def rs_extra_state(self):
+        st = self.lane_state
+        if st is None:
+            return {"rfg_spp": None}
+        eng = next(h for h in self.sampling_hooks if isinstance(h, CriticEngine))
+        return {"rfg_spp": {"critic": st.critic.state_dict(), "rho_ema": st.rho_ema, "rho_k": list(st.rho_k), "kl_scale": float(st.kl_scale),
+                           "y_mean": np.array(st.y_mean, dtype=np.float64), "engine_it": int(eng.it), "cal": st.cal.copy()}}
+
+    def rs_load_extra_state(self, ex):
+        d = ex.get("rfg_spp")
+        if d is None:
+            return
+        st = self.lane_state
+        assert st is not None, "checkpoint carries RFG/SPP state but rfg_spp.enable is false"
+        st.critic.load_state_dict(d["critic"])
+        st.rho_ema, st.rho_k = d["rho_ema"], list(d["rho_k"])
+        st.kl_scale, st.y_mean = float(d["kl_scale"]), np.array(d["y_mean"], dtype=np.float64)
+        if "cal" in d:
+            st.cal = np.array(d["cal"], dtype=np.float64)
+        next(h for h in self.sampling_hooks if isinstance(h, CriticEngine)).it = int(d["engine_it"])
+
+    def setup(self):
+        super().setup()
+        cfg_e: RFGSPPConfig = self.cfg.rfg_spp
+        self.lane_state = None
+        if not cfg_e.enable:
+            print("[rfg_spp] disabled -> baseline behaviour", flush=True)
+            return
+        assert self.cfg.num_workers == 0, "RFG/SPP keeps its state in the main process"
+        t0 = time.time()
+        critic = BlockCritic.from_ctx(cfg_e, self.ctx, self.device, seed=self.cfg.seed)
+        state = RFGSPPState(cfg_e, self.cfg, critic, self.ctx)
+        state.sampling_model = self.sampling_model
+        self.lane_state = state
+        for mdl in {id(self.model): self.model, id(self.sampling_model): self.sampling_model}.values():
+            mdl.critic = critic
+        assert cfg_e.mode in ("behavior", "prior"), cfg_e.mode
+        prior = cfg_e.mode == "prior"
+        for mdl in {id(self.model): self.model, id(self.sampling_model): self.sampling_model}.values():
+            mdl.state, mdl.prior_mode = state, prior
+        self.sampling_model.record_scores = True
+        # behaviour mode: the EMA sampling model alone needs the scores; prior mode: the training model builds the same prior categorical
+        self.model.record_scores = prior or (self.sampling_model is self.model)
+        self.algo.graph_sampler.rfg_spp = state
+        self.sampling_hooks.append(CriticEngine(cfg_e, state, self.ctx))
+        print(
+            f"[rfg_spp] enabled: mode={cfg_e.mode} tilt={cfg_e.tilt} ridge_grid={cfg_e.ridge_grid} kl_target={cfg_e.kl_target} gate rho in [{cfg_e.rho_lo},{cfg_e.rho_hi}] max_bonus={cfg_e.max_bonus} "
+            f"roles={cfg_e.roles} qed={cfg_e.use_qed}; feature dim D={critic.D}; setup {time.time() - t0:.1f}s",
+            flush=True,
+        )

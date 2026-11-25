@@ -1,0 +1,3 @@
+condition,old,corrected,formula
+cnn_original_adjusted,0.014377707636288994,0.018244908697918418,score~1+method+centered_heavy_atoms
+cnn_redocked_adjusted,-0.08225080136417633,-0.08659233708943233,score~1+method+centered_heavy_atoms

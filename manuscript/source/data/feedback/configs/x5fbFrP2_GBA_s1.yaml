@@ -1,0 +1,242 @@
+desc: Vina-QED optimization using 3D information
+log_dir: /path/to/ARRE/run/opt/x5fbFrP2/GBA/seed1
+device: cuda
+seed: 1
+validate_every: 0
+checkpoint_every: null
+store_all_checkpoints: false
+print_every: 1
+start_at_step: 0
+num_final_gen_steps: 0
+num_validation_gen_steps: 0
+num_training_steps: 1000
+num_workers: 0
+hostname: eg034.agroda.org
+pickle_mp_messages: false
+git_hash: unknown
+overwrite_existing_exp: false
+algo:
+  method: TB
+  num_from_policy: 64
+  num_from_dataset: 0
+  valid_num_from_policy: 0
+  valid_num_from_dataset: 0
+  max_len: 3
+  illegal_action_logreward: -75.0
+  train_random_action_prob: 0.05
+  train_det_after: null
+  valid_random_action_prob: 0.0
+  sampling_tau: 0.9
+  tb:
+    bootstrap_own_reward: false
+    epsilon: null
+    reward_loss_multiplier: 1.0
+    variant: TB
+    do_correct_idempotent: false
+    do_parameterize_p_b: false
+    do_predict_n: false
+    do_sample_p_b: false
+    do_length_normalize: false
+    subtb_max_len: 128
+    Z_learning_rate: 0.001
+    Z_lr_decay: 50000.0
+    cum_subtb: true
+    loss_fn: MSE
+    loss_fn_par: 1.0
+    n_loss: none
+    n_loss_multiplier: 1.0
+    backward_policy: Uniform
+  action_subsampling:
+    sampling_ratio: 0.01
+    min_sampling: 50
+    importance_temp: 0.0
+model:
+  num_emb: 64
+  num_mlp_layers: 2
+  num_emb_block: 64
+  num_mlp_layers_block: 1
+  graph_transformer:
+    num_heads: 2
+    ln_type: pre
+    num_layers: 3
+    concat_heads: true
+opt:
+  opt: adam
+  learning_rate: 0.0001
+  lr_decay: 20000.0
+  weight_decay: 1.0e-08
+  momentum: 0.9
+  clip_grad_type: norm
+  clip_grad_param: 10.0
+  adam_eps: 1.0e-08
+replay:
+  use: false
+  capacity: null
+  warmup: null
+  hindsight_ratio: 0.0
+  num_from_replay: null
+  num_new_samples: null
+task:
+  moo:
+    objectives:
+    - vina
+    - qed
+    n_valid: 15
+    n_valid_repeats: 128
+    log_topk: false
+    online_pareto_front: true
+  constraint:
+    rule: null
+  docking:
+    protein_path: /tmp/cgf_663560/pocket/GBA/protein.pdb
+    ref_ligand_path: /tmp/cgf_663560/pocket/GBA/ligand.mol2
+    redocking: true
+    ff_opt: true
+cond:
+  valid_sample_cond_info: true
+  temperature:
+    sample_dist: uniform
+    dist_params:
+    - 0
+    - 64
+    num_thermometer_dim: 32
+  moo:
+    num_objectives: 2
+    num_thermometer_dim: 16
+  weighted_prefs:
+    preference_type: dirichlet
+    preference_param: 1.5
+  focus_region:
+    focus_type: null
+    use_steer_thermomether: false
+    focus_cosim: 0.98
+    focus_limit_coef: 0.1
+    focus_model_training_limits:
+    - 0.25
+    - 0.75
+    focus_model_state_space_res: 30
+    max_train_it: 20000
+num_workers_retrosynthesis: 4
+env_dir: /path/to/ARRE/data/envs/catalog
+semlaflow:
+  ckpt_path: /path/to/ARRE/weights/stateflow_main_ep029.ckpt
+  use_predicted_pose: true
+  num_inference_steps: 80
+lane_b:
+  enable: false
+  utd: 4
+  replay_batch: 64
+  capacity: 12000
+  warmup_iters: 20
+  priority: rank
+  rank_kappa: 0.01
+  uniform_mix: 0.2
+  hindsight: posterior_cal
+  hindsight_candidates: 32
+  hindsight_prob: 1.0
+  hindsight_min_ess: 0.1
+  cal_history: 1024
+  cal_min_samples: 256
+  cal_bandwidth_beta: 0.1
+  cal_bandwidth_pref: 0.15
+  protected_elites: 200
+  skip_failed_docking: true
+  ema_on_extra: true
+  lr_sched_on_extra: false
+  selfcheck_replay_data: false
+rfg_spp:
+  enable: true
+  tilt: 1.0
+  min_labels: 128
+  ridge_grid: 300,3000,30000,300000
+  kl_target: 4.0
+  kl_gain: 0.5
+  kl_min: 0.1
+  rho_lo: 0.05
+  rho_hi: 0.3
+  rho_ema: 0.9
+  max_bonus: 6.0
+  use_qed: true
+  mode: behavior
+  roles: both
+  refit_every: 1
+  freeze_after_iters: 100
+  std_floor: 0.05
+  z_clip: 10.0
+  stat_blocks_per_type: 200
+  calibrate: true
+  calib_decay: 0.9
+  calib_min: 0.25
+  calib_max: 8.0
+  group_norm: true
+  syn_prior: /path/to/ARRE/data/syn_prior_v1.frozen.json
+  syn_kappa: 4.0
+  syn_lookahead: true
+rhc:
+  enable: true
+  elite_size: 256
+  elite_sim: 0.5
+  qed_min: 0.5
+  k_modes: 100
+  min_elites: 8
+  rank_kappa: 0.05
+  warmup_iters: 30
+  onpolicy_floor: 0.25
+  prefix_cap: 0.5
+  bandit: true
+  fixed_prefix_frac: 0.25
+  bandit_discount: 0.98
+  cond_mode: posterior
+  hindsight_candidates: 256
+  z_estimator: kernel
+  z_capacity: 1024
+  z_min_n: 256
+  z_bw_beta: 0.1
+  z_bw_w: 0.15
+  ess_min: 0.02
+  dedupe: true
+  topup_rounds: 3
+  topup_margin: 0.25
+  log_arms: true
+lane_d:
+  enable: false
+  oversample: 2
+  act: true
+  fit: true
+  ensemble: 5
+  hidden: 128
+  warmup_labels: 2000
+  min_rho: 0.2
+  rho_ema: 0.9
+  rho_hysteresis: 0.05
+  qed_floor: 0.45
+  kappa: 1.0
+  random_frac: 0.1
+  strata: 4
+  score_mode: scalarized
+  fit_epochs: 2
+  fit_max_samples: 4096
+  fit_batch_size: 256
+  lr: 0.001
+  lambda_rank: 1.0
+  rank_tau: 1.0
+  bootstrap_p: 0.8
+  buffer_capacity: 20000
+  rand_window: 256
+  use_vina_local: false
+lane_a:
+  enable: false
+  normalizer: uniform
+  behavior: subsample
+  num_samples: 1024
+  defensive_mix: 0.1
+  behavior_eps: 0.1
+  refresh_every: 4
+  diag_every: 20
+  diag_num_states: 16
+  cache_dtype: float16
+  table_device: auto
+  chunk_elems: 8388608
+  grad_checkpoint: true
+  sampling_logprob: cached_exact
+  clamp_logprob: true

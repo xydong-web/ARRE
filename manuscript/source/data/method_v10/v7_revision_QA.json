@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "unchanged_source_files": [
+    {
+      "name": "child_P0.sdf",
+      "sha256": "68a442e48b85da86a8d9650c3d5333369a391f0f1956a09c5976ff9cd880a4df",
+      "unchanged_from_v6": true
+    },
+    {
+      "name": "child_GNINA.sdf",
+      "sha256": "240734cd0c65351f347987289a05d35ba1eeb7fbb3b4071050fdd1d0d3ec7b96",
+      "unchanged_from_v6": true
+    },
+    {
+      "name": "selected_trajectory.json",
+      "sha256": "57029561039662cb440bfcd763da2b25873dda85d516605adfc158327c25fa21",
+      "unchanged_from_v6": true
+    },
+    {
+      "name": "selected_retrosynthesis.json",
+      "sha256": "ea84982b2d2c9054a50167dbf746b6fdc2c99668244e0e83c0a4db32048a6cd3",
+      "unchanged_from_v6": true
+    }
+  ],
+  "canonical_molecules_checked": 12,
+  "scope": "visual presentation only; no docking, scoring, or route recomputation"
+}

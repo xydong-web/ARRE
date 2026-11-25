@@ -1,0 +1,201 @@
+method,threshold_q,metric,mean,ci95_low,ci95_high,n_targets,analysis,interval
+ARRE,0.05,T_percent,68.33333333333333,60.33277777777778,76.40055555555556,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.05,DS_percent,51.71111111111111,43.511111111111106,60.68944444444444,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.05,C_percent,74.34497923158756,68.97702846292947,79.27459040482444,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.05,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.1,T_percent,88.62222222222222,84.2888888888889,92.62333333333333,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.1,DS_percent,66.2,59.577777777777776,72.95611111111111,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.1,C_percent,74.21434049128007,68.96423154702973,79.26902998937696,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.1,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.15,T_percent,96.68888888888888,94.33333333333333,98.5111111111111,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.15,DS_percent,72.08888888888889,66.68888888888888,77.44555555555554,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.15,C_percent,74.42891061381938,69.60308485996705,79.20253709803737,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.15,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.2,T_percent,98.8888888888889,97.86666666666669,99.71111111111114,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.2,DS_percent,73.62222222222222,68.59944444444444,78.59999999999998,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.2,C_percent,74.3867847885523,69.62530981632602,79.1098958435973,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.2,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.25,T_percent,99.4888888888889,98.97777777777779,99.8888888888889,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.25,DS_percent,74.11111111111111,69.31111111111112,78.91166666666666,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.25,C_percent,74.46860106655669,69.74281238997168,79.16686529750088,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.25,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.3,T_percent,99.84444444444445,99.68888888888888,99.97777777777779,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.3,DS_percent,74.46666666666665,69.71055555555554,79.17777777777776,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.3,C_percent,74.567512338663,69.89823459279106,79.22234819394238,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.3,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.35,T_percent,99.88888888888889,99.75555555555555,100.0,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.35,DS_percent,74.46666666666665,69.71055555555554,79.17777777777776,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.35,C_percent,74.53581139218723,69.84114925715596,79.20614323409625,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.35,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.4,T_percent,99.95555555555555,99.8888888888889,100.0,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.4,DS_percent,74.5111111111111,69.82111111111111,79.17833333333333,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.4,C_percent,74.54024526198438,69.84774061687105,79.20042735042735,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.4,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.45,T_percent,99.97777777777777,99.93333333333334,100.0,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.45,DS_percent,74.53333333333332,69.82222222222224,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.45,C_percent,74.5453734671126,69.85592902266816,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.45,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.5,T_percent,100.0,100.0,100.0,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.5,DS_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.5,C_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE,0.5,M2_percent,74.55555555555556,69.86611111111111,79.20055555555557,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.05,T_percent,37.24444444444444,31.244444444444454,43.777777777777786,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.05,DS_percent,31.88888888888889,26.24388888888889,37.82222222222222,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.05,C_percent,85.0655378384349,82.37136982412649,87.89532364310685,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.05,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.1,T_percent,59.86666666666667,52.42166666666666,67.57833333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.1,DS_percent,51.95555555555554,45.17722222222221,59.08944444444443,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.1,C_percent,86.70023082945839,84.41841126708718,89.07186152134557,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.1,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.15,T_percent,77.48888888888888,69.8438888888889,84.97833333333334,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.15,DS_percent,67.24444444444445,59.933333333333344,74.42222222222222,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.15,C_percent,86.62027499413672,84.26120247098265,88.99154024698555,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.15,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.2,T_percent,87.62222222222225,81.2,93.48944444444443,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.2,DS_percent,76.0,69.79944444444445,81.86666666666666,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.2,C_percent,86.66119190432146,84.32917451836873,89.00109840556497,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.2,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.25,T_percent,92.68888888888888,87.73333333333335,96.86666666666666,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.25,DS_percent,80.39999999999999,75.4888888888889,84.88944444444444,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.25,C_percent,86.72700780628136,84.49264067280853,88.98194927575409,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.25,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.3,T_percent,95.93333333333335,91.97722222222222,98.84444444444445,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.3,DS_percent,83.08888888888889,79.08888888888889,86.73333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.3,C_percent,86.615001443499,84.36296584935037,88.87952137611887,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.3,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.35,T_percent,97.26666666666667,94.51055555555557,99.26666666666667,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.35,DS_percent,84.11111111111111,80.8888888888889,87.15611111111113,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.35,C_percent,86.47054414184183,84.22779935775156,88.75756136410924,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.35,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.4,T_percent,98.40000000000002,96.6888888888889,99.64444444444443,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.4,DS_percent,84.97777777777777,82.31055555555555,87.66666666666667,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.4,C_percent,86.34771232535272,84.13922137048948,88.62045552722111,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.4,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.45,T_percent,98.97777777777777,97.82222222222221,99.8,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.45,DS_percent,85.42222222222222,82.97777777777779,87.91111111111111,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.45,C_percent,86.29789895135687,84.05085404865612,88.60841750972024,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.45,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.5,T_percent,99.37777777777777,98.75555555555555,99.86666666666665,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.5,DS_percent,85.75555555555555,83.44444444444444,88.13333333333335,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.5,C_percent,86.28752159937677,84.05653758328192,88.59322917684828,15,exploratory,pointwise percentile target-bootstrap
+ARRE frozen,0.5,M2_percent,86.2,83.93333333333334,88.53333333333332,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.05,T_percent,5.0,5.0,5.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.05,DS_percent,3.0222222222222217,2.6444444444444444,3.3777777777777778,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.05,C_percent,60.44444444444445,52.88888888888889,67.55555555555557,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.05,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.1,T_percent,10.0,10.0,10.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.1,DS_percent,6.311111111111112,5.711111111111112,6.888888888888889,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.1,C_percent,63.11111111111111,57.11111111111112,68.8888888888889,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.1,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.15,T_percent,15.022222222222222,15.0,15.066666666666668,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.15,DS_percent,9.6,8.933333333333334,10.244444444444444,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.15,C_percent,63.92270531400966,59.40096618357487,68.29629629629629,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.15,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.2,T_percent,20.0,20.0,20.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.2,DS_percent,12.866666666666667,12.08888888888889,13.644444444444444,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.2,C_percent,64.33333333333333,60.44444444444444,68.22222222222221,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.2,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.25,T_percent,25.0,25.0,25.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.25,DS_percent,16.31111111111111,15.355555555555554,17.222222222222225,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.25,C_percent,65.24444444444444,61.42222222222222,68.8888888888889,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.25,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.3,T_percent,30.0,30.0,30.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.3,DS_percent,19.377777777777776,18.222222222222225,20.511111111111113,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.3,C_percent,64.5925925925926,60.74074074074075,68.37037037037038,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.3,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.35,T_percent,35.0,35.0,35.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.35,DS_percent,22.688888888888886,21.4,23.93333333333333,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.35,C_percent,64.82539682539684,61.142857142857146,68.38095238095238,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.35,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.4,T_percent,40.022222222222226,40.0,40.06666666666668,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.4,DS_percent,26.17777777777778,24.688333333333333,27.600000000000005,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.4,C_percent,65.41230486685032,61.64885215794306,69.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.4,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.45,T_percent,45.0,45.0,45.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.45,DS_percent,29.4,27.755555555555556,31.044999999999995,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.45,C_percent,65.33333333333333,61.67901234567901,68.9888888888889,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.45,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.5,T_percent,50.0,50.0,50.0,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.5,DS_percent,32.55555555555556,30.64444444444445,34.44444444444445,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.5,C_percent,65.11111111111111,61.2888888888889,68.8888888888889,15,exploratory,pointwise percentile target-bootstrap
+CGFlow-B,0.5,M2_percent,65.08888888888889,61.93333333333333,68.28888888888888,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.05,T_percent,10.822222222222221,8.422222222222222,13.644444444444444,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.05,DS_percent,7.666666666666667,5.422222222222222,10.355555555555556,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.05,C_percent,67.92317194881959,59.879550401924696,75.86180409559228,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.05,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.1,T_percent,18.044444444444444,14.755555555555555,21.82222222222222,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.1,DS_percent,13.511111111111113,10.200000000000001,17.488888888888887,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.1,C_percent,72.22772844991593,65.96325855958416,78.33927997688578,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.1,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.15,T_percent,25.15555555555556,20.044444444444444,31.244999999999994,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.15,DS_percent,19.22222222222222,14.37722222222222,25.089444444444442,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.15,C_percent,73.96986362657987,68.06801187279267,79.50210997372162,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.15,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.2,T_percent,31.888888888888893,25.888333333333335,38.62277777777778,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.2,DS_percent,25.0,19.22222222222222,31.57833333333333,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.2,C_percent,76.25402829655594,71.38985610029329,80.95314463017297,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.2,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.25,T_percent,37.91111111111111,30.621666666666666,46.15611111111111,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.25,DS_percent,29.91111111111111,23.06611111111111,37.733888888888885,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.25,C_percent,76.83593768335359,72.33712901298877,81.0413312419209,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.25,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.3,T_percent,43.55555555555555,35.754999999999995,52.08944444444444,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.3,DS_percent,34.6,27.26666666666667,42.82222222222222,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.3,C_percent,77.66198027143103,73.54538619604568,81.54658062544176,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.3,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.35,T_percent,49.51111111111111,41.46611111111111,58.377777777777766,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.35,DS_percent,39.666666666666664,32.06666666666667,48.02277777777778,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.35,C_percent,78.69532180286892,74.6691446818541,82.43440556785384,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.35,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.4,T_percent,54.11111111111111,45.93277777777779,63.0011111111111,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.4,DS_percent,43.51111111111111,35.711111111111116,52.04444444444444,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.4,C_percent,79.24311704534918,75.38163153589569,82.83812853193606,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.4,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.45,T_percent,58.333333333333336,49.91055555555555,67.24444444444444,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.45,DS_percent,47.04444444444445,39.044444444444444,55.733333333333334,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.45,C_percent,79.6382944620549,75.65046256361029,83.30671849823608,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.45,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.5,T_percent,62.48888888888889,54.00000000000001,71.13333333333334,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.5,DS_percent,50.44444444444444,42.46611111111111,58.82333333333331,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.5,C_percent,79.93079804766367,76.21968779701008,83.34210050390121,15,exploratory,pointwise percentile target-bootstrap
+SynGA,0.5,M2_percent,81.02222222222223,77.46666666666667,84.2,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.05,T_percent,30.644444444444446,24.84444444444445,36.44555555555554,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.05,DS_percent,25.977777777777778,20.911111111111115,31.333333333333332,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.05,C_percent,85.29551229121815,79.7019971944514,90.35477520315328,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.05,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.1,T_percent,44.044444444444444,36.93333333333333,51.266666666666666,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.1,DS_percent,37.37777777777777,31.599444444444444,43.199999999999996,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.1,C_percent,85.81458858590301,80.79945628227405,90.4966347097878,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.1,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.15,T_percent,56.68888888888889,48.177777777777784,65.4,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.15,DS_percent,48.133333333333326,41.35555555555555,54.778333333333315,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.15,C_percent,86.06384737548325,81.47830857750964,90.42251971867742,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.15,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.2,T_percent,65.6222222222222,56.422222222222224,75.1561111111111,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.2,DS_percent,56.177777777777784,49.06611111111111,63.42277777777778,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.2,C_percent,86.79720955842316,82.3277715003416,90.98848697097084,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.2,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.25,T_percent,71.11111111111111,62.11,80.13333333333334,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.25,DS_percent,60.8888888888889,53.910555555555554,67.77777777777777,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.25,C_percent,86.5965204291649,82.28268817042354,90.68347451112176,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.25,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.3,T_percent,76.02222222222221,67.46666666666667,84.53388888888888,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.3,DS_percent,65.28888888888888,58.6661111111111,71.57833333333332,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.3,C_percent,86.78146262944159,82.48698821131858,90.80755652708773,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.3,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.35,T_percent,79.91111111111111,71.64388888888888,87.86666666666666,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.35,DS_percent,68.55555555555556,62.0661111111111,74.82222222222222,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.35,C_percent,86.57443378936425,82.22226882429419,90.70543878749726,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.35,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.4,T_percent,82.93333333333334,75.42166666666667,90.0,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.4,DS_percent,71.4,65.4888888888889,77.26666666666667,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.4,C_percent,86.71593469535347,82.41547523362934,90.82037654083649,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.4,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.45,T_percent,85.46666666666665,78.19888888888889,92.08944444444444,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.45,DS_percent,73.57777777777778,67.79944444444445,79.40055555555556,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.45,C_percent,86.6569909509745,82.24601047244768,90.84298896291764,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.45,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.5,T_percent,87.53333333333333,80.46666666666665,93.75555555555553,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.5,DS_percent,75.33333333333333,69.75555555555555,80.88944444444445,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.5,C_percent,86.59702092294023,82.23871456189352,90.73291166320313,15,exploratory,pointwise percentile target-bootstrap
+SynGBO,0.5,M2_percent,86.06666666666666,81.88833333333332,90.04444444444445,15,exploratory,pointwise percentile target-bootstrap

@@ -1,0 +1,530 @@
+[
+  {
+    "figure": "ToC",
+    "panel": "a",
+    "source_files": [
+      "search/search_route.json"
+    ],
+    "statistics": "authentic archived shared-prefix chemistry, schematic strategy labels"
+  },
+  {
+    "figure": "ToC",
+    "panel": "l",
+    "source_files": [
+      "search/search_route.json"
+    ],
+    "statistics": "authentic archived shared-prefix chemistry, schematic strategy labels"
+  },
+  {
+    "figure": "ToC",
+    "panel": "l",
+    "source_files": [
+      "search/search_route.json"
+    ],
+    "statistics": "authentic archived shared-prefix chemistry, schematic strategy labels"
+  },
+  {
+    "figure": 1,
+    "panel": "a",
+    "source_files": [
+      "method_v10/Figure_01.pptx",
+      "method_v10/figure_one_export.json",
+      "method_v10/selected_trajectory.json",
+      "method_v10/selected_retrosynthesis.json",
+      "method_v10/source_manifest.json"
+    ],
+    "statistics": "Editable supplied plate; RHC expansion aligned with text; archived poses, reactions and assessment"
+  },
+  {
+    "figure": 1,
+    "panel": "b",
+    "source_files": [
+      "method_v10/Figure_01.pptx",
+      "method_v10/figure_one_export.json",
+      "method_v10/selected_trajectory.json",
+      "method_v10/selected_retrosynthesis.json",
+      "method_v10/source_manifest.json"
+    ],
+    "statistics": "Editable supplied plate; RHC expansion aligned with text; archived poses, reactions and assessment"
+  },
+  {
+    "figure": 1,
+    "panel": "c",
+    "source_files": [
+      "method_v10/Figure_01.pptx",
+      "method_v10/figure_one_export.json",
+      "method_v10/selected_trajectory.json",
+      "method_v10/selected_retrosynthesis.json",
+      "method_v10/source_manifest.json"
+    ],
+    "statistics": "Editable supplied plate; RHC expansion aligned with text; archived poses, reactions and assessment"
+  },
+  {
+    "figure": 1,
+    "panel": "d",
+    "source_files": [
+      "method_v10/Figure_01.pptx",
+      "method_v10/figure_one_export.json",
+      "method_v10/selected_trajectory.json",
+      "method_v10/selected_retrosynthesis.json",
+      "method_v10/source_manifest.json"
+    ],
+    "statistics": "Editable supplied plate; RHC expansion aligned with text; archived poses, reactions and assessment"
+  },
+  {
+    "figure": 2,
+    "panel": "a",
+    "source_files": [
+      "legacy/fig2_target_means.csv"
+    ],
+    "statistics": "15 target means; 3 seeds; unchanged pointwise percentile target bootstrap, 10,000 draws, RandomState 0"
+  },
+  {
+    "figure": 2,
+    "panel": "b",
+    "source_files": [
+      "acceptance/supp_results_all_20261107.json"
+    ],
+    "statistics": "six archived unadjusted Vina and AiZynthFinder means; same oracle, 64,000 distinct evaluations, 15 development tasks and 3 seeds; descriptive"
+  },
+  {
+    "figure": 2,
+    "panel": "c",
+    "source_files": [
+      "legacy/fig2_target_means.csv"
+    ],
+    "statistics": "15 target means at 64,000 evaluations after averaging 3 seeds, with overall means"
+  },
+  {
+    "figure": 2,
+    "panel": "d",
+    "source_files": [
+      "walltime.json",
+      "extension_data.json"
+    ],
+    "statistics": "5 paired target means, 2 seeds; nominal 95% t interval; measured elapsed time"
+  },
+  {
+    "figure": 2,
+    "panel": "e",
+    "source_files": [
+      "walltime.json",
+      "extension_data.json"
+    ],
+    "statistics": "5 paired target means, 2 seeds; nominal 95% t interval; measured elapsed time"
+  },
+  {
+    "figure": 3,
+    "panel": "a",
+    "source_files": [
+      "search/search_route.json"
+    ],
+    "statistics": "seven vector structures drawn from archived SMILES; original actions, zero-based iteration and score"
+  },
+  {
+    "figure": 3,
+    "panel": "b",
+    "source_files": [
+      "search/search_allocation_summary.csv"
+    ],
+    "statistics": "15 targets \u00d7 3 seeds; archived pointwise target-bootstrap 95% intervals"
+  },
+  {
+    "figure": 3,
+    "panel": "c",
+    "source_files": [
+      "search/search_yield_summary.csv"
+    ],
+    "statistics": "phase- and arm-specific target counts; archived pointwise target-bootstrap 95% intervals"
+  },
+  {
+    "figure": 3,
+    "panel": "d",
+    "source_files": [
+      "search/search_critic_window_rho_summary.csv",
+      "search/search_critic_window_labels_summary.csv"
+    ],
+    "statistics": "15 targets \u00d7 3 seeds; archived pointwise target-bootstrap 95% intervals; predictive association"
+  },
+  {
+    "figure": 4,
+    "panel": "a",
+    "source_files": [
+      "pocket_render/render_manifest.json",
+      "pocket_render/selected_contact_geometry.json",
+      "pocket_review/pose_review.json",
+      "pocket_render/NAMPT_B.png",
+      "pocket_render/NAMPT_ARRE.png",
+      "pocket_render/NAMPT_reference.png",
+      "search/pocket_molecules.csv",
+      "search/pocket_seeds.csv",
+      "search/pocket_fingerprints.csv",
+      "search/pocket_effects.csv"
+    ],
+    "statistics": "300 candidates per method and target; 3 seeds; separate rank-based pose display screen; common camera and crop"
+  },
+  {
+    "figure": 4,
+    "panel": "b",
+    "source_files": [
+      "pocket_render/render_manifest.json",
+      "pocket_render/selected_contact_geometry.json",
+      "pocket_review/pose_review.json",
+      "pocket_render/MEK1_B.png",
+      "pocket_render/MEK1_ARRE_rank2.png",
+      "pocket_render/MEK1_reference.png",
+      "search/pocket_molecules.csv",
+      "search/pocket_seeds.csv",
+      "search/pocket_fingerprints.csv",
+      "search/pocket_effects.csv"
+    ],
+    "statistics": "300 candidates per method and target; 3 seeds; separate rank-based pose display screen; common camera and crop"
+  },
+  {
+    "figure": 4,
+    "panel": "c",
+    "source_files": [
+      "pocket_render/render_manifest.json",
+      "pocket_render/selected_contact_geometry.json",
+      "pocket_review/pose_review.json",
+      "pocket_render/ROCK1_B.png",
+      "pocket_render/ROCK1_ARRE.png",
+      "pocket_render/ROCK1_reference.png",
+      "search/pocket_molecules.csv",
+      "search/pocket_seeds.csv",
+      "search/pocket_fingerprints.csv",
+      "search/pocket_effects.csv"
+    ],
+    "statistics": "300 candidates per method and target; 3 seeds; separate rank-based pose display screen; common camera and crop"
+  },
+  {
+    "figure": 5,
+    "panel": "a",
+    "source_files": [
+      "search/search_route.json",
+      "medicinal_figures/prefix.svg",
+      "medicinal_figures/parent.svg",
+      "medicinal_figures/child.svg"
+    ],
+    "statistics": "Recorded two-action ADRB2 prefix and two terminal completions, drawn on a common core."
+  },
+  {
+    "figure": 5,
+    "panel": "b",
+    "source_files": [
+      "factorial_summary.json",
+      "factorial_target_means.csv",
+      "factorial_runs.csv"
+    ],
+    "statistics": "Nominal 95% paired target t intervals after seed averaging; eight factorial configurations"
+  },
+  {
+    "figure": 5,
+    "panel": "c",
+    "source_files": [
+      "factorial_summary.json",
+      "factorial_target_means.csv",
+      "factorial_runs.csv"
+    ],
+    "statistics": "Nominal 95% paired target t intervals after seed averaging; eight factorial configurations"
+  },
+  {
+    "figure": 5,
+    "panel": "d",
+    "source_files": [
+      "legacy/ablation_display_effects.csv",
+      "legacy/ablation_primary_statistics.csv"
+    ],
+    "statistics": "Original nominal 95% target-bootstrap intervals; eight Holm-corrected ablation tests"
+  },
+  {
+    "figure": 5,
+    "panel": "e",
+    "source_files": [
+      "controls.json"
+    ],
+    "statistics": "Five paired task means; 95% paired t intervals"
+  },
+  {
+    "figure": 6,
+    "panel": "a",
+    "source_files": [
+      "trial.json"
+    ],
+    "statistics": "Three prespecified contrasts from the six-test Holm docking family, paired 95% t intervals"
+  },
+  {
+    "figure": 6,
+    "panel": "b",
+    "source_files": [
+      "trial.json"
+    ],
+    "statistics": "Preregistered -5 pp independent-planning margin; paired 90% and 95% t intervals"
+  },
+  {
+    "figure": 6,
+    "panel": "c",
+    "source_files": [
+      "trial.json",
+      "Heldout20.csv"
+    ],
+    "statistics": "Ordered policy-frozen minus SynGBO paired docking differences across 20 pockets."
+  },
+  {
+    "figure": 6,
+    "panel": "d",
+    "source_files": [
+      "trial.json",
+      "portability.json"
+    ],
+    "statistics": "Held-out matched pockets and developmental RxnFlow comparison; paired t intervals"
+  },
+  {
+    "figure": 6,
+    "panel": "e",
+    "source_files": [
+      "planner_full.json",
+      "planner_extra.json",
+      "planner_dev.json",
+      "planner_held.json"
+    ],
+    "statistics": "Independent planner, full-run pocket-bootstrap intervals"
+  },
+  {
+    "figure": 7,
+    "panel": "a",
+    "source_files": [
+      "property/source_data_size_target.csv"
+    ],
+    "statistics": "15 target-level means, 3 seeds"
+  },
+  {
+    "figure": 7,
+    "panel": "b",
+    "source_files": [
+      "property/source_data_correction_summary.csv",
+      "property/source_data_correction_target.csv"
+    ],
+    "statistics": "original 95% target-bootstrap intervals; raw/R1/ANCOVA are separate estimands"
+  },
+  {
+    "figure": 7,
+    "panel": "c",
+    "source_files": [
+      "property/source_data_threshold_summary.csv",
+      "property/source_data_target_threshold_long.csv"
+    ],
+    "statistics": "pointwise target-bootstrap 95% intervals, 15 targets; multiple thresholds exploratory"
+  },
+  {
+    "figure": 7,
+    "panel": "d",
+    "source_files": [
+      "property/source_data_threshold_summary.csv",
+      "property/source_data_target_threshold_long.csv"
+    ],
+    "statistics": "pointwise target-bootstrap 95% intervals, 15 targets; multiple thresholds exploratory"
+  },
+  {
+    "figure": 7,
+    "panel": "e",
+    "source_files": [
+      "sizecap.json",
+      "extension_data.json"
+    ],
+    "statistics": "five target means \u00d7 3 seeds, nominal paired t interval; prespecified size cap"
+  },
+  {
+    "figure": 7,
+    "panel": "f",
+    "source_files": [
+      "sizecap.json",
+      "extension_data.json"
+    ],
+    "statistics": "five target means \u00d7 3 seeds, nominal paired t interval; prespecified size cap"
+  },
+  {
+    "figure": 8,
+    "panel": "a",
+    "source_files": [
+      "independent/statistics.csv",
+      "independent/source_target_effects.csv"
+    ],
+    "statistics": "Native score units; original 95% target-bootstrap intervals"
+  },
+  {
+    "figure": 8,
+    "panel": "b",
+    "source_files": [
+      "independent/source_pose_strata.csv",
+      "independent/statistics.csv"
+    ],
+    "statistics": "Unadjusted redocking-minus-original CNNaffinity change, ARRE minus CGFlow, 15 target means and archived 95% target-bootstrap intervals."
+  },
+  {
+    "figure": 8,
+    "panel": "c",
+    "source_files": [
+      "medicinal_figures/pose_case.json",
+      "medicinal_figures/eligible_pose_ids.csv",
+      "medicinal_figures/original.mol",
+      "medicinal_figures/redocked.mol",
+      "medicinal_figures/oprk1_pocket.pdb",
+      "medicinal_figures/original_pocket.png",
+      "medicinal_figures/redocked_pocket.png",
+      "medicinal_figures/pocket_view.json"
+    ],
+    "statistics": "Graph, stereo and protonation matched original and redocked coordinates of the upper median eligible ARRE candidate above 5 A; same receptor camera and scale, pose-specific side-chain proximity and no ligand-only alignment."
+  },
+  {
+    "figure": 8,
+    "panel": "d",
+    "source_files": [
+      "xrec.json"
+    ],
+    "statistics": "Ten paired source pockets and 24 alternatives; mean and paired t intervals within receptor condition"
+  },
+  {
+    "figure": 8,
+    "panel": "e",
+    "source_files": [
+      "independent/statistics.csv",
+      "independent/source_AUROC.csv"
+    ],
+    "statistics": "Shared cohort, archived 95% bootstrap intervals"
+  },
+  {
+    "figure": 8,
+    "panel": "f",
+    "source_files": [
+      "pb_held.json"
+    ],
+    "statistics": "Method-level rates among 24,000 held-out poses; development-arm rates are recorded in the Supporting Information."
+  },
+  {
+    "figure": "S1",
+    "panel": "a",
+    "source_files": [
+      "legacy/ablation_target_summary.csv"
+    ],
+    "statistics": "15 target means \u00d7 3 seeds; percentile bootstrap 95% intervals; descriptive sweep and generator controls"
+  },
+  {
+    "figure": "S1",
+    "panel": "b",
+    "source_files": [
+      "legacy/ablation_target_summary.csv"
+    ],
+    "statistics": "15 target means \u00d7 3 seeds; percentile bootstrap 95% intervals; descriptive sweep and generator controls"
+  },
+  {
+    "figure": "S1",
+    "panel": "c",
+    "source_files": [
+      "legacy/ablation_target_summary.csv"
+    ],
+    "statistics": "15 target means \u00d7 3 seeds; percentile bootstrap 95% intervals; descriptive sweep and generator controls"
+  },
+  {
+    "figure": "S1",
+    "panel": "d",
+    "source_files": [
+      "legacy/ablation_target_summary.csv"
+    ],
+    "statistics": "15 target means \u00d7 3 seeds; percentile bootstrap 95% intervals; descriptive sweep and generator controls"
+  },
+  {
+    "figure": "S2",
+    "panel": "a",
+    "source_files": [
+      "feedback_runs.csv",
+      "feedback_target_means.csv",
+      "feedback_summary.json"
+    ],
+    "statistics": "135 complete branch runs; exploratory paired t intervals by cohort; complete budget and checkpoint audit"
+  },
+  {
+    "figure": "S2",
+    "panel": "b",
+    "source_files": [
+      "feedback_runs.csv",
+      "feedback_target_means.csv",
+      "feedback_summary.json"
+    ],
+    "statistics": "135 complete branch runs; exploratory paired t intervals by cohort; complete budget and checkpoint audit"
+  },
+  {
+    "figure": "S2",
+    "panel": "c",
+    "source_files": [
+      "feedback_runs.csv",
+      "feedback_target_means.csv",
+      "feedback_summary.json"
+    ],
+    "statistics": "135 complete branch runs; exploratory paired t intervals by cohort; complete budget and checkpoint audit"
+  },
+  {
+    "figure": "S2",
+    "panel": "d",
+    "source_files": [
+      "feedback_runs.csv",
+      "feedback_target_means.csv",
+      "feedback_summary.json"
+    ],
+    "statistics": "135 complete branch runs; exploratory paired t intervals by cohort; complete budget and checkpoint audit"
+  },
+  {
+    "figure": "S3",
+    "panel": "a",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  },
+  {
+    "figure": "S3",
+    "panel": "b",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  },
+  {
+    "figure": "S3",
+    "panel": "c",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  },
+  {
+    "figure": "S3",
+    "panel": "d",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  },
+  {
+    "figure": "S3",
+    "panel": "e",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  },
+  {
+    "figure": "S3",
+    "panel": "f",
+    "source_files": [
+      "legacy/fig4_transfer_targets.csv",
+      "legacy/transfer_runs.csv"
+    ],
+    "statistics": "earlier exploratory transfer, retained without adding independent confirmatory pocket counts"
+  }
+]

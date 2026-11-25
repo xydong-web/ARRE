@@ -1,0 +1,15 @@
+{
+ "n_logged": 64000,
+ "n_valid": 63969,
+ "n_dock_ok": 63627,
+ "n_qed_pass": 31277,
+ "n_selected": 100,
+ "vina_mean": -7.870630085468292,
+ "vina_median": -7.812000215053558,
+ "qed_mean": 0.6466840559244156,
+ "ligand_eff_mean": 0.23552143342918214,
+ "heavy_atoms_mean": 33.69,
+ "n_modes_vina_lt_thr": 462,
+ "mode_vina_thr": -7.0,
+ "best_vina": -10.009000301361084
+}

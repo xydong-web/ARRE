@@ -1,0 +1,19 @@
+target,method,rule,kind,residues,mode,observed,matched
+NAMPT,B,0,H-Bond,A_SER275|A_ASP219,any,A_SER275,True
+NAMPT,B,1,Hydrophobic contact,A_VAL242,all,A_VAL242,True
+NAMPT,B,2,Pi-stacking,A_PHE193|B_TYR18,all,A_PHE193|B_TYR18,True
+NAMPT,ARRE,0,H-Bond,A_SER275|A_ASP219,any,A_SER275,True
+NAMPT,ARRE,1,Hydrophobic contact,A_VAL242,all,A_VAL242,True
+NAMPT,ARRE,2,Pi-stacking,A_PHE193|B_TYR18,all,A_PHE193|B_TYR18,True
+NAMPT,reference,0,H-Bond,A_SER275|A_ASP219,any,A_SER275,True
+NAMPT,reference,1,Hydrophobic contact,A_VAL242,all,A_VAL242,True
+NAMPT,reference,2,Pi-stacking,A_PHE193|B_TYR18,all,A_PHE193|B_TYR18,True
+MEK1,B,0,H-Bond,B_SER212,all,,False
+MEK1,B,1,Halogen bond,B_VAL127,all,,False
+MEK1,ARRE,0,H-Bond,B_SER212,all,,False
+MEK1,ARRE,1,Halogen bond,B_VAL127,all,,False
+MEK1,reference,0,H-Bond,B_SER212,all,B_SER212,True
+MEK1,reference,1,Halogen bond,B_VAL127,all,B_VAL127,True
+ROCK1,B,0,H-Bond,A_MET156,all,,False
+ROCK1,ARRE,0,H-Bond,A_MET156,all,,False
+ROCK1,reference,0,H-Bond,A_MET156,all,A_MET156,True

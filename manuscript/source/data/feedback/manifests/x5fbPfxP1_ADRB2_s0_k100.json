@@ -1,0 +1,35 @@
+{
+  "source": "run/opt/x5fbPfxP1/ADRB2/seed0",
+  "arms": [
+    {
+      "tag": "x5fbOnP1",
+      "target": "ADRB2",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 0,
+      "bandit": true,
+      "checkpoint_sha256": "6a8881b18df29fc57b71827c409ff449e7240f559544f2beeb73e067fe6e3ad3",
+      "path": "run/opt/x5fbOnP1/ADRB2/seed0"
+    },
+    {
+      "tag": "x5fbFrP1",
+      "target": "ADRB2",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 100,
+      "bandit": true,
+      "checkpoint_sha256": "6a8881b18df29fc57b71827c409ff449e7240f559544f2beeb73e067fe6e3ad3",
+      "path": "run/opt/x5fbFrP1/ADRB2/seed0"
+    },
+    {
+      "tag": "x5fbFxP1",
+      "target": "ADRB2",
+      "seed": 0,
+      "checkpoint_iteration": 100,
+      "freeze_after": 0,
+      "bandit": false,
+      "checkpoint_sha256": "6a8881b18df29fc57b71827c409ff449e7240f559544f2beeb73e067fe6e3ad3",
+      "path": "run/opt/x5fbFxP1/ADRB2/seed0"
+    }
+  ]
+}

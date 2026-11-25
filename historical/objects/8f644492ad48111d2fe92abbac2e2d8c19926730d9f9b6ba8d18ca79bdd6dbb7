@@ -1,0 +1,11 @@
+"""Adapter that gives RxnFlow's Uni-Dock MOO task the hook the 3D tasks expose (`_calc_vina_score_batch(objs) -> list[float]`, the batch oracle).  RHC wraps that hook
+for its exact-budget dedupe; everything else of the task is RxnFlow's.  Without a wrapper the behaviour is identical to UniDockMOOTask."""
+from rxnflow.tasks.unidock import UniDockMOOTask
+
+
+class UniDockTaskAdapter(UniDockMOOTask):
+    def run_docking(self, objs):
+        return self._calc_vina_score_batch(objs)
+
+    def _calc_vina_score_batch(self, objs):
+        return UniDockMOOTask.run_docking(self, objs)
